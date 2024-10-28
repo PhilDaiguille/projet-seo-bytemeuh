@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+sitemap: http://bytemeuh-farm.fr/sitemap.xml
