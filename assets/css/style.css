@@ -67,7 +67,7 @@ header {
     color: white;
     text-align: center;
     h1{
-        background-color: #4CAF50;
+        background-color: #177940;
         padding: 2rem;
         margin: 1rem auto;
         max-width: 40rem;
@@ -92,7 +92,7 @@ h1 {
 .keyword {
     font-weight: bold;
     font-size: 2rem;
-    color: #4CAF50;
+    color: #177940;
 }
 section{
     margin: 20px 0;
@@ -109,7 +109,7 @@ article{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: justify;
     a{
-        color: #4CAF50;
+        color: #177940;
     }
     h1, h2, h3, strong{
         margin: 20px 0;
