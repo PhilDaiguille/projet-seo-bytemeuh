@@ -545,3 +545,152 @@ footer p {
         font-size: 1.4rem;
     }
 }
+/* Section FAQ principale */
+.faq-section {
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faq-section h3 {
+    color: #2d3748;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Style des éléments details/summary */
+.faq-content details {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.faq-content details:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.faq-content details[open] {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-content summary {
+    padding: 1.25rem;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    color: #334155;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Retirer le marker par défaut et ajouter une icône personnalisée */
+.faq-content summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-content summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: #64748b;
+    transition: transform 0.3s ease;
+}
+
+.faq-content details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+/* Contenu de la réponse */
+.faq-content details p {
+    margin: 0;
+    padding: 1rem 2rem;
+    color: #475569;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.6rem;
+
+}
+
+/* Animation d'ouverture */
+.faq-content details[open] p {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries pour la responsivité */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 1.5rem;
+        margin: 2rem 1rem;
+    }
+    
+    .faq-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .faq-content summary {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .faq-content details p {
+        padding: 0 1rem 1rem;
+        font-size: 1.6rem;
+    }
+}
+
+/* États de focus et hover pour l'accessibilité */
+.faq-content details summary:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Style pour les utilisateurs qui préfèrent la réduction des animations */
+@media (prefers-reduced-motion: reduce) {
+    .faq-content details[open] p {
+        animation: none;
+    }
+    
+    .faq-content details {
+        transition: none;
+    }
+}
+
+/* Style d'impression */
+@media print {
+    .faq-content details {
+        border: 1px solid #000;
+    }
+    
+    .faq-content summary::after {
+        display: none;
+    }
+    
+    .faq-content details[open] {
+        box-shadow: none;
+    }
+}
