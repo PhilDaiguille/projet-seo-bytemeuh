@@ -8,14 +8,15 @@
 
 
 <url>
-  <loc>http://bytemeuh-farm.fr/</loc>
-  <lastmod>2024-10-28T17:01:35+00:00</lastmod>  
+  <loc>https://bytemeuh-farm.fr/</loc>
+  <lastmod>2024-10-29T07:20:17+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://bytemeuh-farm.fr/blog/article.html</loc>
-  <lastmod>2024-10-28T17:01:35+00:00</lastmod>
+  <loc>https://bytemeuh-farm.fr/blog/article.html</loc>
+  <lastmod>2024-10-29T07:20:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 
 </urlset>
