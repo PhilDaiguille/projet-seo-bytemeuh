@@ -19,48 +19,142 @@
         <h1>Tacos de Boeuf</h1>
     </header>
     <main>
-        <nav>
+        <nav class="breadcrumb">
             <ul>
                 <li><a href="../">Accueil</a></li>
+                <li><span class="separator">></span></li>
+                <li><a href="../#recettes-vedettes">Recettes</a></li>
+                <li><span class="separator">></span></li>
+                <li>Tacos de Bœuf</li>
             </ul>
         </nav>
-        <article>
-            <figure>
-                <img src="../assets/images/tacos-boeuf.webp" alt="Tacos de Boeuf Faciles et Délicieux">
-            </figure>
-            <h2>Tacos de Boeuf Faciles et Délicieux</h2>
-            <p><strong>Introduction</strong></p>
-            <p>Les tacos de Boeuf sont un plat classique qui ne se démode jamais. Faciles à préparer et parfaits pour un dîner en famille ou une soirée entre amis, ils sont toujours appréciés. Dans cet article, nous vous guiderons à travers une recette simple qui vous permettra de réaliser des tacos savoureux en un rien de temps.</p>
-            <p><strong>Ingrédients</strong></p>
-            <p>Pour 4 personnes, vous aurez besoin de :</p>
-            <ul>
-                <li>500 g de poitrine de Boeuf, coupée en dés</li>
-                <li>1 oignon, haché</li>
-                <li>2 gousses d'ail, émincées</li>
-                <li>1 poivron rouge, coupé en dés</li>
-                <li>1 cuillère à café de cumin</li>
-                <li>1 cuillère à café de paprika</li>
-                <li>1/2 cuillère à café de chili en poudre (optionnel)</li>
-                <li>8 petites tortillas de maïs</li>
-                <li>Huile d'olive</li>
-                <li>Sel et poivre au goût</li>
-                <li>Garnitures : avocat, coriandre fraîche, fromage râpé, crème aigre</li>
-            </ul>
 
-            <p><strong>Instructions</strong></p>
-            <ol>
-                <li><strong>Préparation des Ingrédients :</strong> Dans une poêle, chauffez un peu d'huile d'olive à feu moyen. Ajoutez l'oignon et l'ail, puis faites revenir jusqu'à ce qu'ils soient dorés.</li>
-                <li><strong>Cuisson du Boeuf :</strong> Ajoutez les dés de Boeuf à la poêle et faites cuire pendant environ 5 à 7 minutes, jusqu'à ce qu'ils soient bien cuits. Assaisonnez avec le cumin, le paprika, le chili en poudre (si vous l'utilisez), le sel et le poivre. Mélangez bien pour enrober le Boeuf des épices.</li>
-                <li><strong>Ajout des Poivrons :</strong> Incorporez le poivron rouge et continuez à cuire pendant 3 à 4 minutes, jusqu'à ce qu'il soit légèrement ramolli.</li>
-                <li><strong>Chauffage des Tortillas :</strong> Pendant que le mélange de Boeuf cuit, réchauffez les tortillas dans une autre poêle ou au micro-ondes, jusqu'à ce qu'elles soient chaudes et souples.</li>
-                <li><strong>Montage des Tacos :</strong> Répartissez le mélange de Boeuf dans chaque tortilla. Garnissez avec des tranches d'avocat, de la coriandre fraîche, du fromage râpé et une cuillère de crème aigre.</li>
-                <li><strong>Dégustation :</strong> Servez les tacos chauds avec une salsa ou des quartiers de citron pour une touche de fraîcheur.</li>
-            </ol>
+        <article class="recipe-article">
+            <div class="recipe-header">
+                <figure class="recipe-hero">
+                    <img src="../assets/images/tacos-boeuf.webp" alt="Tacos de Bœuf maison garnis de légumes frais et d'avocat" loading="lazy">
+                    <figcaption>Une recette authentique de tacos de bœuf, parfaite pour un repas convivial</figcaption>
+                </figure>
 
-            <p><strong>Conclusion</strong></p>
-            <p>Ces tacos de Boeuf sont non seulement simples à préparer, mais ils sont également délicieux et parfaits pour toutes les occasions. N'hésitez pas à personnaliser la recette avec vos garnitures préférées ou à essayer d'autres viandes ou légumes. Profitez de votre repas !</p>
+                <div class="recipe-meta">
+                    <div class="recipe-info">
+                        <span class="prep-time">
+                            <i class="icon-time"></i>
+                            Préparation : 20 min
+                        </span>
+                        <span class="cook-time">
+                            <i class="icon-cook"></i>
+                            Cuisson : 15 min
+                        </span>
+                        <span class="difficulty">
+                            <i class="icon-level"></i>
+                            Difficulté : Facile
+                        </span>
+                        <span class="portions">
+                            <i class="icon-portion"></i>
+                            Pour 4 personnes
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-content">
+                <section class="recipe-intro">
+                    <h2>Découvrez nos Tacos de Bœuf Faciles et Délicieux</h2>
+                    <p>Les tacos de bœuf représentent le mariage parfait entre la cuisine traditionnelle mexicaine et la qualité de la viande française. Cette recette simple mais savoureuse vous permettra de réaliser des tacos maison qui raviront toute la famille. Parfaits pour un dîner décontracté ou une soirée festive entre amis, ces tacos allient la tendreté du bœuf aux saveurs épicées des condiments traditionnels.</p>
+                </section>
+
+                <section class="recipe-ingredients">
+                    <h3>Ingrédients</h3>
+                    <div class="ingredients-grid">
+                        <div class="ingredients-main">
+                            <h4>Pour la viande</h4>
+                            <ul>
+                                <li><span class="quantity">500g</span> de poitrine de bœuf, coupée en dés</li>
+                                <li><span class="quantity">1</span> oignon, haché finement</li>
+                                <li><span class="quantity">2</span> gousses d'ail, émincées</li>
+                                <li><span class="quantity">1</span> poivron rouge, coupé en dés</li>
+                            </ul>
+                        </div>
+                        <div class="ingredients-spices">
+                            <h4>Épices et assaisonnements</h4>
+                            <ul>
+                                <li><span class="quantity">1 c.à.c</span> de cumin moulu</li>
+                                <li><span class="quantity">1 c.à.c</span> de paprika</li>
+                                <li><span class="quantity">½ c.à.c</span> de chili en poudre (optionnel)</li>
+                                <li>Sel et poivre du moulin</li>
+                            </ul>
+                        </div>
+                        <div class="ingredients-garnish">
+                            <h4>Pour le service</h4>
+                            <ul>
+                                <li><span class="quantity">8</span> petites tortillas de maïs</li>
+                                <li>Avocat mûr</li>
+                                <li>Coriandre fraîche</li>
+                                <li>Fromage râpé</li>
+                                <li>Crème aigre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recipe-instructions">
+                    <h3>Préparation</h3>
+                    <ol>
+                        <li>
+                            <h4>Préparation des Ingrédients</h4>
+                            <p>Dans une poêle à feu moyen, faites chauffer un filet d'huile d'olive. Ajoutez l'oignon et l'ail émincés, puis faites-les revenir jusqu'à ce qu'ils deviennent translucides et légèrement dorés.</p>
+                        </li>
+                        <li>
+                            <h4>Cuisson du Bœuf</h4>
+                            <p>Incorporez les dés de bœuf et faites-les cuire pendant 5-7 minutes en remuant régulièrement. La viande doit être bien dorée sur toutes ses faces. Assaisonnez avec le cumin, le paprika et le chili si désiré. Salez et poivrez selon votre goût.</p>
+                        </li>
+                        <li>
+                            <h4>Ajout des Légumes</h4>
+                            <p>Ajoutez le poivron rouge et poursuivez la cuisson 3-4 minutes supplémentaires jusqu'à ce qu'il soit légèrement croquant.</p>
+                        </li>
+                        <li>
+                            <h4>Préparation des Tortillas</h4>
+                            <p>Pendant ce temps, réchauffez les tortillas soit dans une poêle sèche, soit au micro-ondes entre deux feuilles de papier absorbant.</p>
+                        </li>
+                        <li>
+                            <h4>Assemblage</h4>
+                            <p>Garnissez chaque tortilla de préparation au bœuf. Ajoutez des tranches d'avocat, parsemez de coriandre fraîche, de fromage râpé et terminez par une cuillère de crème aigre.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="recipe-tips">
+                    <h3>Conseils du Chef</h3>
+                    <ul>
+                        <li>Pour plus de saveur, préparez la viande quelques heures à l'avance et laissez-la mariner avec les épices.</li>
+                        <li>Choisissez des tortillas de taille moyenne pour faciliter la dégustation.</li>
+                        <li>Servez avec des quartiers de citron vert pour plus de fraîcheur.</li>
+                    </ul>
+                </section>
+
+                <section class="recipe-variations">
+                    <h3>Variations Possibles</h3>
+                    <ul>
+                        <li>Remplacez le bœuf par du poulet ou du porc pour varier les plaisirs.</li>
+                        <li>Ajoutez des haricots noirs réchauffés pour une version plus consistante.</li>
+                        <li>Pour une version végétarienne, utilisez des champignons et des haricots.</li>
+                    </ul>
+                </section>
+
+                <section class="nutritional-info">
+                    <h3>Informations Nutritionnelles</h3>
+                    <p>Par portion (2 tacos) :</p>
+                    <ul>
+                        <li>Calories : environ 450 kcal</li>
+                        <li>Protéines : 28g</li>
+                        <li>Glucides : 35g</li>
+                        <li>Lipides : 22g</li>
+                    </ul>
+                </section>
+            </div>
         </article>
-    </main>     
+    </main> 
     <footer>
         <p>&copy; 2024 Bytemeuh. Tous droits réservés.</p>
     </footer>

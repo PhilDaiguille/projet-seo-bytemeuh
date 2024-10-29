@@ -54,29 +54,81 @@
         <h1>Bienvenue sur Bytemeuh</h1>
     </header>
     <main>
-        <figure>
-            <img src="./assets/images/background.webp" alt="Vache dans la prairie">
+        <figure class="hero-banner">
+            <img src="./assets/images/background.webp" alt="Vache dans une prairie verdoyante de France - Bytemeuh Farm" class="hero-image">
+            <figcaption>La cuisine authentique inspirée du terroir français</figcaption>
         </figure>
-        <section>
-            <h2>Découvrez notre univers avec le mot-clé <span class="keyword">bytemeuh</span> !</h2>
-            <p>Chez Bytemeuh, nous vous proposons un voyage culinaire riche en saveurs et en découvertes. Explorez des recettes délicieuses et faciles à réaliser, des astuces pratiques pour améliorer votre expérience en cuisine, ainsi que des conseils nutritionnels pour une alimentation équilibrée.</p>
+
+        <section class="intro">
+            <h2>Découvrez notre univers gourmand avec <span class="keyword">Bytemeuh</span> !</h2>
+            <p>Bienvenue dans l'univers chaleureux de Bytemeuh, votre destination culinaire de confiance en France. Notre mission est de vous accompagner dans votre aventure gastronomique, que vous soyez un chef amateur passionné ou un cuisinier débutant enthousiaste. Nous partageons notre amour pour la cuisine authentique, les produits de qualité et les saveurs qui racontent une histoire.</p>
         </section>
-        <section id="recette">
-            <article>
-                <a href="./blog/article.html">
-                    <h2>Tacos de Boeuf Faciles et Délicieux</h2>
-                </a>
-            </article>
+        
+        <section id="recettes-vedettes" class="featured-content">
+            <h2>Nos Recettes Vedettes</h2>
+            <div class="recipes-grid">
+                <article class="recipe-card">
+                    <a href="./blog/article.html" class="recipe-link">
+                        <figure>
+                            <img src="./assets/images/tacos-boeuf.webp" alt="Tacos de Boeuf Faciles et Délicieux">
+                        </figure>
+                        <h3>Tacos de Bœuf Faciles et Délicieux</h3>
+                        <p>Une recette fusion qui marie la tradition française du bœuf aux saveurs mexicaines. Découvrez notre version unique des tacos, préparée avec du bœuf français de qualité.</p>
+                        <div class="recipe-meta">
+                            <span>Temps de préparation : 20 minutes</span>
+                            <span>Difficulté : Facile</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
         </section>
-    
-        <section id="astuces">
-            <h2>Astuces Cuisine</h2>
-            <p>Découvrez des conseils pratiques pour améliorer vos compétences culinaires. Que vous soyez débutant ou chef expérimenté, nos astuces vous aideront à créer des plats délicieux en un rien de temps.</p>
+
+        <section id="nos-expertises" class="features-grid">
+            <h2>Nos Domaines d'Expertise Culinaire</h2>
+            <div class="expertise-cards">
+                <article class="expertise-card">
+                    <h3>Recettes Traditionnelles</h3>
+                    <p>Explorez notre collection de recettes françaises authentiques, transmises de génération en génération. De l'entrée au dessert, découvrez des plats qui mettent en valeur les meilleurs produits de nos régions.</p>
+                </article>
+                
+                <article class="expertise-card">
+                    <h3>Cuisine Moderne</h3>
+                    <p>Découvrez nos réinterprétations contemporaines des classiques culinaires. Des recettes innovantes qui respectent les traditions tout en embrassant les nouvelles tendances gastronomiques.</p>
+                </article>
+
+                <article class="expertise-card">
+                    <h3>Cuisine Healthy</h3>
+                    <p>Apprenez à préparer des repas équilibrés et savoureux. Nos recettes healthy combinent nutrition optimale et plaisir gustatif pour votre bien-être quotidien.</p>
+                </article>
+            </div>
         </section>
-    
-        <section id="avis">
-            <h2>Avis Restaurants</h2>
-            <p>Nous partageons nos avis sur les meilleurs restaurants et les tendances food du moment. Restez informé des nouveautés culinaires et trouvez l'inspiration pour votre prochaine sortie gastronomique.</p>
+
+        <section id="astuces" class="tips-section">
+            <h2>Astuces et Conseils Culinaires</h2>
+            <div class="tips-content">
+                <p>Enrichissez votre savoir-faire culinaire grâce à nos conseils d'experts. De la sélection des ingrédients aux techniques de cuisson avancées, nos astuces vous aideront à devenir un véritable chef dans votre cuisine.</p>
+                <ul class="tips-list">
+                    <li>Techniques de découpe professionnelles</li>
+                    <li>Secrets de conservation des aliments</li>
+                    <li>Cuisson parfaite des viandes</li>
+                    <li>Associations de saveurs réussies</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="avis-restaurants" class="reviews-section">
+            <h2>Guide des Meilleures Adresses Gastronomiques</h2>
+            <p>Parcourez nos critiques détaillées des restaurants les plus prometteurs de France. Notre équipe sillonne le pays à la recherche des meilleures tables, des bistrots traditionnels aux établissements étoilés, pour vous guider dans vos découvertes gastronomiques.</p>
+            <div class="review-categories">
+                <article class="category">
+                    <h3>Restaurants Traditionnels</h3>
+                    <p>Découvrez les établissements qui perpétuent l'excellence de la gastronomie française.</p>
+                </article>
+                <article class="category">
+                    <h3>Nouvelles Tables</h3>
+                    <p>Explorez les dernières adresses tendance qui réinventent la cuisine contemporaine.</p>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
