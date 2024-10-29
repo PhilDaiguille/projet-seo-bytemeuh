@@ -81,7 +81,30 @@ header h1 {
 header h1:hover {
     transform: translateY(-2px);
 }
+header .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    padding: 1rem 2rem;
+    @media (max-width: 480px) {
+        padding: 1rem;
+    }
+    ul{
+        display: flex;
+        gap: 2rem;
+        li{
+            a{
+                font-size: 1.6rem;
+                font-weight: 600;
+                transition: color 0.3s ease;
+                &:hover{
+                    color: #0b4824;
+                }
+            }
+        }
+    }
+}
 /* Main Content */
 main {
     padding: 2rem;
@@ -692,5 +715,77 @@ footer p {
     
     .faq-content details[open] {
         box-shadow: none;
+    }
+}
+
+/* Section équipe */
+.team-section {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 3rem;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: #666;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-section {
+        padding: 3rem 1rem;
+    }
+
+    .team-section h2 {
+        font-size: 2rem;
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
     }
 }
