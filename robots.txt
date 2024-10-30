@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: https://bytemeuh-farm.fr/blog/article.html
+Disallow: http://bytemeuh-farm.fr/
 sitemap: https://bytemeuh-farm.fr/sitemap.xml
