@@ -644,7 +644,7 @@ footer a{
 
 .faq-content summary::after {
     content: '+';
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #64748b;
     transition: transform 0.3s ease;
 }
@@ -693,7 +693,7 @@ footer a{
     
     .faq-content summary {
         padding: 1rem;
-        font-size: 0.95rem;
+        font-size: 1.4rem;
     }
     
     .faq-content details p {
@@ -803,5 +803,123 @@ footer a{
     .team-member img {
         width: 150px;
         height: 150px;
+    }
+}
+
+/* Styles pour le contenu de l'article */
+.article-content {
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.6rem;
+    color: #333;
+    text-align: left !important;
+}
+
+/* Introduction de l'article */
+.article-intro {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #444;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-left: 8px solid #007bff;
+    border-radius: 8px;
+}
+.article-content figure img{
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+/* Titres */
+.article-content h2 {
+    font-size: 2.4rem;
+    color: #2c3e50;
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.article-content h3 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin: 2rem 0 1rem;
+}
+
+/* Paragraphes */
+.article-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* Listes */
+.article-content ul {
+    margin: 1rem 0 1.5rem 1.5rem;
+    padding-left: 1rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.article-content li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    position: absolute;
+    left: -1rem;
+}
+
+/* Sections */
+.article-content section {
+    margin-bottom: 3rem;
+}
+
+/* Mise en valeur */
+.article-content em {
+    color: #666;
+    font-style: italic;
+}
+
+/* Conclusion */
+#conclusion {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 3rem;
+}
+
+#conclusion p {
+    margin-bottom: 1rem;
+}
+
+#conclusion p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .article-content {
+        padding: 0 1rem;
+    }
+
+    .article-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .article-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .article-intro {
+        font-size: 1.1rem;
+    }
+
+    .article-content p {
+        font-size: 1rem;
     }
 }
