@@ -1,51 +1,55 @@
-<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-	<url>
-		<loc>https://bytemeuh-farm.fr/</loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://bytemeuh-farm.fr/blog/</loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
-	<url>
-		<loc>https://bytemeuh-farm.fr/a-propos-de-nous/</loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
-	<url>
-		<loc>https://bytemeuh-farm.fr/contact/</loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
-	<url>
-		<loc>
-      https://bytemeuh-farm.fr/blog/la-technologie-au-service-de-notre-bien-etre-alimentaire/
-  </loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
-	<url>
-		<loc>
-      https://bytemeuh-farm.fr/blog/ratatouille-provencale/
-    </loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
-	<url>
-		<loc>https://bytemeuh-farm.fr/blog/kebab-de-boeuf/</loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
-	<url>
-		<loc>https://bytemeuh-farm.fr/blog/tacos-de-boeuf/</loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
-	<url>
-		<loc>https://bytemeuh-farm.fr/blog/burgers-de-boeuf/</loc>
-		<lastmod>2024-10-31T20:02:34+00:00</lastmod>
-		<priority>0.90</priority>
-	</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://bytemeuh-farm.fr/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/blog/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/a-propos-de-nous/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/contact/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/blog/la-technologie-au-service-de-notre-bien-etre-alimentaire/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/blog/ratatouille-provencale/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/blog/kebab-de-boeuf/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/blog/tacos-de-boeuf/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://bytemeuh-farm.fr/blog/burgers-de-boeuf/</loc>
+  <lastmod>2024-10-31T20:02:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 </urlset>
