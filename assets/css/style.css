@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+    font-display: swap;
+}
 /* Base Reset */
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-h1, h2 {
+h1, h2, h3, h4{
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 h1, h2, h3, p, figure, ul, ol, section {
@@ -56,6 +60,7 @@ body {
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
+    font-weight: normal;
 }
 
 /* Header Styles */
