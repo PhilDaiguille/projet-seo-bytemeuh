@@ -302,6 +302,9 @@ footer p {
     border-radius: 5px;
     font-size: 1.4rem;
 }
+footer a{
+    color: #005724;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
