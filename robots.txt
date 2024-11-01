@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /blog/article.html
 sitemap: https://bytemeuh-farm.fr/sitemap.xml
