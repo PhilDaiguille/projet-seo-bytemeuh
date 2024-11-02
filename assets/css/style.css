@@ -734,21 +734,6 @@ footer a {
 	}
 }
 
-/* Style d'impression */
-@media print {
-	.faq-content details {
-		border: 1px solid #000;
-	}
-
-	.faq-content summary::after {
-		display: none;
-	}
-
-	.faq-content details[open] {
-		box-shadow: none;
-	}
-}
-
 /* Section équipe */
 .team-section {
 	padding: 4rem 2rem;
@@ -927,14 +912,14 @@ footer a {
 	}
 
 	.article-content h3 {
-		font-size: 1.3rem;
+		font-size: 1.6rem;
 	}
 
 	.article-intro {
-		font-size: 1.1rem;
+		font-size: 1.4rem;
 	}
 
 	.article-content p {
-		font-size: 1rem;
+		font-size: 1.4rem;
 	}
 }
