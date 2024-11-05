@@ -52,6 +52,7 @@ img {
   box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #222 #333;
+  color-scheme: light dark;
 }
 
 *::-webkit-scrollbar {
