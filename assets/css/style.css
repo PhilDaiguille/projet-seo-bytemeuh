@@ -930,11 +930,11 @@ footer a {
   font-size: 2rem;
   color: #333;
   h1{
-    font-size: 2.5rem;
+    font-size: 6rem;
     color: #333;
   }
   p{
-    font-size: 1.6rem;
+    font-size: 4rem;
     color: #666;
   }
   a{
@@ -942,6 +942,7 @@ footer a {
     font-weight: bold;
     padding: 1rem 2rem;
     color: white;
+    font-size: 3rem;
     display: inline-block;
     border-radius: 5px;
     margin-top: 2rem;
