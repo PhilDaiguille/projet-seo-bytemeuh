@@ -921,7 +921,7 @@ footer a {
   }
 }
 
-.notfound{
+.notfound {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -929,15 +929,15 @@ footer a {
   height: 100vh;
   font-size: 2rem;
   color: #333;
-  h1{
+  h1 {
     font-size: 6rem;
     color: #333;
   }
-  p{
+  p {
     font-size: 4rem;
     color: #666;
   }
-  a{
+  a {
     background-color: #177940;
     font-weight: bold;
     padding: 1rem 2rem;
@@ -946,7 +946,7 @@ footer a {
     display: inline-block;
     border-radius: 5px;
     margin-top: 2rem;
-    :hover{
+    :hover {
       background-color: #135f33;
     }
   }
