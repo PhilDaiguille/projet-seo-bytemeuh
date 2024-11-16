@@ -29,5 +29,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/blog/article.html",
+      "destination": "/blog/tacos-de-boeuf/",
+      "permanent": true
+    }
   ]
 }
