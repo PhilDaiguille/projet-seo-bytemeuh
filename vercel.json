@@ -13,7 +13,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://www.google.com; font-src 'self' https://fonts.googleapis.com"
+          "value": "default-src 'self'; script-src 'self' https://www.google-analytics.com https://vercel.live/_next-live/feedback/feedback.js; style-src 'self' 'unsafe-inline'; img-src 'self' https://bytemeuh-farm.fr https://www.google.com; font-src 'self' https://fonts.googleapis.com"
         },
         {
           "key": "Access-Control-Allow-Origin",
@@ -42,6 +42,11 @@
     {
       "source": "/blog/article.html",
       "destination": "/blog/tacos-de-boeuf/",
+      "permanent": true
+    },
+    {
+      "source": "http://bytemeuh-farm.fr/",
+      "destination": "https://bytemeuh-farm.fr/",
       "permanent": true
     }
   ]
