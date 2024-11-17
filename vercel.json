@@ -43,11 +43,6 @@
       "source": "/blog/article.html",
       "destination": "/blog/tacos-de-boeuf/",
       "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "destination": "https://bytemeuh-farm.fr/$1",
-      "permanent": true
     }
   ]
 }
