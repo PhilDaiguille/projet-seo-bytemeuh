@@ -709,6 +709,18 @@ footer a {
   line-height: 1.6;
   font-size: 1.6rem;
 }
+.faq-content details ul {
+  padding-left: 2rem;
+
+  li {
+    margin: 0;
+    padding: 1rem 2rem;
+    color: #475569;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
+}
 
 /* Animation d'ouverture */
 .faq-content details[open] p {
