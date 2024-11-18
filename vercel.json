@@ -43,6 +43,11 @@
       "source": "/blog/article.html",
       "destination": "/blog/tacos-de-boeuf/",
       "permanent": true
+    },
+    {
+      "source": "/favicon.ico",
+      "destination": "/assets/images/favicon.ico",
+      "permanent": true
     }
   ]
 }
