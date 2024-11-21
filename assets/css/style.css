@@ -182,7 +182,8 @@ main {
 }
 
 /* Section Styles */
-section {
+section,
+article {
   margin: 1rem auto;
   padding: 3rem;
   background-color: white;
