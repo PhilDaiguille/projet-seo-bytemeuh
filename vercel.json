@@ -51,13 +51,11 @@
     {
       "source": "/blog/article.html",
       "destination": "/blog/tacos-de-boeuf/",
-      "permanent": true,
       "statusCode": 301
     },
     {
       "source": "/favicon.ico",
       "destination": "/assets/static/favicon.ico",
-      "permanent": true,
       "statusCode": 301
     }
   ],
