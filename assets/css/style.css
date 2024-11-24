@@ -18,8 +18,11 @@ h3,
 h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  text-wrap: auto;
 }
-
+p {
+  text-wrap: auto;
+}
 h1,
 h2,
 h3,
@@ -190,6 +193,16 @@ article {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  .recipe-content a,
+  .article-content a {
+    font-weight: bold;
+  }
+
+  .recipe-content a:hover,
+  .article-content a:hover {
+    color: #177940;
+    text-decoration: underline;
+  }
 }
 
 /* Features Grid */
