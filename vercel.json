@@ -50,19 +50,29 @@
   "redirects": [
     {
       "source": "/blog/article.html",
-      "destination": "/blog/tacos-de-boeuf/",
+      "destination": "/blog/recettes/tacos-boeuf/",
       "statusCode": 301
     },
     {
       "source": "/blog/article/",
-      "destination": "/blog/tacos-de-boeuf/",
+      "destination": "/blog/recettes/tacos-boeuf/",
       "statusCode": 301
     },
     {
       "source": "/favicon.ico",
       "destination": "/assets/static/favicon.ico",
       "statusCode": 301
-    }
+    },
+    { "source": "/blog/les-technologies-qui-transforment-notre-facon-de-cuisiner/", "destination": "/blog/article/technologies-transforment-cuisine/", "statusCode": 301 },
+    { "source": "/blog/kebab-de-boeuf/", "destination": "/blog/recette/kebab-boeuf/", "statusCode": 301 },
+    { "source": "/blog/smartphones-revolution-agriculture/", "destination": "/blog/article/smartphones-revolution-agricole/", "statusCode": 301 },
+    { "source": "/blog/ratatouille-provencale/", "destination": "/blog/recette/ratatouille-provencale/", "statusCode": 301 },
+    { "source": "/blog/traditions-culinaires-ere-numerique/", "destination": "/blog/article/traditions-culinaires-ere-numerique/", "statusCode": 301 },
+    { "source": "/blog/la-technologie-au-service-de-notre-bien-etre-alimentaire/", "destination": "/blog/article/technologie-bien-etre-alimentaire/", "statusCode": 301 },
+    { "source": "/blog/elevage-intelligent-tech-bien-etre-animal/", "destination": "/blog/article/elevage-intelligent-bien-etre-animal/", "statusCode": 301 },
+    { "source": "/blog/bao-buns-vegan/", "destination": "/blog/recette/bao-buns-vegan/", "statusCode": 301 },
+    { "source": "/blog/tacos-de-boeuf/", "destination": "/blog/recette/tacos-boeuf/", "statusCode": 301 },
+    { "source": "/blog/burgers-de-boeuf/", "destination": "/blog/recette/burgers-boeuf/", "statusCode": 301 }
   ],
   "trailingSlash": true,
   "cleanUrls": true

@@ -6,3 +6,4 @@ package.json
 rollup.config.js
 .prettierrc
 .prettierignore
+.idea
