@@ -42,7 +42,7 @@
           "postalCode": "75012",
           "addressCountry": "FR"
         },
-        "sameAs": []
+        "sameAs": ["https://www.twitter.com/bytemeuhFarm", "https://www.linkedin.com/company/bytemeuh-farm/"]
       }
     </script>
     <script type="application/ld+json">
@@ -63,7 +63,7 @@
     </script>
     <script type="application/ld+json">
       {
-        "@context": "http://schema.org/",
+        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
           {
@@ -73,6 +73,29 @@
             "item": "https://bytemeuh-farm.fr/"
           }
         ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Bytemeuh - Recettes, astuces cuisine et technologie pour une cuisine savoureuse",
+        "url": "https://bytemeuh-farm.fr/",
+        "description": "Bytemeuh : recettes délicieuses, astuces cuisine, conseils nutritionnels, avis restaurants et tendances food pour une cuisine inspirante.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Bytemeuh",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://bytemeuh-farm.fr/assets/static/favicon-16x16.png",
+            "width": 16,
+            "height": 16
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://bytemeuh-farm.fr/"
+        }
       }
     </script>
   </head>
@@ -316,13 +339,22 @@
       </section>
     </main>
     <footer>
-      <p>&copy; 2024 Bytemeuh. Tous droits réservés.</p>
-      <p><a href="https://bytemeuh-farm.fr/mention-legales/">Mentions Légales</a></p>
-      <p><a href="./contact/">Contactez-nous</a></p>
-      <p>
-        Email :
-        <a href="mailto:contact@bytemeuh-farm.fr">contact@bytemeuh-farm.fr</a>
-      </p>
+      <div itemscope itemtype="https://schema.org/Organization">
+        <p>&copy; 2024 <span itemprop="name">Bytemeuh</span>. Tous droits réservés.</p>
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <p
+            >Adresse : <span itemprop="streetAddress">242 Rue du Faubourg Saint-Antoine</span>, <span itemprop="addressLocality">Paris</span>, <span itemprop="addressRegion">Île-de-France</span> <span itemprop="postalCode">75012</span>,
+            <span itemprop="addressCountry">France</span></p
+          >
+        </div>
+        <p><a href="https://bytemeuh-farm.fr/mention-legales/">Mentions Légales</a></p>
+        <p><a href="./contact/">Contactez-nous</a></p>
+        <p>Email : <a href="mailto:contact@bytemeuh-farm.fr">contact@bytemeuh-farm.fr</a></p>
+        <div itemprop="sameAs">
+          <a href="https://www.twitter.com/bytemeuh" rel="noopener" target="_blank">Twitter</a> |
+          <a href="https://www.linkedin.com/company/bytemeuh-farm/" rel="noopener" target="_blank">Linkedin</a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
