@@ -65,6 +65,7 @@
     },
     { "source": "/blog/les-technologies-qui-transforment-notre-facon-de-cuisiner/", "destination": "/blog/articles/technologies-transforment-cuisine/", "statusCode": 301 },
     { "source": "/blog/kebab-de-boeuf/", "destination": "/blog/recettes/kebab-boeuf/", "statusCode": 301 },
+    { "source": "/blog/burgers-de-boeuf/", "destination": "/blog/recettes/burgers-boeuf/", "statusCode": 301 },
     { "source": "/blog/smartphones-revolution-agriculture/", "destination": "/blog/articles/smartphones-revolution-agricole/", "statusCode": 301 },
     { "source": "/blog/ratatouille-provencale/", "destination": "/blog/recettes/ratatouille-provencale/", "statusCode": 301 },
     { "source": "/blog/traditions-culinaires-ere-numerique/", "destination": "/blog/articles/traditions-culinaires-ere-numerique/", "statusCode": 301 },
