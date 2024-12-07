@@ -200,6 +200,7 @@ article {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  height: 100%;
   .recipe-content a,
   .article-content a {
     font-weight: bold;
