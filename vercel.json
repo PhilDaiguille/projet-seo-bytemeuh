@@ -21,7 +21,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "ALLOW-FROM https://www.youtube-nocookie.com/"
+          "value": "SAMEORIGIN"
         },
         {
           "key": "X-Content-Type-Options",
