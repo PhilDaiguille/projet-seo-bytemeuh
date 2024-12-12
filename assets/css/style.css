@@ -355,22 +355,98 @@ a {
 a:hover {
   color: #135f33;
 }
-
-/* Footer */
-footer {
-  margin-top: 4rem;
+:root {
+  --primary-color: #005724;
+  --secondary-color: #007b36;
+  --text-color: #333;
 }
 
-footer p {
-  padding: 2rem;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: var(--white);
+}
+
+.company-info {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-color: #ddd;
-  border-radius: 5px;
-  font-size: 1.4rem;
 }
 
-footer a {
-  color: #005724;
+.contact-info {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quick-links {
+  grid-column: span 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.social-links {
+  grid-column: span 12;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+}
+
+.footer-bottom {
+  grid-column: span 12;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--background-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.quick-links a {
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+.company-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-info,
+  .contact-info,
+  .quick-links {
+    grid-column: span 12;
+  }
+
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Responsive Design */
