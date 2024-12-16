@@ -228,22 +228,22 @@ article {
   justify-content: center;
 
   div:first-child {
-      width: 100%;
-    }
-  
-    .bytemeuh-music {
-      width: 100%;
-      max-width: 30rem;
-      height: auto;
-      border-radius: 8px;
-    }
-  
-    p {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      line-height: 2.4rem;
-    }
+    width: 100%;
   }
+
+  .bytemeuh-music {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 2.4rem;
+  }
+}
 /* Features Grid */
 .features-grid {
   padding: 4rem 2rem;
