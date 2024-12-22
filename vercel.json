@@ -81,7 +81,8 @@
     { "source": "/blog/technologie-bien-etre-alimentaire/", "destination": "/blog/articles/technologie-bien-etre-alimentaire/", "statusCode": 301 },
     { "source": "/blog/elevage-intelligent-bien-etre-animal/", "destination": "/blog/articles/elevage-intelligent-bien-etre-animal/", "statusCode": 301 },
     { "source": "/blog/tacos-boeuf/", "destination": "/blog/recettes/tacos-boeuf/", "statusCode": 301 },
-    { "source": "/blog/burgers-boeuf/", "destination": "/blog/recettes/burgers-boeuf/", "statusCode": 301 }
+    { "source": "/blog/burgers-boeuf/", "destination": "/blog/recettes/burgers-boeuf/", "statusCode": 301 },
+    { "source": "/assets/images/elevage-intelligent.webp", "destination":"/assets/images/vaches-tech.webp", "statusCode":301 }
   ],
   "trailingSlash": true,
   "cleanUrls": true
