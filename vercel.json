@@ -83,7 +83,9 @@
     { "source": "/blog/tacos-boeuf/", "destination": "/blog/recettes/tacos-boeuf/", "statusCode": 301 },
     { "source": "/blog/burgers-boeuf/", "destination": "/blog/recettes/burgers-boeuf/", "statusCode": 301 },
     { "source": "/assets/images/elevage-intelligent.webp", "destination": "/assets/images/vaches-tech.webp", "statusCode": 301 },
-    { "source": "/blog/articles/bytemeuh-innovation-consulting/", "destination": "/", "statusCode": 301 }
+    { "source": "/blog/articles/bytemeuh-innovation-consulting/", "destination": "/", "statusCode": 301 },
+    { "source": "/faq/", "destination": "/", "statusCode": 301 },
+    { "source": "/partenaires/", "destination": "/", "statusCode": 301 }
   ],
   "trailingSlash": true,
   "cleanUrls": true
