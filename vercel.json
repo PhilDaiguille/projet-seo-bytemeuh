@@ -87,7 +87,6 @@
     { "source": "/faq/", "destination": "/", "statusCode": 301 },
     { "source": "/partenaires/", "destination": "/", "statusCode": 301 }
   ],
-  
   "trailingSlash": true,
   "cleanUrls": true
 }
