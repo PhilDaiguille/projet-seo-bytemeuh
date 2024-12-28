@@ -166,7 +166,12 @@ main {
   margin: 0 auto;
   min-height: 75dvh;
 }
-
+main section p,
+main article p {
+  line-height: 2.4rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
 /* Hero Section */
 .hero-banner {
   position: relative;
