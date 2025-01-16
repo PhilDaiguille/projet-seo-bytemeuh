@@ -5,8 +5,6 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://bytemeuh-farm.fr/</loc>
   <lastmod>2025-01-15T13:07:34+00:00</lastmod>
@@ -131,20 +129,18 @@
   <loc>https://bytemeuh-farm.fr/blog/articles/cuisine-saine-et-gourmande/</loc>
   <lastmod>2025-01-15T13:07:38+00:00</lastmod>
   <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bytemeuh-farm.fr/blog/recettes/salade-quinoa-legumes-grilles/</loc>
   <lastmod>2025-01-15T13:07:38+00:00</lastmod>
   <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bytemeuh-farm.fr/blog/recettes/pizza-chevre-miel/</loc>
   <lastmod>2025-01-15T13:07:38+00:00</lastmod>
   <changefreq>daily</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
-
-
 </urlset>
