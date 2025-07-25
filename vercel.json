@@ -1,184 +1,184 @@
 {
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=31536000; includeSubDomains; preload"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self' https://vercel.live/ https://www.youtube-nocookie.com https://play.google.com/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://vercel.live/ https://cdn.matomo.cloud/; style-src 'self' 'unsafe-inline'; img-src 'self' https://bytemeuh-farm.fr https://www.google.com; font-src 'self' https://fonts.googleapis.com; frame-src https://www.youtube-nocookie.com/; connect-src 'self' https://bytemeuhfarm.matomo.cloud/ https://vercel.live/;"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "https://bytemeuh-farm.fr"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Permissions-Policy",
-          "value": "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31556952, immutable"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/blog/article.html",
-      "destination": "/blog/recettes/tacos-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/article/",
-      "destination": "/blog/recettes/tacos-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/assets/static/favicon.ico",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/les-technologies-qui-transforment-notre-facon-de-cuisiner/",
-      "destination": "/blog/articles/technologies-transforment-cuisine/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/kebab-de-boeuf/",
-      "destination": "/blog/recettes/kebab-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/burgers-de-boeuf/",
-      "destination": "/blog/recettes/burgers-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/smartphones-revolution-agriculture/",
-      "destination": "/blog/articles/smartphones-revolution-agricole/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/ratatouille-provencale/",
-      "destination": "/blog/recettes/ratatouille-provencale/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/traditions-culinaires-ere-numerique/",
-      "destination": "/blog/articles/traditions-culinaires-ere-numerique/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/la-technologie-au-service-de-notre-bien-etre-alimentaire/",
-      "destination": "/blog/articles/technologie-bien-etre-alimentaire/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/elevage-intelligent-tech-bien-etre-animal/",
-      "destination": "/blog/articles/elevage-intelligent-bien-etre-animal/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/bao-buns-vegan/",
-      "destination": "/blog/recettes/bao-buns-vegan/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/tacos-de-boeuf/",
-      "destination": "/blog/recettes/tacos-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/burgers-boeuf/",
-      "destination": "/blog/recettes/burgers-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/technologies-transforment-cuisine/",
-      "destination": "/blog/articles/technologies-transforment-cuisine/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/kebab-boeuf/",
-      "destination": "/blog/recettes/kebab-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/smartphones-revolution-agricole/",
-      "destination": "/blog/articles/smartphones-revolution-agricole/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/traditions-culinaires-ere-numerique/",
-      "destination": "/blog/articles/traditions-culinaires-ere-numerique/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/technologie-bien-etre-alimentaire/",
-      "destination": "/blog/articles/technologie-bien-etre-alimentaire/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/elevage-intelligent-bien-etre-animal/",
-      "destination": "/blog/articles/elevage-intelligent-bien-etre-animal/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/tacos-boeuf/",
-      "destination": "/blog/recettes/tacos-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/burgers-boeuf/",
-      "destination": "/blog/recettes/burgers-boeuf/",
-      "statusCode": 301
-    },
-    {
-      "source": "/assets/images/elevage-intelligent.webp",
-      "destination": "/assets/images/vaches-tech.webp",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/articles/bytemeuh-innovation-consulting/",
-      "destination": "/",
-      "statusCode": 301
-    },
-    {
-      "source": "/faq/",
-      "destination": "/",
-      "statusCode": 301
-    },
-    {
-      "source": "/partenaires/",
-      "destination": "/",
-      "statusCode": 301
-    }
-  ],
-  "trailingSlash": true,
-  "cleanUrls": true
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{
+					"key": "Strict-Transport-Security",
+					"value": "max-age=31536000; includeSubDomains; preload"
+				},
+				{
+					"key": "X-XSS-Protection",
+					"value": "1; mode=block"
+				},
+				{
+					"key": "Content-Security-Policy",
+					"value": "default-src 'self' https://vercel.live/ https://www.youtube-nocookie.com https://play.google.com/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://vercel.live/ https://cdn.matomo.cloud/; style-src 'self' 'unsafe-inline'; img-src 'self' https://bytemeuh-farm.fr https://www.google.com; font-src 'self' https://fonts.googleapis.com; frame-src https://www.youtube-nocookie.com/; connect-src 'self' https://bytemeuhfarm.matomo.cloud/ https://vercel.live/;"
+				},
+				{
+					"key": "Access-Control-Allow-Origin",
+					"value": "https://bytemeuh-farm.fr"
+				},
+				{
+					"key": "X-Frame-Options",
+					"value": "SAMEORIGIN"
+				},
+				{
+					"key": "X-Content-Type-Options",
+					"value": "nosniff"
+				},
+				{
+					"key": "Referrer-Policy",
+					"value": "strict-origin-when-cross-origin"
+				},
+				{
+					"key": "Permissions-Policy",
+					"value": "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+				}
+			]
+		},
+		{
+			"source": "/assets/(.*)",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, max-age=31556952, immutable"
+				}
+			]
+		}
+	],
+	"redirects": [
+		{
+			"source": "/blog/article.html",
+			"destination": "/blog/recettes/tacos-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/article/",
+			"destination": "/blog/recettes/tacos-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/favicon.ico",
+			"destination": "/assets/static/favicon.ico",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/les-technologies-qui-transforment-notre-facon-de-cuisiner/",
+			"destination": "/blog/articles/technologies-transforment-cuisine/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/kebab-de-boeuf/",
+			"destination": "/blog/recettes/kebab-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/burgers-de-boeuf/",
+			"destination": "/blog/recettes/burgers-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/smartphones-revolution-agriculture/",
+			"destination": "/blog/articles/smartphones-revolution-agricole/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/ratatouille-provencale/",
+			"destination": "/blog/recettes/ratatouille-provencale/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/traditions-culinaires-ere-numerique/",
+			"destination": "/blog/articles/traditions-culinaires-ere-numerique/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/la-technologie-au-service-de-notre-bien-etre-alimentaire/",
+			"destination": "/blog/articles/technologie-bien-etre-alimentaire/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/elevage-intelligent-tech-bien-etre-animal/",
+			"destination": "/blog/articles/elevage-intelligent-bien-etre-animal/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/bao-buns-vegan/",
+			"destination": "/blog/recettes/bao-buns-vegan/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/tacos-de-boeuf/",
+			"destination": "/blog/recettes/tacos-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/burgers-boeuf/",
+			"destination": "/blog/recettes/burgers-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/technologies-transforment-cuisine/",
+			"destination": "/blog/articles/technologies-transforment-cuisine/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/kebab-boeuf/",
+			"destination": "/blog/recettes/kebab-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/smartphones-revolution-agricole/",
+			"destination": "/blog/articles/smartphones-revolution-agricole/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/traditions-culinaires-ere-numerique/",
+			"destination": "/blog/articles/traditions-culinaires-ere-numerique/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/technologie-bien-etre-alimentaire/",
+			"destination": "/blog/articles/technologie-bien-etre-alimentaire/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/elevage-intelligent-bien-etre-animal/",
+			"destination": "/blog/articles/elevage-intelligent-bien-etre-animal/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/tacos-boeuf/",
+			"destination": "/blog/recettes/tacos-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/burgers-boeuf/",
+			"destination": "/blog/recettes/burgers-boeuf/",
+			"statusCode": 301
+		},
+		{
+			"source": "/assets/images/elevage-intelligent.webp",
+			"destination": "/assets/images/vaches-tech.webp",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/articles/bytemeuh-innovation-consulting/",
+			"destination": "/",
+			"statusCode": 301
+		},
+		{
+			"source": "/faq/",
+			"destination": "/",
+			"statusCode": 301
+		},
+		{
+			"source": "/partenaires/",
+			"destination": "/",
+			"statusCode": 301
+		}
+	],
+	"trailingSlash": true,
+	"cleanUrls": true
 }
