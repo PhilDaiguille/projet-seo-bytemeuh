@@ -70,10 +70,9 @@ export default defineConfig({
   plugins: [
     compression({
       algorithms: [
-        ["gzip", { level: 9 }],
         ["brotliCompress", { level: 11 }],
-        ["zstandard", { level: 22 }],
       ],
+
       threshold: 1024,
       deleteOriginalAssets: false,
     })]
