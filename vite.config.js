@@ -15,14 +15,6 @@ htmlFiles.forEach(file => {
   input[name] = resolve(__dirname, file);
 });
 
-const sitemapRoutes = htmlFiles
-  .filter(file => file !== '404.html') // Exclure la page 404
-  .map(file => {
-    let route = file.replace(/\/index\.html$/, '/').replace(/^index\.html$/, '');
-    if (!route.startsWith('/')) route = '/' + route;
-    return route;
-  });
-
 export default defineConfig({
   root: '.',
   publicDir: 'public',
@@ -121,7 +113,6 @@ export default defineConfig({
     
     sitemap({
       hostname: 'https://bytemeuh.phildaiguille.fr',
-      dynamicRoutes: sitemapRoutes,
       exclude: ['/404', '/404.html'],
       changefreq: 'weekly',
       priority: 0.8,
