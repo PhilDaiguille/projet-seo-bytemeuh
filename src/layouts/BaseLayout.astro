@@ -36,7 +36,7 @@ const SITE_NAME = 'Bytemeuh';
 const SITE_URL = 'https://bytemeuh.phildaiguille.fr';
 
 const slug = Astro.url.pathname.replace(/^\/|\/$/g, '');
-const derivedOgImage = ogImage ?? `${SITE_URL}/assets/og/${slug || 'index'}.jpg`;
+const derivedOgImage = ogImage ?? `${SITE_URL}/assets/images/background.webp`;
 
 const currentPath = Astro.url.pathname;
 ---
@@ -66,6 +66,12 @@ const currentPath = Astro.url.pathname;
       article={article}
       noindex={noindex}
       graph={graph}
+      extraMeta={[
+        { name: 'twitter:title', content: `${title} | ${SITE_NAME}` },
+        ...(description ? [{ name: 'twitter:description', content: description }] : []),
+        { name: 'twitter:image', content: derivedOgImage },
+        { name: 'twitter:image:alt', content: ogImageAlt ?? title },
+      ]}
       extraLinks={[
         { rel: 'icon', type: 'image/svg+xml', href: '/assets/static/favicon.svg' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/assets/static/favicon-32x32.png' },

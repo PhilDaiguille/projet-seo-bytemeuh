@@ -11,6 +11,7 @@ export default defineConfig({
   experimental: {
     svgOptimizer: svgoOptimizer(),
   },
+  prefetch: true,
   integrations: [
     sitemap({
       entryLimit: 1000,
