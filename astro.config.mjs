@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig, svgoOptimizer} from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import seoGraph from '@jdevalk/astro-seo-graph/integration';
 
@@ -8,6 +8,9 @@ export default defineConfig({
   site: SITE_URL,
   trailingSlash: 'always',
   output: 'static',
+  experimental: {
+    svgOptimizer: svgoOptimizer(),
+  },
   integrations: [
     sitemap({
       entryLimit: 1000,
