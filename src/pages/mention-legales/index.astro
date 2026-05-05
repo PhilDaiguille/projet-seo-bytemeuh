@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Mentions Légales — Bytemeuh"
+  description="Mentions légales du site Bytemeuh. Éditeur, hébergeur, données personnelles et droits d'auteur."
+  canonical="https://bytemeuh.phildaiguille.fr/mention-legales/"
+  noindex={true}
+>
+  <nav aria-label="Fil d'ariane" class="breadcrumb">
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <span class="separator" aria-hidden="true">›</span>
+      <li aria-current="page">Mentions légales</li>
+    </ul>
+  </nav>
+
+  <section>
+    <h1>Mentions légales</h1>
+    <div class="article-content">
+      <h2>Éditeur du site</h2>
+      <p>
+        <strong>Bytemeuh</strong><br />
+        Site web : <a href="https://bytemeuh.phildaiguille.fr">bytemeuh.phildaiguille.fr</a><br />
+        Email : contact@bytemeuh.phildaiguille.fr<br />
+        Localisation : Paris, France
+      </p>
+
+      <h2>Hébergement</h2>
+      <p>
+        Ce site est hébergé par <strong>Vercel Inc.</strong><br />
+        340 Pine Street, Suite 701, San Francisco, CA 94104, USA
+      </p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>
+        L'ensemble du contenu présent sur ce site (textes, images, recettes) est la propriété exclusive de Bytemeuh.
+        Toute reproduction, même partielle, est interdite sans autorisation préalable.
+      </p>
+
+      <h2>Données personnelles</h2>
+      <p>
+        Ce site utilise Umami Analytics, une solution d'analyse web respectueuse de la vie privée, sans cookies de traçage.
+        Aucune donnée personnelle n'est collectée ou revendue.
+      </p>
+
+      <h2>Liens externes</h2>
+      <p>
+        Bytemeuh décline toute responsabilité concernant le contenu des sites externes vers lesquels des liens sont proposés.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

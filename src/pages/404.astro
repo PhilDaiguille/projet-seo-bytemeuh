@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page introuvable — Bytemeuh"
+  description="La page que vous recherchez n'existe pas ou a été déplacée. Retournez à l'accueil de Bytemeuh."
+  noindex={true}
+>
+  <div class="notfound">
+    <h1>404</h1>
+    <p>Page introuvable</p>
+    <a href="/">Retour à l'accueil</a>
+  </div>
+</BaseLayout>

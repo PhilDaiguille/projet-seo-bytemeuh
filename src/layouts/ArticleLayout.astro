@@ -1,0 +1,196 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { Image } from 'astro:assets';
+import RelatedArticles from '../components/RelatedArticles.astro';
+import FaqSection from '../components/FaqSection.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+}
+
+const { article } = Astro.props;
+const { data } = article;
+
+const SITE_URL = 'https://bytemeuh.phildaiguille.fr';
+const pageUrl = new URL(Astro.url.pathname, SITE_URL).toString();
+
+// Image URL : ogImage (string absolue) ou fallback vers public/assets/images/
+const imageUrl = data.ogImage ?? `${SITE_URL}/assets/images/${data.featuredImage?.src.split('/').pop() ?? ''}`;
+
+const faqGraph = data.faq && data.faq.length > 0
+  ? [{
+      '@type': 'FAQPage',
+      mainEntity: data.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    }]
+  : [];
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting',
+      headline: data.title,
+      description: data.description,
+      image: imageUrl,
+      author: {
+        '@type': 'Organization',
+        name: data.author,
+        url: SITE_URL,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Bytemeuh',
+        url: SITE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${SITE_URL}/assets/images/bytemeuh.webp`,
+        },
+      },
+      datePublished: data.publishDate.toISOString(),
+      dateModified: data.publishDate.toISOString(),
+      mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+      keywords: data.tags?.join(', '),
+      articleSection: data.category,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` },
+        { '@type': 'ListItem', position: 3, name: 'Articles', item: `${SITE_URL}/blog/articles/` },
+        { '@type': 'ListItem', position: 4, name: data.title, item: pageUrl },
+      ],
+    },
+    ...faqGraph,
+  ],
+};
+
+const canonicalUrl = pageUrl;
+
+const dateFormatted = data.publishDate.toLocaleDateString('fr-FR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  canonical={canonicalUrl}
+  ogType="article"
+  ogImage={data.ogImage}
+  ogImageAlt={data.featuredImageAlt}
+  article={{
+    publishedTime: data.publishDate,
+    tags: data.tags,
+    section: data.category,
+  }}
+  graph={graph}
+>
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="reading-progress" style="width:0%" aria-hidden="true"></div>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Fil d'ariane" class="breadcrumb">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </li>
+      <li><a href="/blog/articles/">Articles</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </li>
+      <li aria-current="page">{data.title}</li>
+    </ol>
+  </nav>
+
+  <div class="article-wrapper">
+    <!-- Hero image -->
+    {data.featuredImage && (
+      <figure class="article-hero" aria-label={data.featuredImageAlt ?? data.title}>
+        <Image
+          src={data.featuredImage}
+          alt={data.featuredImageAlt ?? data.title}
+          width={1200}
+          height={440}
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="article-hero-overlay" aria-hidden="true"></div>
+        <h1 class="article-hero-title">{data.title}</h1>
+      </figure>
+    )}
+
+    {!data.featuredImage && (
+      <h1 style="font-size: var(--text-4xl); margin-bottom: var(--space-6);">{data.title}</h1>
+    )}
+
+    <!-- Meta bar -->
+    <div class="article-header">
+      <div class="article-meta-bar" role="contentinfo" aria-label="Informations sur l'article">
+        <span class="article-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <strong>{dateFormatted}</strong>
+        </span>
+        <span class="article-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <strong>{data.author}</strong>
+        </span>
+        {data.category && (
+          <span class="article-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            <strong>{data.category}</strong>
+          </span>
+        )}
+        {data.tags && data.tags.length > 0 && (
+          <div class="card-tags" style="margin-left: auto;">
+            {data.tags.slice(0, 3).map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {data.description && (
+        <p class="article-intro">{data.description}</p>
+      )}
+    </div>
+
+    <!-- Article body -->
+    <div class="article-content">
+      <slot />
+    </div>
+
+    <!-- FAQ -->
+    {data.faq && data.faq.length > 0 && (
+      <FaqSection items={data.faq} />
+    )}
+  </div>
+
+  <!-- Reading progress script -->
+  <script is:inline>
+    const bar = document.getElementById('reading-progress');
+    if (bar) {
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = docHeight > 0 ? (scrollTop / docHeight * 100) + '%' : '0%';
+      }, { passive: true });
+    }
+  </script>
+
+  <RelatedArticles currentId={article.id} currentCategory={data.category} />
+
+</BaseLayout>

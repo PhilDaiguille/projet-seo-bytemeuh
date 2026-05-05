@@ -1,0 +1,498 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import heroImg from '../assets/images/background.webp';
+
+const recettes = await getCollection('recettes');
+const articles = await getCollection('articles');
+
+const latestRecettes = recettes
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+  .slice(0, 6);
+
+const latestArticles = articles
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+  .slice(0, 6);
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://bytemeuh.phildaiguille.fr/#website',
+      url: 'https://bytemeuh.phildaiguille.fr/',
+      name: 'Bytemeuh',
+      description: 'Ferme française engagée dans une agriculture durable et une cuisine saine.',
+      publisher: { '@id': 'https://bytemeuh.phildaiguille.fr/#organization' },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: { '@type': 'EntryPoint', urlTemplate: 'https://bytemeuh.phildaiguille.fr/?s={search_term_string}' },
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://bytemeuh.phildaiguille.fr/#organization',
+      name: 'Bytemeuh',
+      url: 'https://bytemeuh.phildaiguille.fr/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://bytemeuh.phildaiguille.fr/assets/images/bytemeuh.webp',
+        width: 512,
+        height: 512,
+      },
+      description: 'Ferme française engagée dans une agriculture durable, un élevage responsable et une cuisine saine.',
+      knowsAbout: ['agriculture biologique', 'élevage durable', 'cuisine saine', 'biotechnologie agricole'],
+      publishingPrinciples: 'https://bytemeuh.phildaiguille.fr/mention-legales/',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: "Qu'est-ce que Bytemeuh ?",
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Bytemeuh est une ferme française engagée dans une agriculture durable, combinant technologies innovantes et pratiques respectueuses de l'environnement.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: "Quels types de recettes propose Bytemeuh ?",
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Bytemeuh propose des recettes saines et gourmandes, incluant des plats végans, végétariens et des viandes françaises de qualité.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: "Comment Bytemeuh s'engage pour l'environnement ?",
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Bytemeuh utilise des technologies innovantes comme les capteurs connectés, les systèmes d'irrigation intelligents et la valorisation des déchets pour réduire son impact environnemental.",
+          },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Bytemeuh — Ferme durable et cuisine saine"
+  description="Découvrez Bytemeuh, une ferme française engagée dans une agriculture durable. Recettes saines, articles sur la biotechnologie agricole et l'élevage responsable."
+  canonical="https://bytemeuh.phildaiguille.fr/"
+  graph={graph}
+>
+
+  <!-- HERO BANNER -->
+  <figure class="hero-banner" aria-label="Paysage de la ferme Bytemeuh">
+    <Image
+      src={heroImg}
+      alt="Paysage de la ferme Bytemeuh en France — agriculture durable"
+      width={1200}
+      height={520}
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+    <div class="hero-banner-overlay" aria-hidden="true"></div>
+    <div class="hero-banner-content">
+      <span class="hero-eyebrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Ferme française durable
+      </span>
+      <h1 class="hero-title">Agriculture durable<br />&amp; cuisine saine</h1>
+      <p class="hero-subtitle">
+        Découvrez nos recettes gourmandes, nos articles sur la biotechnologie agricole et notre vision d'une alimentation responsable, depuis notre ferme en France.
+      </p>
+      <div class="hero-actions">
+        <a href="/blog/recettes/" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          Voir les recettes
+        </a>
+        <a href="/blog/articles/" class="btn btn-ghost">
+          Lire les articles
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </figure>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar" role="list" aria-label="Chiffres clés de Bytemeuh">
+    <div class="stat-item" role="listitem">
+      <div class="stat-value">{recettes.length}</div>
+      <div class="stat-label">Recettes publiées</div>
+    </div>
+    <div class="stat-item" role="listitem">
+      <div class="stat-value">{articles.length}</div>
+      <div class="stat-label">Articles rédigés</div>
+    </div>
+    <div class="stat-item" role="listitem">
+      <div class="stat-value">100%</div>
+      <div class="stat-label">Agriculture durable</div>
+    </div>
+    <div class="stat-item" role="listitem">
+      <div class="stat-value">FR</div>
+      <div class="stat-label">Produits français</div>
+    </div>
+  </div>
+
+  <!-- LATEST RECIPES -->
+  <section class="section" aria-labelledby="recettes-heading">
+    <div class="section-header">
+      <h2 class="section-title" id="recettes-heading">
+        <span class="section-title-accent" aria-hidden="true"></span>
+        Nos dernières recettes
+      </h2>
+      <a href="/blog/recettes/" class="section-link" aria-label="Voir toutes les recettes Bytemeuh">
+        Toutes les recettes
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="cards-grid">
+      {latestRecettes.map((recette) => (
+        <article class="card">
+          <a href={`/blog/recettes/${recette.id}/`} aria-label={`Recette : ${recette.data.title}`}>
+            <div class="card-image">
+              {recette.data.featuredImage && (
+                <Image
+                  src={recette.data.featuredImage}
+                  alt={recette.data.featuredImageAlt ?? recette.data.title}
+                  width={600}
+                  height={375}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+              <span class="card-badge badge-recipe">Recette</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                {recette.data.totalTime && (
+                  <span class="card-meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    {recette.data.totalTime.replace('PT','').replace('H',' h ').replace('M',' min').trim()}
+                  </span>
+                )}
+                {recette.data.difficulty && (
+                  <span class="card-meta-item">{recette.data.difficulty}</span>
+                )}
+              </div>
+              <h3 class="card-title">{recette.data.title}</h3>
+              <p class="card-description">{recette.data.description}</p>
+            </div>
+            {recette.data.tags && recette.data.tags.length > 0 && (
+              <div class="card-footer">
+                <div class="card-tags">
+                  {recette.data.tags.slice(0, 2).map((tag) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary)" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            )}
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- EXPERTISE STRIP -->
+  <section class="surface" style="margin-bottom:var(--space-12);" aria-labelledby="expertise-heading">
+    <h2 class="section-title" id="expertise-heading" style="margin-bottom:var(--space-3);">
+      <span class="section-title-accent" aria-hidden="true"></span>
+      Notre engagement
+    </h2>
+    <p style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:0;">
+      Bytemeuh allie tradition agricole française et technologies modernes pour une alimentation plus saine et plus respectueuse de la planète.
+    </p>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <p class="expertise-title">Agriculture durable</p>
+        <p class="expertise-desc">Des pratiques agricoles respectueuses de l'environnement, avec des intrants naturels et une gestion raisonnée des ressources.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
+        </div>
+        <p class="expertise-title">Technologie innovante</p>
+        <p class="expertise-desc">Capteurs connectés, systèmes d'irrigation intelligents et biotechnologie au service d'une ferme du futur.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        </div>
+        <p class="expertise-title">Cuisine saine & gourmande</p>
+        <p class="expertise-desc">Des recettes élaborées avec nos propres produits : viandes françaises, légumes de saison et alternatives véganes créatives.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST ARTICLES -->
+  <section class="section" aria-labelledby="articles-heading">
+    <div class="section-header">
+      <h2 class="section-title" id="articles-heading">
+        <span class="section-title-accent" aria-hidden="true"></span>
+        Nos derniers articles
+      </h2>
+      <a href="/blog/articles/" class="section-link" aria-label="Voir tous les articles Bytemeuh">
+        Tous les articles
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="cards-grid">
+      {latestArticles.map((article) => (
+        <article class="card">
+          <a href={`/blog/articles/${article.id}/`} aria-label={`Article : ${article.data.title}`}>
+            <div class="card-image">
+              {article.data.featuredImage && (
+                <Image
+                  src={article.data.featuredImage}
+                  alt={article.data.featuredImageAlt ?? article.data.title}
+                  width={600}
+                  height={375}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+              <span class="card-badge badge-article">Article</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  {article.data.publishDate.toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
+                </span>
+                {article.data.category && (
+                  <span class="card-meta-item">{article.data.category}</span>
+                )}
+              </div>
+              <h3 class="card-title">{article.data.title}</h3>
+              <p class="card-description">{article.data.description}</p>
+            </div>
+            {article.data.tags && article.data.tags.length > 0 && (
+              <div class="card-footer">
+                <div class="card-tags">
+                  {article.data.tags.slice(0, 2).map((tag) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary)" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            )}
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- DOMAINES D'EXPERTISE CULINAIRE -->
+  <section class="surface" style="margin-bottom:var(--space-12);" aria-labelledby="domaines-heading">
+    <h2 class="section-title" id="domaines-heading" style="margin-bottom:var(--space-3);">
+      <span class="section-title-accent" aria-hidden="true"></span>
+      Nos domaines d'expertise culinaire à la ferme Bytemeuh
+    </h2>
+    <p style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:0;">
+      De la tradition provençale aux créations fusion contemporaines, notre cuisine explore toutes les facettes du goût — avec toujours la même exigence : des ingrédients de qualité, issus d'une agriculture responsable.
+    </p>
+    <div class="expertise-grid" style="margin-top:var(--space-8);">
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+        </div>
+        <p class="expertise-title">Recettes traditionnelles</p>
+        <p class="expertise-desc">Plongez au cœur du patrimoine culinaire français ! Découvrez des recettes transmises de génération en génération, célébrant l'authenticité et les saveurs intemporelles de la cuisine française.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="expertise-title">Cuisine moderne</p>
+        <p class="expertise-desc">Revisitez les grands classiques ! Nos créations modernes réinventent la cuisine française en alliant tradition et innovation, pour des expériences gustatives uniques et actuelles.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <p class="expertise-title">Cuisine healthy</p>
+        <p class="expertise-desc">Alliez plaisir et bien-être avec nos recettes équilibrées. Découvrez des plats gourmands qui prennent soin de votre santé sans jamais faire de compromis sur le goût ou la qualité.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASTUCES ET CONSEILS -->
+  <section class="surface" style="margin-bottom:var(--space-12);" aria-labelledby="astuces-heading">
+    <h2 class="section-title" id="astuces-heading" style="margin-bottom:var(--space-3);">
+      <span class="section-title-accent" aria-hidden="true"></span>
+      Astuces et conseils culinaires de l'équipe Bytemeuh
+    </h2>
+    <p style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:var(--space-8);">
+      En cuisine, c'est souvent les petits détails qui font la différence ! Au fil des années, on a accumulé pas mal de tours de main qu'on a hâte de partager avec vous. De la manière de bien choisir ses produits aux techniques de cuisson qui changent tout, on vous livre tous nos secrets pour devenir un as des fourneaux.
+    </p>
+    <ul class="tips-checklist" aria-label="Exemples d'astuces Bytemeuh">
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Les gestes qui vous feront couper comme un chef</span>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Nos astuces pour que vos aliments restent frais plus longtemps</span>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Le b.a.-ba pour une viande toujours réussie</span>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span>Les associations de saveurs qui marchent à tous les coups</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- MEILLEURES ADRESSES FOOD-TECH -->
+  <section class="surface" style="margin-bottom:var(--space-12);" aria-labelledby="adresses-heading">
+    <h2 class="section-title" id="adresses-heading" style="margin-bottom:var(--space-3);">
+      <span class="section-title-accent" aria-hidden="true"></span>
+      Les meilleures adresses food-tech validées par Bytemeuh
+    </h2>
+    <p style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:0;">
+      Nous explorons la France pour dénicher les pépites qui marient innovation et gastronomie. Des petits bistrots traditionnels aux concepts futuristes, nous testons, dégustons et partageons nos expériences. Notre objectif ? Vous faire découvrir des lieux où la technologie sublime la cuisine.
+    </p>
+    <div class="expertise-grid" style="margin-top:var(--space-8);">
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <p class="expertise-title">Les tables traditionnelles 2.0</p>
+        <p class="expertise-desc">Une sélection d'adresses qui revisitent la gastronomie française avec des outils modernes : des QR codes interactifs aux techniques de cuisson high-tech, la tradition rencontre l'innovation.</p>
+      </div>
+      <div class="expertise-card">
+        <div class="expertise-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <p class="expertise-title">Les innovations food-tech</p>
+        <p class="expertise-desc">Découvrez les restaurants qui utilisent des imprimantes 3D alimentaires, des menus digitalisés ou des expériences immersives grâce à la réalité augmentée. Ces lieux repoussent les limites de la cuisine classique.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI CHOISIR BYTEMEUH -->
+  <section class="surface" style="margin-bottom:var(--space-12);" aria-labelledby="pourquoi-heading">
+    <h2 class="section-title" id="pourquoi-heading" style="margin-bottom:var(--space-3);">
+      <span class="section-title-accent" aria-hidden="true"></span>
+      Pourquoi choisir Bytemeuh ?
+    </h2>
+    <p style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:var(--space-8);">
+      Basé à Paris, Bytemeuh est plus qu'une simple ferme. Nous sommes un atelier qui combine passion, innovation et expertise pour répondre aux besoins des entreprises, des avocats et des passionnés de cuisine.
+    </p>
+    <ul class="tips-checklist" aria-label="Raisons de choisir Bytemeuh">
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span><strong>Une expertise reconnue</strong> : en technologie, développement web et consulting.</span>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span><strong>Des solutions personnalisées</strong> : adaptées à chaque client et chaque projet.</span>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span><strong>Un service sur mesure</strong> : de l'idée à la réalisation, nous vous accompagnons à chaque étape.</span>
+      </li>
+    </ul>
+    <div style="margin-top:var(--space-6);">
+      <a href="/contact/" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Contactez-nous
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="surface" aria-labelledby="faq-heading">
+    <h2 class="section-title" id="faq-heading" style="margin-bottom:var(--space-6);">
+      <span class="section-title-accent" aria-hidden="true"></span>
+      Questions fréquentes
+    </h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <details>
+          <summary>
+            Qu'est-ce que Bytemeuh ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Bytemeuh est une ferme française engagée dans une agriculture durable, combinant technologies innovantes et pratiques respectueuses de l'environnement. Nous partageons nos recettes, nos connaissances et notre passion pour une alimentation saine et responsable.</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>
+            Quels types de recettes propose Bytemeuh ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Bytemeuh propose des recettes saines et gourmandes, incluant des plats végans (bao buns jack-fruit, poke bowl), végétariens (ratatouille provençale) et des viandes françaises de qualité (burgers, tacos, kebab, ravioli au bœuf).</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>
+            Comment Bytemeuh s'engage pour l'environnement ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Bytemeuh utilise des technologies innovantes comme les capteurs connectés, les systèmes d'irrigation intelligents et la valorisation des déchets en biogaz pour réduire son impact environnemental et promouvoir une agriculture plus durable.</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>
+            Quels types de projets réalisez-vous ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Nous travaillons avec des avocats, des entreprises et des passionnés de cuisine pour développer des sites web, des plateformes interactives, des outils de gestion et bien plus encore. Chaque projet est traité avec une approche sur mesure.</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>
+            Comment intégrer la technologie dans votre entreprise ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Nos services de consulting vous permettent d'adopter des solutions tech modernes adaptées à vos besoins spécifiques, que ce soit pour automatiser des processus, améliorer votre présence en ligne ou optimiser votre expérience client.</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>
+            Proposez-vous des solutions adaptées aux petites entreprises et start-ups ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Oui, nous accompagnons les petites entreprises et start-ups en leur proposant des solutions accessibles et évolutives, allant de la création de sites web professionnels à la mise en place de stratégies digitales innovantes.</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>
+            Travaillez-vous avec des professionnels de la cuisine ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Absolument ! Nous créons des plateformes pour les passionnés de cuisine et les professionnels, comme des sites de recettes interactifs, des outils pour gérer des cours de cuisine en ligne ou des applications de gestion de restaurant.</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>
+            Pourquoi choisir Bytemeuh pour votre projet digital ?
+            <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </summary>
+          <p>Basés à Paris, nous sommes un atelier spécialisé dans le développement web et le consulting. Notre approche combine expertise, créativité et innovation pour répondre aux besoins spécifiques des avocats, des entreprises et des passionnés de cuisine.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
