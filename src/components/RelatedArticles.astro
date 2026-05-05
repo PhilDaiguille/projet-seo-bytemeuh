@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  currentId: string;
+  currentCategory?: string;
+  limit?: number;
+}
+
+const { currentId, currentCategory, limit = 3 } = Astro.props;
+
+const all = await getCollection('articles');
+
+// Même catégorie d'abord (hors courant), puis les autres par date, sans doublon
+const sameCategory = all
+  .filter((a) => a.id !== currentId && a.data.category === currentCategory)
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const others = all
+  .filter((a) => a.id !== currentId && a.data.category !== currentCategory)
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+const related: CollectionEntry<'articles'>[] = [...sameCategory, ...others].slice(0, limit);
+---
+
+{related.length > 0 && (
+  <section class="related-section" aria-labelledby="related-articles-heading">
+    <div class="related-header">
+      <h2 class="related-title" id="related-articles-heading">
+        <span class="section-title-accent" aria-hidden="true"></span>
+        Articles qui pourraient vous intéresser
+      </h2>
+      <a href="/blog/articles/" class="related-link">
+        Tous les articles
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="related-grid">
+      {related.map((article) => (
+        <article class="related-card">
+          <a href={`/blog/articles/${article.id}/`} aria-label={`Article : ${article.data.title}`}>
+            {article.data.featuredImage && (
+              <div class="related-card-image">
+                <Image
+                  src={article.data.featuredImage}
+                  alt={article.data.featuredImageAlt ?? article.data.title}
+                  width={480}
+                  height={300}
+                  loading="lazy"
+                  decoding="async"
+                />
+                {article.data.category && (
+                  <span class="related-card-badge">{article.data.category}</span>
+                )}
+              </div>
+            )}
+            <div class="related-card-body">
+              <div class="related-card-meta">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  {article.data.publishDate.toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
+                </span>
+                {article.data.category && (
+                  <span>{article.data.category}</span>
+                )}
+              </div>
+              <h3 class="related-card-title">{article.data.title}</h3>
+              <p class="related-card-desc">{article.data.description}</p>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+)}
