@@ -45,6 +45,17 @@ tips:
   - "Température de l'eau cruciale : 37°C pour une levée parfaite"
   - "Ne pas trop remplir les bao pour pouvoir les fermer facilement"
   - "Préparez la marinade à l'avance pour plus de saveurs"
+steps:
+  - name: "Préparation de la pâte"
+    text: "Dans un bol, mélangez la farine avec la levure. Ajoutez progressivement les liquides tièdes et pétrissez jusqu'à obtention d'une pâte souple."
+  - name: "Le façonnage signature"
+    text: "Après 1h de levée, divisez la pâte en 8 portions. Étalez chaque portion en cercle et pliez-la en demi-lune pour obtenir la forme caractéristique des bao."
+  - name: "Préparation du Jack-fruit"
+    text: "Effilochez le jack-fruit et faites-le mariner dans notre sauce signature pendant 30 minutes minimum."
+  - name: "Cuisson vapeur"
+    text: "Cuisez les bao dans un panier vapeur pendant 10 minutes jusqu'à ce qu'ils soient moelleux et gonflés."
+  - name: "L'assemblage final"
+    text: "Garnissez généreusement chaque bao de jack-fruit mariné, ajoutez les pickles maison, la mayonnaise végétale et la coriandre fraîche."
 variations:
   - "Version champignons king oyster pour plus d'umami"
   - "Option tempeh fumé maison"

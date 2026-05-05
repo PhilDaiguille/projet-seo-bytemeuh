@@ -49,6 +49,17 @@ tips:
   - "La cuisson séparée des légumes est essentielle pour préserver leurs saveurs distinctes."
   - "N'hésitez pas à préparer la ratatouille la veille, elle n'en sera que meilleure."
   - "Utilisez des légumes de saison bien mûrs pour plus de saveur."
+steps:
+  - name: "Préparation des légumes"
+    text: "Lavez tous les légumes. Coupez les aubergines et les courgettes en cubes de 2-3 cm. Épépinez les poivrons et coupez-les en lanières. Pelez et coupez les oignons en lamelles. Pelez et émincez l'ail. Coupez les tomates en quartiers."
+  - name: "Cuisson des aubergines"
+    text: "Dans une grande cocotte, faites chauffer un généreux filet d'huile d'olive. Faites revenir les aubergines par petites quantités jusqu'à ce qu'elles soient dorées. Réservez."
+  - name: "Cuisson des courgettes"
+    text: "Dans la même cocotte, faites revenir les courgettes jusqu'à ce qu'elles soient légèrement colorées mais encore fermes. Réservez avec les aubergines."
+  - name: "Préparation de la base"
+    text: "Faites revenir les oignons et l'ail jusqu'à ce qu'ils deviennent translucides. Ajoutez les poivrons et laissez-les cuire 5 minutes. Incorporez les tomates, le thym et le laurier."
+  - name: "Assemblage final"
+    text: "Remettez tous les légumes dans la cocotte. Salez, poivrez. Laissez mijoter à feu doux pendant 30 minutes en remuant délicatement de temps en temps. Ajoutez le basilic ciselé avant de servir."
 variations:
   - "Ajoutez des pommes de terre pour une version plus consistante."
   - "Incorporez des champignons de Paris pour plus de texture."

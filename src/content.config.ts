@@ -6,6 +6,12 @@ const faqItem = z.object({
   answer: z.string(),
 });
 
+const recipeStep = z.object({
+  name: z.string(),
+  text: z.string(),
+  image: z.string().optional(), // URL absolue optionnelle
+});
+
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/articles' }),
   schema: ({ image: img }) => z.object({
@@ -56,6 +62,7 @@ const recettes = defineCollection({
         reviewCount: z.string(),
       })
       .optional(),
+    steps: z.array(recipeStep).optional(),
     tips: z.array(z.string()).optional(),
     variations: z.array(z.string()).optional(),
     faq: z.array(faqItem).optional(),

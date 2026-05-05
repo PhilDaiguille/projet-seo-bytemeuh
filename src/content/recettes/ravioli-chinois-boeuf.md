@@ -43,6 +43,15 @@ tips:
   - "Humidifiez bien les bords des ravioli pour qu'ils se soudent parfaitement."
   - "Vous pouvez congeler les ravioli crus pour les cuire plus tard."
   - "Servez avec une sauce ponzu pour une touche d'acidité."
+steps:
+  - name: "Préparation de la farce"
+    text: "Dans un grand bol, mélangez la viande de bœuf hachée, l'oignon, l'ail, le gingembre, la sauce soja, la sauce huître, l'huile de sésame et la coriandre. Assaisonnez avec du sel et du poivre."
+  - name: "Façonnage des ravioli"
+    text: "Disposez une feuille de pâte à ravioli sur une surface propre. Placez une cuillerée de farce au centre. Humidifiez les bords de la pâte avec un peu d'eau et pliez-la en forme de ravioli."
+  - name: "Cuisson"
+    text: "Faites cuire les ravioli dans une casserole d'eau bouillante pendant 5-7 minutes, jusqu'à ce qu'ils soient bien cuits et flottent à la surface."
+  - name: "Service"
+    text: "Servez les ravioli chauds avec une sauce de votre choix, comme de la sauce soja ou de la sauce piquante."
 variations:
   - "Remplacez le bœuf par du porc haché pour une version plus traditionnelle."
   - "Ajoutez des champignons shiitake finement hachés pour plus d'umami."

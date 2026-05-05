@@ -46,6 +46,17 @@ tips:
   - "Utilisez un miel liquide de qualité, idéalement un miel d'acacia qui apportera de la douceur sans masquer les autres saveurs."
   - "Pour une pâte encore plus croustillante, préchauffez votre plaque de cuisson avant d'y déposer la pizza."
   - "N'ajoutez le miel qu'à la sortie du four pour préserver sa saveur et éviter qu'il ne caramélise trop."
+steps:
+  - name: "Préparation de la pâte"
+    text: "Dans un saladier, mélangez la farine avec la levure et le sel. Ajoutez l'eau tiède et l'huile d'olive. Pétrissez pendant 10 minutes jusqu'à obtenir une pâte souple. Formez une boule, couvrez et laissez lever 2 heures dans un endroit tiède."
+  - name: "Préparation des garnitures"
+    text: "Émincez finement l'oignon et faites-le revenir dans un peu d'huile d'olive jusqu'à ce qu'il devienne translucide. Si vous utilisez des lardons, faites-les dorer séparément."
+  - name: "Étalage de la pâte"
+    text: "Dégazez la pâte et étalez-la sur un plan de travail fariné pour former un cercle d'environ 30cm de diamètre. Déposez-la sur une plaque de cuisson recouverte de papier sulfurisé."
+  - name: "Garniture de la pizza"
+    text: "Étalez une fine couche de crème fraîche sur la pâte. Répartissez les oignons caramélisés, puis émiettez le fromage de chèvre. Ajoutez les lardons si vous en utilisez. Parsemez de thym frais."
+  - name: "Cuisson"
+    text: "Enfournez dans un four préchauffé à 220°C pendant 15 minutes, jusqu'à ce que la pâte soit dorée et le fromage légèrement gratiné. À la sortie du four, arrosez de miel et ajoutez un tour de moulin à poivre."
 variations:
   - "Ajoutez des noix concassées pour plus de croquant."
   - "Remplacez le miel par du miel de châtaignier pour une saveur plus prononcée."

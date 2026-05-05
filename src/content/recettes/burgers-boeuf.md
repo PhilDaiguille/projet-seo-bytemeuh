@@ -47,6 +47,15 @@ tips:
   - "Pour des burgers encore plus juteux, choisissez de la viande avec un peu de gras (15-20%)."
   - "Vous pouvez ajouter des épices à la viande, comme du paprika ou du cumin, pour plus de saveur."
   - "Servez avec des frites maison ou une salade fraîche pour un repas complet."
+steps:
+  - name: "Préparation de la viande"
+    text: "Dans un grand bol, mélangez la viande hachée, l'oignon, l'œuf et la moutarde. Assaisonnez avec du sel et du poivre. Formez des galettes de la taille de vos pains à burger."
+  - name: "Cuisson des burgers"
+    text: "Dans une poêle ou sur un grill préchauffé, faites cuire les galettes de bœuf pendant 4-5 minutes de chaque côté, jusqu'à ce qu'elles soient bien dorées. Ajoutez une tranche de fromage sur chaque galette pendant la dernière minute de cuisson pour qu'elle fonde."
+  - name: "Préparation des pains"
+    text: "Pendant ce temps, toastez les pains à burger sur le grill ou dans une poêle pour qu'ils soient légèrement dorés."
+  - name: "Assemblage"
+    text: "Sur la moitié inférieure de chaque pain, placez une galette de bœuf, puis ajoutez les garnitures de votre choix : salade, tomates, pickles et condiments."
 variations:
   - "Ajoutez des champignons sautés pour une touche umami."
   - "Remplacez le bœuf par de l'agneau pour un goût différent."

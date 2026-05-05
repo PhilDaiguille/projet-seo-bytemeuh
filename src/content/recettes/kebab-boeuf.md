@@ -52,6 +52,17 @@ tips:
   - "Pour des tranches de viande plus fines, placez la viande 30 minutes au congélateur avant de la couper."
   - "Préparez la sauce blanche maison en mélangeant du yaourt grec avec de l'ail, du citron et des herbes."
   - "Pour une version plus légère, utilisez des galettes de blé complet."
+steps:
+  - name: "Marinade de la viande"
+    text: "Dans un bol, mélangez l'huile d'olive avec l'ail écrasé, le paprika, le cumin, l'origan, le thym, le sel et le poivre. Ajoutez les lamelles de bœuf et laissez mariner au moins 2 heures au réfrigérateur."
+  - name: "Préparation des légumes"
+    text: "Lavez et coupez tous les légumes : les tomates et le concombre en rondelles, l'oignon en fines lamelles, et la laitue en lanières."
+  - name: "Cuisson de la viande"
+    text: "Dans une grande poêle ou sur une plancha, faites cuire la viande marinée à feu vif pendant 8-10 minutes en remuant régulièrement jusqu'à ce qu'elle soit bien dorée."
+  - name: "Préparation des pains"
+    text: "Réchauffez les pains pita ou les galettes quelques minutes au four ou à la poêle."
+  - name: "Assemblage"
+    text: "Garnissez les pains avec la viande, les légumes frais, et ajoutez la sauce blanche et la sauce piquante selon votre goût."
 variations:
   - "Remplacez le bœuf par de l'agneau pour une version plus traditionnelle."
   - "Ajoutez des pickles d'oignons rouges pour plus de saveur."

@@ -52,6 +52,15 @@ tips:
   - "Utilisez du riz sushi pour une texture parfaite"
   - "Marinez le tofu à l'avance pour plus de saveurs"
   - "Ajoutez des graines de sésame grillées pour une touche croquante"
+steps:
+  - name: "Préparation du riz"
+    text: "Rincez le riz sushi jusqu'à ce que l'eau soit claire. Faites-le cuire avec l'eau selon les instructions du paquet. Une fois cuit, mélangez avec le vinaigre de riz, le sucre et le sel. Laissez refroidir."
+  - name: "Marinade du tofu"
+    text: "Coupez le tofu en dés et faites-le mariner dans la sauce soja, le vinaigre de riz et le sirop d'érable pendant au moins 30 minutes. Faites revenir les dés de tofu dans une poêle chaude jusqu'à ce qu'ils soient dorés."
+  - name: "Préparation des légumes"
+    text: "Coupez l'avocat, le concombre, la carotte et la mangue en fines lamelles. Réservez."
+  - name: "Assemblage du Poke Bowl"
+    text: "Dans un bol, disposez le riz sushi refroidi. Ajoutez les dés de tofu mariné, les lamelles de légumes et de mangue. Garnissez de coriandre fraîche et de graines de sésame. Ajoutez un filet de sauce sriracha si désiré."
 variations:
   - "Version avec des edamame pour plus de protéines"
   - "Option avec des algues nori pour un goût marin"

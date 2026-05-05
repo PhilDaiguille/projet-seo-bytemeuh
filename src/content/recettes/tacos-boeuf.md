@@ -50,6 +50,17 @@ tips:
   - "Pour plus de saveur, préparez la viande quelques heures à l'avance et laissez-la mariner avec les épices."
   - "Choisissez des tortillas de taille moyenne pour faciliter la dégustation."
   - "Servez avec des quartiers de citron vert pour plus de fraîcheur."
+steps:
+  - name: "Préparation des ingrédients"
+    text: "Dans une poêle à feu moyen, faites chauffer un filet d'huile d'olive. Ajoutez l'oignon et l'ail émincés, puis faites-les revenir jusqu'à ce qu'ils deviennent translucides et légèrement dorés."
+  - name: "Cuisson du bœuf"
+    text: "Incorporez les dés de bœuf et faites-les cuire pendant 5-7 minutes en remuant régulièrement. La viande doit être bien dorée sur toutes ses faces. Assaisonnez avec le cumin, le paprika et le chili si désiré. Salez et poivrez selon votre goût."
+  - name: "Ajout des légumes"
+    text: "Ajoutez le poivron rouge et poursuivez la cuisson 3-4 minutes supplémentaires jusqu'à ce qu'il soit légèrement croquant."
+  - name: "Préparation des tortillas"
+    text: "Pendant ce temps, réchauffez les tortillas soit dans une poêle sèche, soit au micro-ondes entre deux feuilles de papier absorbant."
+  - name: "Assemblage"
+    text: "Garnissez chaque tortilla de préparation au bœuf. Ajoutez des tranches d'avocat, parsemez de coriandre fraîche, de fromage râpé et terminez par une cuillère de crème aigre."
 variations:
   - "Remplacez le bœuf par du poulet ou du porc pour varier les plaisirs."
   - "Ajoutez des haricots noirs réchauffés pour une version plus consistante."

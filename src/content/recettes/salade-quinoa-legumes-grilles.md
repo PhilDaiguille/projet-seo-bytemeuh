@@ -47,6 +47,13 @@ tips:
   - "Utilisez des légumes de saison pour plus de fraîcheur"
   - "Ajoutez des graines de grenade pour une touche sucrée"
   - "Préparez le quinoa à l'avance pour gagner du temps"
+steps:
+  - name: "Préparation du quinoa"
+    text: "Rincez le quinoa et faites-le cuire dans l'eau bouillante pendant 15 minutes. Égouttez et laissez refroidir."
+  - name: "Grillade des légumes"
+    text: "Coupez les légumes en morceaux et faites-les griller au four avec un filet d'huile d'olive pendant 20 minutes à 200°C."
+  - name: "Assemblage de la salade"
+    text: "Mélangez le quinoa refroidi avec les légumes grillés. Assaisonnez avec le jus de citron, le sel, le poivre et la coriandre fraîche. Ajoutez la feta si désiré."
 variations:
   - "Version avec des pois chiches grillés pour plus de protéines"
   - "Option avec des épinards frais"

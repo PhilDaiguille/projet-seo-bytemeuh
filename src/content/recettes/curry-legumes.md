@@ -54,6 +54,17 @@ tips:
   - "Faites toujours revenir la pâte de curry dans l'huile chaude avant d'ajouter les légumes — c'est ce qui libère tous ses arômes."
   - "Ajoutez le lait de coco en fin de cuisson et évitez de faire bouillir vigoureusement pour conserver sa douceur crémeuse."
   - "La patate douce est la clé de la texture : elle fond légèrement et épaissit naturellement la sauce."
+steps:
+  - name: "Préparation des légumes"
+    text: "Épluchez et coupez la patate douce et les carottes en dés de 2 cm. Coupez la courgette en rondelles épaisses et le poivron en lanières. Égouttez et rincez les pois chiches."
+  - name: "Faire revenir les aromates"
+    text: "Dans une grande cocotte ou sauteuse, faites chauffer l'huile à feu moyen. Ajoutez l'oignon émincé et faites-le revenir 5 minutes. Ajoutez l'ail et le gingembre râpés, puis la pâte de curry, le curcuma, le cumin et la coriandre. Faites revenir 2 minutes en remuant constamment."
+  - name: "Cuisson des légumes durs"
+    text: "Incorporez la patate douce et les carottes. Mélangez bien pour enrober les légumes des épices. Ajoutez 200ml d'eau, couvrez et laissez cuire 10 minutes à feu moyen."
+  - name: "Ajout des légumes tendres et du lait de coco"
+    text: "Ajoutez le poivron, la courgette et les pois chiches. Versez le lait de coco. Salez et poivrez. Mélangez délicatement et laissez mijoter à feu doux, à découvert, pendant 15 minutes supplémentaires."
+  - name: "Ajustement et service"
+    text: "Goûtez et ajustez l'assaisonnement. Si la sauce est trop épaisse, ajoutez un peu d'eau ; si elle est trop liquide, laissez réduire quelques minutes de plus. Servez sur un lit de riz basmati, parsemé de coriandre fraîche ciselée."
 variations:
   - "Ajoutez des épinards frais 2 minutes avant la fin pour une touche de verdure et de fer."
   - "Version plus protéinée : incorporez du tofu ferme grillé à la place des pois chiches."
