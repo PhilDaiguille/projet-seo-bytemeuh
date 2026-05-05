@@ -52,7 +52,7 @@ const graph = {
         },
       },
       datePublished: data.publishDate.toISOString(),
-      dateModified: data.publishDate.toISOString(),
+      dateModified: (data.updatedDate ?? data.publishDate).toISOString(),
       mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
       keywords: data.tags?.join(', '),
       articleSection: data.category,
@@ -88,6 +88,7 @@ const dateFormatted = data.publishDate.toLocaleDateString('fr-FR', {
   ogImageAlt={data.featuredImageAlt}
   article={{
     publishedTime: data.publishDate,
+    modifiedTime: data.updatedDate,
     tags: data.tags,
     section: data.category,
   }}

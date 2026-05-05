@@ -9,7 +9,7 @@ faq:
   - question: "Quelle est la différence entre épices et aromates ?"
     answer: "Les épices sont des parties séchées de plantes (graines, écorces, racines). Les aromates sont des herbes fraîches ou séchées (basilic, thym, persil). La distinction est culinaire plus que botanique."
 title: "Histoire des épices : routes de la soie et gastronomie"
-description: "Découvrez l'histoire fascinante des épices, ces trésors qui ont façonné l'économie mondiale, déclenché des guerres et transformé la gastronomie depuis l'Antiquité jusqu'à nos assiettes."
+description: "Poivre monnaie d'échange, cannelle des pharaons, piment qui a changé la gastronomie mondiale : l'histoire fascinante des épices, de l'Antiquité à nos assiettes."
 publishDate: 2025-01-20
 author: "Bytemeuh Farm"
 category: "Culture"

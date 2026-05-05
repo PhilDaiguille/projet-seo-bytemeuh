@@ -8,8 +8,8 @@ faq:
     answer: "Le risque existe si on perd le contexte émotionnel et les gestes. C'est pourquoi les vidéos avec les ainés sont précieuses : elles capturent bien plus qu'une liste d'ingrédients."
   - question: "Comment partager des recettes régionales avec une communauté plus large ?"
     answer: "Des plateformes comme Marmiton, Instagram ou des groupes Facebook locaux permettent de diffuser. Mais aussi des associations de patrimoine gastronomique régional qui documentent et préservent."
-title: "Traditions culinaires et ère numérique"
-description: "Préservez et enrichissez vos traditions culinaires grâce aux outils numériques, des recettes familiales aux passions culinaires partagées."
+title: "Traditions culinaires à l'ère numérique"
+description: "Numérisation, livres interactifs, ateliers en ligne : comment préserver et enrichir les traditions culinaires familiales grâce aux outils numériques d'aujourd'hui."
 publishDate: 2024-11-02
 author: "Bytemeuh Farm"
 category: "Culture"
@@ -19,7 +19,7 @@ featuredImageAlt: "Traditions culinaires familiales préservées grâce au numé
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/traditions-numeriques.webp"
 ---
 
-Les recettes de famille, souvent oubliées, retrouvent aujourd'hui une nouvelle vie grâce à la technologie. Découvrons comment le numérique nous aide à préserver et à faire évoluer notre patrimoine culinaire.
+Les recettes de famille, souvent oubliées, retrouvent aujourd'hui une nouvelle vie grâce à la technologie. Découvrons comment le numérique nous aide à préserver et à faire évoluer notre patrimoine culinaire — un sujet qui rejoint notre réflexion sur la façon dont les [technologies transforment la cuisine moderne](/blog/articles/technologies-transforment-cuisine/).
 
 ## La transmission culinaire à l'ère numérique
 
@@ -93,4 +93,4 @@ Les recettes familiales sont bien plus que de simples instructions de cuisine. E
 
 La rencontre entre traditions culinaires et numérique crée une nouvelle façon de préserver notre patrimoine gastronomique. Ce n'est pas seulement une modernisation, mais une véritable renaissance qui permet de garder et partager nos précieuses recettes.
 
-Le numérique devient ainsi le gardien de nos traditions culinaires, les transmettant aux générations futures tout en les enrichissant avec de nouvelles idées.
+Le numérique devient ainsi le gardien de nos traditions culinaires, les transmettant aux générations futures tout en les enrichissant avec de nouvelles idées. Ces traditions se prolongent dans nos recettes du terroir : découvrez notre [ratatouille provençale](/blog/recettes/ratatouille-provencale/) ou notre [shakshuka maison aux œufs pochés](/blog/recettes/shakshuka-maison/), deux plats enracinés dans une histoire culinaire riche et transmis avec soin.

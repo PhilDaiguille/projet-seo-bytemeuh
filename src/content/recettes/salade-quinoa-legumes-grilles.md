@@ -9,7 +9,7 @@ faq:
   - question: "Le quinoa est-il vraiment une protéine complète ?"
     answer: "Oui, c'est l'un des rares végétaux à contenir les 9 acides aminés essentiels. Avec 14 g de protéines pour 100 g cuit, il est excellent pour une alimentation végétarienne ou vegan."
 title: "Recette de salade de quinoa et légumes grillés"
-description: "Découvrez notre recette de salade de quinoa et légumes grillés, une explosion de saveurs et de couleurs, parfaite pour un repas sain et équilibré."
+description: "Quinoa protéiné, légumes grillés au four, vinaigrette citronnée : une salade complète et colorée, idéale en meal prep ou comme plat principal végétarien léger et rassasiant."
 descriptionLong: "La recette signature de la salade de quinoa et légumes grillés de Bytemeuh, une explosion de saveurs et de couleurs. Le quinoa, riche en protéines et en fibres, est accompagné de légumes grillés qui apportent une touche fumée et savoureuse."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"

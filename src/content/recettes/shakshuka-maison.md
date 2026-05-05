@@ -9,7 +9,7 @@ faq:
   - question: "Peut-on rendre le shakshuka végane ?"
     answer: "Oui : remplacez les œufs par du tofu soyeux coupé en dés posé sur la sauce, ou par des pois chiches. La base tomate épicée est déjà naturellement végane."
 title: "Recette de shakshuka maison aux œufs pochés"
-description: "Découvrez notre recette de shakshuka maison, des œufs pochés dans une sauce tomate épicée aux poivrons. Un plat du Moyen-Orient savoureux, sain et rapide à préparer."
+description: "Œufs pochés dans une sauce tomate épicée aux poivrons et cumin : le shakshuka moyen-oriental en version maison, prêt en 25 min, parfait du brunch au dîner."
 descriptionLong: "La shakshuka maison de Bytemeuh : des œufs pochés à la perfection dans une sauce tomate riche aux poivrons et épices moyen-orientales, pour un repas sain et réconfortant en moins de 30 minutes."
 publishDate: 2025-01-10
 author: "Bytemeuh Farm"

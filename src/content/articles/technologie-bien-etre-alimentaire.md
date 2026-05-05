@@ -8,18 +8,18 @@ faq:
     answer: "Ils permettent de corréler alimentation, activité et ressenti. Les études montrent qu'ils augmentent la conscience de soi — mais la durabilité des changements dépend surtout de la motivation personnelle."
   - question: "Comment distinguer les vrais conseils nutritionnels des tendances marketing ?"
     answer: "Privilégiez les sources validées (ANSES, INSERM, Registered Dietitian). Méfiez-vous des 'superaliments' miracles et des régimes exclusifs. La science nutritionnelle préconise toujours la variété et l'équilibre."
-title: "La technologie au service du bien-être alimentaire"
-description: "Explorez comment la technologie, des apps aux objets connectés, révolutionne l'alimentation et le bien-être pour une vie plus saine."
+title: "Nutrition connectée : apps et objets pour mieux manger"
+description: "Apps de suivi nutritionnel, objets connectés, nutrigénomique : comment la technologie vous aide à mieux comprendre vos besoins alimentaires et adopter une alimentation plus consciente."
 publishDate: 2024-10-31
 author: "Bytemeuh Farm"
 category: "Alimentation"
-tags: ["technologie", "alimentation", "bien-être", "numérique"]
+tags: ["nutrition connectée", "suivi nutritionnel", "alimentation consciente", "bien-être alimentaire"]
 featuredImage: "../../assets/images/technologie-alimentaire.webp"
 featuredImageAlt: "Application mobile de suivi nutritionnel et alimentation saine"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/technologie-alimentaire.webp"
 ---
 
-Dans notre monde hyperconnecté, la technologie s'invite désormais jusque dans nos assiettes. Loin d'être une intrusion, elle devient une alliée précieuse pour nous aider à mieux manger et à prendre soin de notre bien-être.
+Dans notre monde hyperconnecté, la technologie s'invite désormais jusque dans nos assiettes. Loin d'être une intrusion, elle devient une alliée précieuse pour nous aider à mieux manger et à prendre soin de notre bien-être — tout comme elle transforme la façon dont nous [cultivons et élevons nos animaux à la ferme](/blog/articles/elevage-intelligent-bien-etre-animal/).
 
 ## L'alimentation consciente à l'ère numérique
 
@@ -73,6 +73,6 @@ Les applications de suivi alimentaire peuvent désormais :
 
 ## Conclusion
 
-La technologie nous offre des outils formidables pour prendre soin de notre alimentation et de notre bien-être. L'important est de l'utiliser avec discernement, comme un support plutôt qu'une contrainte.
+La technologie nous offre des outils formidables pour prendre soin de notre alimentation et de notre bien-être. L'important est de l'utiliser avec discernement, comme un support plutôt qu'une contrainte. Pour mettre en pratique cette alimentation consciente, explorez nos recettes équilibrées comme la [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/) ou le [curry de légumes maison aux épices naturelles](/blog/recettes/curry-legumes/).
 
 La meilleure technologie est celle qui nous aide à retrouver notre nature profonde, pas celle qui nous en éloigne.

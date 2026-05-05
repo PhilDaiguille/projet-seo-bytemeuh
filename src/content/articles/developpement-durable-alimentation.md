@@ -9,7 +9,7 @@ faq:
   - question: "Que signifie le label Agriculture Biologique par rapport à la durabilité ?"
     answer: "Le bio interdit les pesticides de synthèse et les OGM, favorise la biodiversité et les sols vivants. Mais il ne garantit pas la durabilité sociale ou le circuit court — il faut croiser avec d'autres labels."
 title: "Développement durable et alimentation durable"
-description: "Découvrez les enjeux environnementaux, sociaux et économiques de l'alimentation durable dans le cadre du développement durable."
+description: "30 % des émissions mondiales viennent des systèmes alimentaires. Comprendre les enjeux environnementaux, sociaux et économiques pour adopter une alimentation véritablement durable."
 publishDate: 2024-12-28
 author: "Bytemeuh Farm"
 category: "Développement Durable"
@@ -19,7 +19,7 @@ featuredImageAlt: "Développement durable et alimentation responsable"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/developpement-durable.webp"
 ---
 
-L'alimentation durable constitue une pierre angulaire du développement durable, en conciliant préservation de l'environnement, équité sociale et viabilité économique.
+L'alimentation durable constitue une pierre angulaire du développement durable, en conciliant préservation de l'environnement, équité sociale et viabilité économique. Ces principes guident chaque choix à la ferme Bytemeuh, depuis nos pratiques d'[élevage intelligent](/blog/articles/elevage-intelligent-bien-etre-animal/) jusqu'aux ingrédients que nous utilisons dans nos recettes.
 
 ## Comprendre l'alimentation durable : un enjeu global
 
@@ -54,9 +54,11 @@ Les Objectifs de Développement Durable ciblent l'alimentation mondiale :
 ## Stratégies concrètes
 
 - Soutenir l'agriculture familiale et durable.
-- Adopter des pratiques agroécologiques.
+- Adopter des pratiques agroécologiques, comme celles que nous expérimentons grâce aux [innovations biotechnologiques](/blog/articles/biotechnologie-agriculture-bio/).
 - Encourager les systèmes alimentaires locaux.
 - Favoriser la consommation de produits de saison.
+
+Dans nos cuisines, cela se traduit par des recettes qui valorisent les légumes frais — comme notre [ratatouille provençale](/blog/recettes/ratatouille-provencale/) ou notre [curry de légumes maison](/blog/recettes/curry-legumes/) — préparées à partir d'ingrédients produits dans le respect de ces principes.
 
 ## Chiffres clés
 

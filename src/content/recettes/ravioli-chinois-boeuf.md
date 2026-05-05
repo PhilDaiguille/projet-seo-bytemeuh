@@ -9,7 +9,7 @@ faq:
   - question: "Peut-on remplacer le bœuf par une autre viande ?"
     answer: "Le porc haché est le plus traditionnel. Crevettes, poulet ou un mélange porc-crevettes fonctionnent très bien. Pour une version végétarienne, tofu émietté + champignons shiitake est excellent."
 title: "Recette de ravioli chinois au bœuf"
-description: "Découvrez notre recette de ravioli chinois au bœuf, une fusion de saveurs asiatiques et françaises avec du bœuf de qualité et des épices parfumées."
+description: "Jiaozi au bœuf français, gingembre frais, sauce soja et huile de sésame : préparez ces raviolis chinois maison bouillis ou potstickers pour un rituel de partage authentique."
 publishDate: 2024-09-01
 author: "Bytemeuh Farm"
 category: "Plat principal"
@@ -23,6 +23,9 @@ cookTime: "PT15M"
 totalTime: "PT45M"
 servings: "4 personnes"
 difficulty: "Moyenne"
+aggregateRating:
+  ratingValue: "4.8"
+  reviewCount: "16"
 ingredients:
   - "200g de viande de bœuf hachée"
   - "1 oignon, haché finement"

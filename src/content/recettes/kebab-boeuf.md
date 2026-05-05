@@ -8,8 +8,8 @@ faq:
     answer: "Il faut bien malaxer la viande avec les épices au moins 3 min pour activer les protéines liantes, et réfrigérer les brochettes 30 min avant cuisson pour qu'elles se raffermissent."
   - question: "Peut-on cuire le kebab au four plutôt qu'à la poêle ?"
     answer: "Oui : enfourner à 220 °C (chaleur tournante) pendant 15-18 min en retournant à mi-cuisson. Un grill en fin donne un beau brunissage."
-title: "Recette de kebab de boeuf maison"
-description: "Découvrez notre recette de kebab de bœuf maison, une version saine et délicieuse avec viande marinée et légumes frais, parfaite pour toute la famille."
+title: "Recette de kebab de bœuf maison mariné aux épices"
+description: "Bœuf mariné au paprika-cumin, légumes frais, sauce blanche maison : préparez un kebab de bœuf sain et savoureux chez vous, avec les secrets d'une marinade qui fait toute la différence."
 descriptionLong: "Une recette authentique de kebab de bœuf maison, saine et savoureuse. Avec du bœuf de qualité et des légumes frais, vous obtiendrez un repas équilibré qui conserve tout le charme du kebab original."
 publishDate: 2024-09-01
 author: "Bytemeuh Farm"

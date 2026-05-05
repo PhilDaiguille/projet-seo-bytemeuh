@@ -9,7 +9,7 @@ faq:
   - question: "La fracture numérique est-elle un problème dans le monde agricole ?"
     answer: "Oui, particulièrement chez les agriculteurs plus âgés et dans les zones peu couvertes. Des programmes de formation numérique agricole existent (Chambre d'Agriculture, VIVEA) pour réduire cet écart."
 title: "Comment les smartphones révolutionnent l'agriculture"
-description: "Découvrez comment les smartphones modernes transforment le travail à la ferme : surveillance des animaux, gestion des cultures et agriculture connectée."
+description: "Prévisions météo, gestion des troupeaux, analyse des sols : les smartphones transforment le quotidien des agriculteurs. Un tour d'horizon de la ferme connectée à la Bytemeuh."
 publishDate: 2024-11-17
 author: "Bytemeuh Farm"
 category: "Agriculture"
@@ -19,7 +19,7 @@ featuredImageAlt: "Agriculteur utilisant un smartphone pour gérer sa ferme conn
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/smartphone-farm.webp"
 ---
 
-Les temps changent, et les agriculteurs aussi ! Aujourd'hui, le smartphone s'invite dans les fermes pour devenir bien plus qu'un simple gadget : un véritable compagnon de travail. Cette technologie nous aide à mieux cultiver la terre et prendre soin de nos animaux.
+Les temps changent, et les agriculteurs aussi ! Aujourd'hui, le smartphone s'invite dans les fermes pour devenir bien plus qu'un simple gadget : un véritable compagnon de travail. Cette technologie nous aide à mieux cultiver la terre et prendre soin de nos animaux — en complément des systèmes de [capteurs connectés que nous utilisons pour l'élevage intelligent](/blog/articles/elevage-intelligent-bien-etre-animal/).
 
 ## Le smartphone : un outil révolutionnaire pour l'agriculture moderne
 
@@ -63,8 +63,8 @@ Les applications agricoles permettent de :
 - **Gain de temps et d'argent** : automatisation des tâches répétitives.
 - **Meilleur bien-être animal** : détection précoce des problèmes de santé.
 - **Réduction du gaspillage** : optimisation des ressources.
-- **Agriculture plus durable** : décisions basées sur des données précises.
+- **Agriculture plus durable** : décisions basées sur des données précises, en ligne avec nos engagements pour le [développement durable](/blog/articles/developpement-durable-alimentation/).
 
 ## Conclusion : l'avenir est dans nos mains
 
-Les smartphones ne sont plus un luxe pour les agriculteurs, mais une nécessité. Ils nous permettent d'innover, de prendre soin de nos animaux et de cultiver durablement. L'avenir de l'agriculture passe par cette révolution numérique que nous vivons aujourd'hui.
+Les smartphones ne sont plus un luxe pour les agriculteurs, mais une nécessité. Ils nous permettent d'innover, de prendre soin de nos animaux et de cultiver durablement. L'avenir de l'agriculture passe par cette révolution numérique que nous vivons aujourd'hui — une révolution qui, chez Bytemeuh, se traduit aussi dans la qualité des produits que nous mettons en recette, comme nos [burgers de bœuf](/blog/recettes/burgers-boeuf/) ou notre [ratatouille provençale aux légumes d'été](/blog/recettes/ratatouille-provencale/).

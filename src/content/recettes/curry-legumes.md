@@ -9,7 +9,7 @@ faq:
   - question: "Avec quoi servir le curry de légumes ?"
     answer: "Riz basmati, naan maison, riz de chou-fleur ou quinoa. Une touche de yaourt nature ou de chutney de mangue équilibre bien la puissance des épices."
 title: "Recette de curry de légumes maison"
-description: "Découvrez notre recette de curry de légumes maison, un plat végétarien parfumé aux épices indiennes avec des légumes de saison frais. Sain, savoureux et facile à préparer."
+description: "Lait de coco, gingembre, légumes de saison : un curry végétarien parfumé et réconfortant, prêt en 30 min. La version maison qui surpasse tous les plats à emporter."
 descriptionLong: "Le curry de légumes maison de Bytemeuh : un plat végétarien généreux, parfumé de curry, gingembre et lait de coco, avec des légumes de saison cuits à la perfection pour un dîner réconfortant et sain."
 publishDate: 2025-01-15
 author: "Bytemeuh Farm"

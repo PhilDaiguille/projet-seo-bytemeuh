@@ -9,7 +9,7 @@ faq:
   - question: "Quelle coupe de bœuf utiliser pour les tacos ?"
     answer: "Le bœuf haché est le plus simple. Mais du paleron ou de la bavette braisé effiloché (pulled beef) est encore meilleur : texture fondante et saveurs plus développées."
 title: "Recette de tacos de bœuf délicieux"
-description: "Découvrez notre recette facile de tacos de bœuf, idéale pour un dîner en famille ou entre amis. Savoureux, rapides à préparer avec du bœuf français."
+description: "Tortillas de maïs, bœuf épicé cumin-paprika, avocat et coriandre fraîche : une recette facile de tacos maison authentiques, prête en 35 min pour un dîner festif en famille."
 descriptionLong: "Une recette simple et délicieuse de tacos de bœuf maison, idéale pour un dîner convivial. Notre recette combine la richesse de la cuisine mexicaine avec l'excellence de la viande de bœuf française."
 publishDate: 2024-09-01
 author: "Bytemeuh Farm"
@@ -43,9 +43,6 @@ nutrition:
   protein: "28g"
   carbs: "35g"
   fat: "22g"
-aggregateRating:
-  ratingValue: "5"
-  reviewCount: "2"
 tips:
   - "Pour plus de saveur, préparez la viande quelques heures à l'avance et laissez-la mariner avec les épices."
   - "Choisissez des tortillas de taille moyenne pour faciliter la dégustation."

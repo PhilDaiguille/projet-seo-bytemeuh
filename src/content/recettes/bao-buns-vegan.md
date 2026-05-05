@@ -9,7 +9,7 @@ faq:
   - question: "Quel type de farine utiliser pour les bao buns ?"
     answer: "La farine T45 (ou farine à gâteaux) donne la texture la plus blanche et moelleuse. La T55 fonctionne mais produit une mie légèrement moins fine."
 title: "Recette de bao buns végans au Jack-fruit"
-description: "Découvrez notre recette de Bao Buns végans au jack-fruit, une fusion de tradition asiatique et d'ingrédients locaux, créée dans la cuisine expérimentale de Bytemeuh."
+description: "Pâte vapeur ultra-moelleuse, jack-fruit effiloché façon pulled : ces bao buns végans fusion asiatique-française sont la street food créative de la cuisine expérimentale Bytemeuh."
 descriptionLong: "La recette signature des Bao Buns végans au jack-fruit de Bytemeuh, une street food fusion innovante et délicieuse. Embarquez pour un voyage culinaire unique avec nos bao buns végans, une réinterprétation audacieuse de la street food asiatique."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
