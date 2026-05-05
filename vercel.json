@@ -66,6 +66,7 @@
     }
   ],
   "redirects": [
+    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "statusCode": 301 },
     { "source": "/blog/article.html", "destination": "/blog/recettes/tacos-boeuf/", "statusCode": 301 },
     { "source": "/blog/article/", "destination": "/blog/recettes/tacos-boeuf/", "statusCode": 301 },
     { "source": "/favicon.ico", "destination": "/assets/static/favicon.ico", "statusCode": 301 },
