@@ -1,8 +1,15 @@
 ---
 import Seo from '@jdevalk/astro-seo-graph/Seo.astro';
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import logoImg from '../assets/images/bytemeuh.webp';
-import '../styles/global.css';
+const allArticles = await getCollection('articles');
+const featuredArticles = allArticles
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
+  .slice(0, 3);
+
+const allRecettes = await getCollection('recettes');
+const featuredRecette = allRecettes[0];
 
 interface Props {
   title: string;
@@ -179,10 +186,13 @@ const currentPath = Astro.url.pathname;
           <div>
             <p class="footer-col-title">Thématiques</p>
             <nav class="footer-links" aria-label="Navigation footer thématiques">
-              <a href="/blog/articles/biotechnologie-agriculture-bio/">Biotechnologie</a>
-              <a href="/blog/articles/elevage-intelligent-bien-etre-animal/">Élevage durable</a>
-              <a href="/blog/articles/developpement-durable-alimentation/">Alimentation durable</a>
-              <a href="/blog/recettes/poke-bowl-vegan/">Cuisine végane</a>
+              {featuredArticles.slice(0, 2).map(article => (
+                <a href={`/blog/articles/${article.id}/`}>{article.data.category ?? 'Article'}</a>
+              ))}
+              {featuredRecette && (
+                <a href={`/blog/recettes/${featuredRecette.id}/`}>Recette</a>
+              )}
+              <a href="/blog/articles/">Tous les articles</a>
             </nav>
           </div>
         </div>

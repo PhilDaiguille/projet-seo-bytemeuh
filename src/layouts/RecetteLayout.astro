@@ -44,11 +44,25 @@ const graph = {
       '@type': 'Recipe',
       name: data.title,
       description: data.descriptionLong ?? data.description,
-      image: imageUrl,
+      image: [imageUrl],
+      video: data.video ? {
+        '@type': 'VideoObject',
+        name: `${data.title} - Video`,
+        description: data.descriptionLong ?? data.description,
+        thumbnailUrl: imageUrl,
+        contentUrl: data.video,
+        uploadDate: data.publishDate.toISOString(),
+      } : undefined,
       author: {
-        '@type': 'Organization',
+        '@type': 'Person',
         name: data.author,
         url: SITE_URL,
+        jobTitle: 'Chef & expert culinaire',
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Bytemeuh Farm',
+          url: SITE_URL,
+        },
       },
       publisher: {
         '@type': 'Organization',
@@ -60,24 +74,25 @@ const graph = {
         },
       },
       datePublished: data.publishDate.toISOString(),
-      recipeCategory: data.category,
-      recipeCuisine: data.cuisine,
-      prepTime: data.prepTime,
+      recipeCategory: data.category ?? 'Plat principal',
+      recipeCuisine: data.cuisine ?? 'Cuisine française',
+      prepTime: data.prepTime ?? 'PT15M',
       cookTime: data.cookTime,
-      totalTime: data.totalTime,
+      totalTime: data.totalTime ?? data.prepTime,
       recipeYield: data.servings,
-      recipeIngredient: data.ingredients,
+      recipeIngredient: data.ingredients.map(ing => String(ing).trim()),
       ...(data.steps && data.steps.length > 0 && {
         recipeInstructions: data.steps.map((step, i) => ({
           '@type': 'HowToStep',
           position: i + 1,
           name: step.name,
           text: step.text,
+          url: pageUrl,
           ...(step.image && { image: step.image }),
         })),
       }),
       mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
-      keywords: data.tags?.join(', '),
+      keywords: data.tags ? data.tags.join(', ') : data.title,
       ...(data.nutrition && {
         nutrition: {
           '@type': 'NutritionInformation',
@@ -148,9 +163,13 @@ const graph = {
   <article itemscope itemtype="https://schema.org/Recipe">
     <!-- Microdata meta cachés -->
     <meta itemprop="url" content={pageUrl} />
-    {!data.featuredImage && data.ogImage && (
-      <meta itemprop="image" content={data.ogImage} />
-    )}
+    {imageUrl && <meta itemprop="image" content={imageUrl} />}
+    {data.video && <meta itemprop="video" content={data.video} />}
+    {data.aggregateRating && <meta itemprop="aggregateRating" content={data.aggregateRating.ratingValue} />}
+    <meta itemprop="recipeCategory" content={data.category ?? 'Plat principal'} />
+    <meta itemprop="recipeCuisine" content={data.cuisine ?? 'Cuisine française'} />
+    {data.prepTime && <meta itemprop="prepTime" content={data.prepTime} />}
+    <meta itemprop="keywords" content={data.tags ? data.tags.join(', ') : data.title} />
     <!-- Hero -->
     {data.featuredImage && (
       <figure class="recipe-hero" aria-label={data.featuredImageAlt ?? data.title}>
@@ -198,7 +217,45 @@ const graph = {
             )}
           </div>
         </div>
-      </figure>
+</figure>
+      )}
+    )}
+
+    {/* H1 fallback si pas d'image */}
+    {!data.featuredImage && (
+      <header class="recipe-no-image-header">
+        <span class="recipe-hero-eyebrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          Recette
+        </span>
+        <h1 class="recipe-hero-title" itemprop="name">{data.title}</h1>
+        <div class="recipe-meta-strip" role="list" aria-label="Informations de la recette">
+          {data.prepTime && (
+            <span class="recipe-meta-item" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Prépa : <strong>{formatDuration(data.prepTime)}</strong>
+            </span>
+          )}
+          {data.cookTime && (
+            <span class="recipe-meta-item" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4.97 0 9-2.69 9-6V6H3v10c0 3.31 4.03 6 9 6z"/><path d="M3 6a9 9 0 0 1 18 0"/></svg>
+              Cuisson : <strong>{formatDuration(data.cookTime)}</strong>
+            </span>
+          )}
+          {data.servings && (
+            <span class="recipe-meta-item" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <strong>{data.servings}</strong>
+            </span>
+          )}
+          {data.difficulty && (
+            <span class="recipe-meta-item" role="listitem">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <strong>{data.difficulty}</strong>
+            </span>
+          )}
+        </div>
+      </header>
     )}
 
     {/* Rating */}
@@ -226,9 +283,9 @@ const graph = {
 
         {data.tips && data.tips.length > 0 && (
           <div class="recipe-tips-block">
-            <h3 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
+            <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
               Conseils du chef
-            </h3>
+            </h2>
             <ul>
               {data.tips.map((tip) => (
                 <li>
@@ -242,9 +299,9 @@ const graph = {
 
         {data.variations && data.variations.length > 0 && (
           <div class="recipe-variations-block">
-            <h3 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
+            <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
               Variantes possibles
-            </h3>
+            </h2>
             <ul>
               {data.variations.map((v) => (
                 <li>
@@ -258,9 +315,9 @@ const graph = {
 
         {data.nutrition && (
           <div class="recipe-tips-block">
-            <h3 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
+            <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
               Informations nutritionnelles
-            </h3>
+            </h2>
             <div class="nutrition-grid">
               {data.nutrition.calories && (
                 <div class="nutrition-item">

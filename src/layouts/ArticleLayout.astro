@@ -38,9 +38,15 @@ const graph = {
       description: data.description,
       image: imageUrl,
       author: {
-        '@type': 'Organization',
+        '@type': 'Person',
         name: data.author,
         url: SITE_URL,
+        jobTitle: 'Expert agriculture durable',
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Bytemeuh Farm',
+          url: SITE_URL,
+        },
       },
       publisher: {
         '@type': 'Organization',

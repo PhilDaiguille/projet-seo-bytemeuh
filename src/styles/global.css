@@ -807,6 +807,35 @@ main {
 .article-content tr:last-child td { border-bottom: none; }
 .article-content tr:nth-child(even) td { background: var(--slate-50); }
 
+.recipe-no-image-header {
+  padding: var(--space-8) 0;
+  margin-bottom: var(--space-6);
+}
+.recipe-no-image-header .recipe-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+.recipe-no-image-header .recipe-hero-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+.recipe-no-image-header .recipe-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
 /* ===== RECIPE PAGE ===== */
 .recipe-wrapper {}
 

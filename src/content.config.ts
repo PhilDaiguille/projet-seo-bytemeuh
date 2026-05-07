@@ -66,6 +66,7 @@ const recettes = defineCollection({
     steps: z.array(recipeStep).optional(),
     tips: z.array(z.string()).optional(),
     variations: z.array(z.string()).optional(),
+    video: z.string().optional(),
     faq: z.array(faqItem).optional(),
   }),
 });
