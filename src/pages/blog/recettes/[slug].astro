@@ -1,9 +1,9 @@
 ---
-import { getCollection, render } from 'astro:content';
-import RecetteLayout from '../../../layouts/RecetteLayout.astro';
+import { getCollection, render } from "astro:content";
+import RecetteLayout from "../../../layouts/RecetteLayout.astro";
 
 export async function getStaticPaths() {
-  const recettes = await getCollection('recettes');
+  const recettes = await getCollection("recettes");
   return recettes.map((recette) => ({
     params: { slug: recette.id },
     props: { recette },

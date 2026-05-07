@@ -1,101 +1,110 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import { Image } from 'astro:assets';
-import RelatedRecettes from '../components/RelatedRecettes.astro';
-import FaqSection from '../components/FaqSection.astro';
-import type { CollectionEntry } from 'astro:content';
+import BaseLayout from "./BaseLayout.astro";
+import { Image } from "astro:assets";
+import RelatedRecettes from "../components/RelatedRecettes.astro";
+import FaqSection from "../components/FaqSection.astro";
+import { slugify } from "../utils/seo";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  recette: CollectionEntry<'recettes'>;
+  recette: CollectionEntry<"recettes">;
 }
 
 const { recette } = Astro.props;
 const { data } = recette;
 
-const SITE_URL = 'https://bytemeuh.phildaiguille.fr';
+const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 const pageUrl = new URL(Astro.url.pathname, SITE_URL).toString();
 
 function formatDuration(iso: string): string {
   const match = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
   if (!match) return iso;
-  const hours = match[1] ? `${match[1]}h ` : '';
-  const minutes = match[2] ? `${match[2]} min` : '';
+  const hours = match[1] ? `${match[1]}h ` : "";
+  const minutes = match[2] ? `${match[2]} min` : "";
   return `${hours}${minutes}`.trim();
 }
 
 // Image URL : ogImage (string absolue) ou fallback vers public/ (les images sont aussi dans public/assets/images/)
-const imageUrl = data.ogImage ?? `${SITE_URL}/assets/images/${data.featuredImage?.src.split('/').pop() ?? ''}`;
+const imageUrl =
+  data.ogImage ??
+  `${SITE_URL}/assets/images/${data.featuredImage?.src.split("/").pop() ?? ""}`;
 
-const faqGraph = data.faq && data.faq.length > 0
-  ? [{
-      '@type': 'FAQPage',
-      mainEntity: data.faq.map((item) => ({
-        '@type': 'Question',
-        name: item.question,
-        acceptedAnswer: { '@type': 'Answer', text: item.answer },
-      })),
-    }]
-  : [];
+const faqGraph =
+  data.faq && data.faq.length > 0
+    ? [
+        {
+          "@type": "FAQPage",
+          mainEntity: data.faq.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+          })),
+        },
+      ]
+    : [];
 
 const graph = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'Recipe',
+      "@type": "Recipe",
       name: data.title,
       description: data.descriptionLong ?? data.description,
       image: [imageUrl],
-      video: data.video ? {
-        '@type': 'VideoObject',
-        name: `${data.title} - Video`,
-        description: data.descriptionLong ?? data.description,
-        thumbnailUrl: imageUrl,
-        contentUrl: data.video,
-        uploadDate: data.publishDate.toISOString(),
-      } : undefined,
+      video: data.video
+        ? {
+            "@type": "VideoObject",
+            name: `${data.title} - Video`,
+            description: data.descriptionLong ?? data.description,
+            thumbnailUrl: imageUrl,
+            contentUrl: data.video,
+            uploadDate: data.publishDate.toISOString(),
+          }
+        : undefined,
       author: {
-        '@type': 'Person',
+        "@type": "Person",
         name: data.author,
         url: SITE_URL,
-        jobTitle: 'Chef & expert culinaire',
+        jobTitle: "Chef & expert culinaire",
         worksFor: {
-          '@type': 'Organization',
-          name: 'Bytemeuh Farm',
+          "@type": "Organization",
+          name: "Bytemeuh Farm",
           url: SITE_URL,
         },
       },
       publisher: {
-        '@type': 'Organization',
-        name: 'Bytemeuh',
+        "@type": "Organization",
+        name: "Bytemeuh",
         url: SITE_URL,
         logo: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: `${SITE_URL}/assets/images/bytemeuh.webp`,
         },
       },
       datePublished: data.publishDate.toISOString(),
-      recipeCategory: data.category ?? 'Plat principal',
-      recipeCuisine: data.cuisine ?? 'Cuisine française',
-      prepTime: data.prepTime ?? 'PT15M',
+      recipeCategory: data.category ?? "Plat principal",
+      recipeCuisine: data.cuisine ?? "Cuisine française",
+      prepTime: data.prepTime ?? "PT15M",
       cookTime: data.cookTime,
       totalTime: data.totalTime ?? data.prepTime,
       recipeYield: data.servings,
-      recipeIngredient: data.ingredients.map(ing => String(ing).trim()),
-      ...(data.steps && data.steps.length > 0 && {
-        recipeInstructions: data.steps.map((step, i) => ({
-          '@type': 'HowToStep',
-          position: i + 1,
-          name: step.name,
-          text: step.text,
-          url: pageUrl,
-          ...(step.image && { image: step.image }),
-        })),
-      }),
-      mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
-      keywords: data.tags ? data.tags.join(', ') : data.title,
+      recipeIngredient: data.ingredients.map((ing) => String(ing).trim()),
+      ...(data.steps &&
+        data.steps.length > 0 && {
+          recipeInstructions: data.steps.map((step, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            name: step.name,
+            text: step.text,
+            url: pageUrl,
+            ...(step.image && { image: step.image }),
+          })),
+        }),
+      mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+      keywords: data.tags ? data.tags.join(", ") : data.title,
       ...(data.nutrition && {
         nutrition: {
-          '@type': 'NutritionInformation',
+          "@type": "NutritionInformation",
           calories: data.nutrition.calories,
           proteinContent: data.nutrition.protein,
           carbohydrateContent: data.nutrition.carbs,
@@ -104,19 +113,34 @@ const graph = {
       }),
       ...(data.aggregateRating && {
         aggregateRating: {
-          '@type': 'AggregateRating',
+          "@type": "AggregateRating",
           ratingValue: data.aggregateRating.ratingValue,
           reviewCount: data.aggregateRating.reviewCount,
         },
       }),
     },
     {
-      '@type': 'BreadcrumbList',
+      "@type": "BreadcrumbList",
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
-        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog/` },
-        { '@type': 'ListItem', position: 3, name: 'Recettes', item: `${SITE_URL}/blog/recettes/` },
-        { '@type': 'ListItem', position: 4, name: data.title, item: pageUrl },
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: `${SITE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${SITE_URL}/blog/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Recettes",
+          item: `${SITE_URL}/blog/recettes/`,
+        },
+        { "@type": "ListItem", position: 4, name: data.title, item: pageUrl },
       ],
     },
     ...faqGraph,
@@ -139,22 +163,61 @@ const graph = {
   graph={graph}
 >
   <!-- Reading progress -->
-  <div class="reading-progress" id="reading-progress" style="width:0%" aria-hidden="true"></div>
+  <div
+    class="reading-progress"
+    id="reading-progress"
+    style="width:0%"
+    aria-hidden="true"
+  >
+  </div>
 
   <!-- Breadcrumb -->
   <nav aria-label="Fil d'ariane" class="breadcrumb">
     <ol>
       <li><a href="/">Accueil</a></li>
       <li aria-hidden="true" class="breadcrumb-sep">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
       </li>
       <li><a href="/blog/">Blog</a></li>
       <li aria-hidden="true" class="breadcrumb-sep">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
       </li>
       <li><a href="/blog/recettes/">Recettes</a></li>
       <li aria-hidden="true" class="breadcrumb-sep">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
       </li>
       <li aria-current="page">{data.title}</li>
     </ol>
@@ -165,113 +228,314 @@ const graph = {
     <meta itemprop="url" content={pageUrl} />
     {imageUrl && <meta itemprop="image" content={imageUrl} />}
     {data.video && <meta itemprop="video" content={data.video} />}
-    {data.aggregateRating && <meta itemprop="aggregateRating" content={data.aggregateRating.ratingValue} />}
-    <meta itemprop="recipeCategory" content={data.category ?? 'Plat principal'} />
-    <meta itemprop="recipeCuisine" content={data.cuisine ?? 'Cuisine française'} />
-    {data.prepTime && <meta itemprop="prepTime" content={data.prepTime} />}
-    <meta itemprop="keywords" content={data.tags ? data.tags.join(', ') : data.title} />
-    <!-- Hero -->
-    {data.featuredImage && (
-      <figure class="recipe-hero" aria-label={data.featuredImageAlt ?? data.title}>
-        <Image
-          src={data.featuredImage}
-          alt={data.featuredImageAlt ?? data.title}
-          width={1200}
-          height={675}
-          loading="eager"
-          decoding="async"
-          fetchpriority="high"
-          itemprop="image"
+    {
+      data.aggregateRating && (
+        <meta
+          itemprop="aggregateRating"
+          content={data.aggregateRating.ratingValue}
         />
-        <div class="recipe-hero-overlay" aria-hidden="true"></div>
-        <div class="recipe-hero-content">
+      )
+    }
+    <meta
+      itemprop="recipeCategory"
+      content={data.category ?? "Plat principal"}
+    />
+    <meta
+      itemprop="recipeCuisine"
+      content={data.cuisine ?? "Cuisine française"}
+    />
+    {data.prepTime && <meta itemprop="prepTime" content={data.prepTime} />}
+    <meta
+      itemprop="keywords"
+      content={data.tags ? data.tags.join(", ") : data.title}
+    />
+    <!-- Hero -->
+    {
+      data.featuredImage && (
+        <figure
+          class="recipe-hero"
+          aria-label={data.featuredImageAlt ?? data.title}
+        >
+          <Image
+            src={data.featuredImage}
+            alt={data.featuredImageAlt ?? data.title}
+            width={1200}
+            height={675}
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            itemprop="image"
+          />
+          <div class="recipe-hero-overlay" aria-hidden="true" />
+          <div class="recipe-hero-content">
+            <span class="recipe-hero-eyebrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 11l19-9-9 19-2-8-8-2z" />
+              </svg>
+              Recette
+            </span>
+            <h1 class="recipe-hero-title" itemprop="name">
+              {data.title}
+            </h1>
+            <div
+              class="recipe-meta-strip"
+              role="list"
+              aria-label="Informations de la recette"
+            >
+              {data.prepTime && (
+                <span class="recipe-meta-item" role="listitem">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                  Prépa : <strong>{formatDuration(data.prepTime)}</strong>
+                </span>
+              )}
+              {data.cookTime && (
+                <span class="recipe-meta-item" role="listitem">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 22c4.97 0 9-2.69 9-6V6H3v10c0 3.31 4.03 6 9 6z" />
+                    <path d="M3 6a9 9 0 0 1 18 0" />
+                  </svg>
+                  Cuisson : <strong>{formatDuration(data.cookTime)}</strong>
+                </span>
+              )}
+              {data.servings && (
+                <span class="recipe-meta-item" role="listitem">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                  <strong>{data.servings}</strong>
+                </span>
+              )}
+              {data.difficulty && (
+                <span class="recipe-meta-item" role="listitem">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                  </svg>
+                  <strong>{data.difficulty}</strong>
+                </span>
+              )}
+            </div>
+          </div>
+        </figure>
+      )
+    }
+
+    {/* H1 fallback si pas d'image */}
+    {
+      !data.featuredImage && (
+        <header class="recipe-no-image-header">
           <span class="recipe-hero-eyebrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 11l19-9-9 19-2-8-8-2z" />
+            </svg>
             Recette
           </span>
-          <h1 class="recipe-hero-title" itemprop="name">{data.title}</h1>
-          <div class="recipe-meta-strip" role="list" aria-label="Informations de la recette">
+          <h1 class="recipe-hero-title" itemprop="name">
+            {data.title}
+          </h1>
+          <div
+            class="recipe-meta-strip"
+            role="list"
+            aria-label="Informations de la recette"
+          >
             {data.prepTime && (
               <span class="recipe-meta-item" role="listitem">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
                 Prépa : <strong>{formatDuration(data.prepTime)}</strong>
               </span>
             )}
             {data.cookTime && (
               <span class="recipe-meta-item" role="listitem">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4.97 0 9-2.69 9-6V6H3v10c0 3.31 4.03 6 9 6z"/><path d="M3 6a9 9 0 0 1 18 0"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 22c4.97 0 9-2.69 9-6V6H3v10c0 3.31 4.03 6 9 6z" />
+                  <path d="M3 6a9 9 0 0 1 18 0" />
+                </svg>
                 Cuisson : <strong>{formatDuration(data.cookTime)}</strong>
               </span>
             )}
             {data.servings && (
               <span class="recipe-meta-item" role="listitem">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
                 <strong>{data.servings}</strong>
               </span>
             )}
             {data.difficulty && (
               <span class="recipe-meta-item" role="listitem">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
                 <strong>{data.difficulty}</strong>
               </span>
             )}
           </div>
-        </div>
-</figure>
-      )}
-    )}
-
-    {/* H1 fallback si pas d'image */}
-    {!data.featuredImage && (
-      <header class="recipe-no-image-header">
-        <span class="recipe-hero-eyebrow">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-          Recette
-        </span>
-        <h1 class="recipe-hero-title" itemprop="name">{data.title}</h1>
-        <div class="recipe-meta-strip" role="list" aria-label="Informations de la recette">
-          {data.prepTime && (
-            <span class="recipe-meta-item" role="listitem">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Prépa : <strong>{formatDuration(data.prepTime)}</strong>
-            </span>
-          )}
-          {data.cookTime && (
-            <span class="recipe-meta-item" role="listitem">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c4.97 0 9-2.69 9-6V6H3v10c0 3.31 4.03 6 9 6z"/><path d="M3 6a9 9 0 0 1 18 0"/></svg>
-              Cuisson : <strong>{formatDuration(data.cookTime)}</strong>
-            </span>
-          )}
-          {data.servings && (
-            <span class="recipe-meta-item" role="listitem">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <strong>{data.servings}</strong>
-            </span>
-          )}
-          {data.difficulty && (
-            <span class="recipe-meta-item" role="listitem">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              <strong>{data.difficulty}</strong>
-            </span>
-          )}
-        </div>
-      </header>
-    )}
+        </header>
+      )
+    }
 
     {/* Rating */}
-    {data.aggregateRating && (
-      <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-6);" aria-label={`Note : ${data.aggregateRating.ratingValue}/5 — ${data.aggregateRating.reviewCount} avis`}>
-        {Array.from({length: 5}).map((_, i) => (
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill={i < Math.round(data.aggregateRating!.ratingValue) ? '#f59e0b' : 'none'} stroke="#f59e0b" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        ))}
-        <span style="font-size:var(--text-sm);color:var(--color-muted);font-weight:600;">{data.aggregateRating.ratingValue}/5 — {data.aggregateRating.reviewCount} avis</span>
-      </div>
-    )}
+    {
+      data.aggregateRating && (
+        <div
+          style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-6);"
+          aria-label={`Note : ${data.aggregateRating.ratingValue}/5 — ${data.aggregateRating.reviewCount} avis`}
+        >
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill={
+                i < Math.round(data.aggregateRating!.ratingValue)
+                  ? "#f59e0b"
+                  : "none"
+              }
+              stroke="#f59e0b"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          ))}
+          <span style="font-size:var(--text-sm);color:var(--color-muted);font-weight:600;">
+            {data.aggregateRating.ratingValue}/5 —{" "}
+            {data.aggregateRating.reviewCount} avis
+          </span>
+        </div>
+      )
+    }
 
     <!-- Intro description -->
-    {(data.descriptionLong ?? data.description) && (
-      <p class="recipe-intro-block" itemprop="description">{data.descriptionLong ?? data.description}</p>
-    )}
+    {
+      (data.descriptionLong ?? data.description) && (
+        <p class="recipe-intro-block" itemprop="description">
+          {data.descriptionLong ?? data.description}
+        </p>
+      )
+    }
 
     <!-- Two-column layout: instructions + sidebar ingredients -->
     <div class="recipe-layout">
@@ -281,95 +545,157 @@ const graph = {
           <slot />
         </div>
 
-        {data.tips && data.tips.length > 0 && (
-          <div class="recipe-tips-block">
-            <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
-              Conseils du chef
-            </h2>
-            <ul>
-              {data.tips.map((tip) => (
-                <li>
-                  <svg class="tip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                  {tip}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {data.variations && data.variations.length > 0 && (
-          <div class="recipe-variations-block">
-            <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
-              Variantes possibles
-            </h2>
-            <ul>
-              {data.variations.map((v) => (
-                <li>
-                  <svg class="tip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-                  {v}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {data.nutrition && (
-          <div class="recipe-tips-block">
-            <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
-              Informations nutritionnelles
-            </h2>
-            <div class="nutrition-grid">
-              {data.nutrition.calories && (
-                <div class="nutrition-item">
-                  <div class="nutrition-value">{data.nutrition.calories}</div>
-                  <div class="nutrition-label">Calories</div>
-                </div>
-              )}
-              {data.nutrition.protein && (
-                <div class="nutrition-item">
-                  <div class="nutrition-value">{data.nutrition.protein}</div>
-                  <div class="nutrition-label">Protéines</div>
-                </div>
-              )}
-              {data.nutrition.carbs && (
-                <div class="nutrition-item">
-                  <div class="nutrition-value">{data.nutrition.carbs}</div>
-                  <div class="nutrition-label">Glucides</div>
-                </div>
-              )}
-              {data.nutrition.fat && (
-                <div class="nutrition-item">
-                  <div class="nutrition-value">{data.nutrition.fat}</div>
-                  <div class="nutrition-label">Lipides</div>
-                </div>
-              )}
+        {
+          data.tips && data.tips.length > 0 && (
+            <div class="recipe-tips-block">
+              <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
+                Conseils du chef
+              </h2>
+              <ul>
+                {data.tips.map((tip) => (
+                  <li>
+                    <svg
+                      class="tip-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="8" x2="12" y2="12" />
+                      <line x1="12" y1="16" x2="12.01" y2="16" />
+                    </svg>
+                    {tip}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-        )}
+          )
+        }
+
+        {
+          data.variations && data.variations.length > 0 && (
+            <div class="recipe-variations-block">
+              <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
+                Variantes possibles
+              </h2>
+              <ul>
+                {data.variations.map((v) => (
+                  <li>
+                    <svg
+                      class="tip-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="17 1 21 5 17 9" />
+                      <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                      <polyline points="7 23 3 19 7 15" />
+                      <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                    </svg>
+                    {v}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+        {
+          data.nutrition && (
+            <div class="recipe-tips-block">
+              <h2 style="font-size:var(--text-base);font-weight:800;color:var(--color-text);margin-bottom:var(--space-3);letter-spacing:-0.01em;">
+                Informations nutritionnelles
+              </h2>
+              <div class="nutrition-grid">
+                {data.nutrition.calories && (
+                  <div class="nutrition-item">
+                    <div class="nutrition-value">{data.nutrition.calories}</div>
+                    <div class="nutrition-label">Calories</div>
+                  </div>
+                )}
+                {data.nutrition.protein && (
+                  <div class="nutrition-item">
+                    <div class="nutrition-value">{data.nutrition.protein}</div>
+                    <div class="nutrition-label">Protéines</div>
+                  </div>
+                )}
+                {data.nutrition.carbs && (
+                  <div class="nutrition-item">
+                    <div class="nutrition-value">{data.nutrition.carbs}</div>
+                    <div class="nutrition-label">Glucides</div>
+                  </div>
+                )}
+                {data.nutrition.fat && (
+                  <div class="nutrition-item">
+                    <div class="nutrition-value">{data.nutrition.fat}</div>
+                    <div class="nutrition-label">Lipides</div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )
+        }
       </div>
 
       <!-- Sidebar ingredients -->
-      {data.ingredients.length > 0 && (
-        <aside class="recipe-sidebar" aria-label="Ingrédients">
-          <p class="recipe-sidebar-title">Ingrédients</p>
-          <ul class="ingredients-list" itemprop="recipeIngredient">
-            {data.ingredients.map((ing) => (
-              <li>
-                <span class="ingredient-dot" aria-hidden="true"></span>
-                <span>{ing}</span>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      )}
+      {
+        data.ingredients.length > 0 && (
+          <aside class="recipe-sidebar" aria-label="Ingrédients">
+            {(data.cuisine || data.category) && (
+              <div
+                class="recipe-sidebar-meta"
+                style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4);"
+              >
+                {data.cuisine && (
+                  <a
+                    href={`/blog/recettes/cuisine/${data.cuisine
+                      .toLowerCase()
+                      .replace(/^cuisine\s+/i, "")
+                      .replace(/\s+/g, "-")}/`}
+                    class="sidebar-badge"
+                    style="padding: var(--space-1) var(--space-3); background: var(--color-primary); color: white; border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600; text-decoration: none;"
+                  >
+                    {data.cuisine}
+                  </a>
+                )}
+                {data.category && (
+                  <a
+                    href={`/blog/recettes/categorie/${slugify(data.category)}/`}
+                    class="sidebar-badge"
+                    style="padding: var(--space-1) var(--space-3); background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600; text-decoration: none;"
+                  >
+                    {data.category}
+                  </a>
+                )}
+              </div>
+            )}
+            <p class="recipe-sidebar-title">Ingrédients</p>
+            <ul class="ingredients-list" itemprop="recipeIngredient">
+              {data.ingredients.map((ing) => (
+                <li>
+                  <span class="ingredient-dot" aria-hidden="true" />
+                  <span>{ing}</span>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
     </div>
   </article>
 
   <!-- FAQ -->
-  {data.faq && data.faq.length > 0 && (
-    <FaqSection items={data.faq} />
-  )}
+  {data.faq && data.faq.length > 0 && <FaqSection items={data.faq} />}
 
   <RelatedRecettes currentId={recette.id} currentCategory={data.category} />
-
 </BaseLayout>

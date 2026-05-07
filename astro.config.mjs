@@ -1,13 +1,13 @@
-import {defineConfig, svgoOptimizer} from 'astro/config';
-import sitemap from '@astrojs/sitemap';
-import seoGraph from '@jdevalk/astro-seo-graph/integration';
+import { defineConfig, svgoOptimizer } from "astro/config";
+import sitemap from "@astrojs/sitemap";
+import seoGraph from "@jdevalk/astro-seo-graph/integration";
 
-const SITE_URL = 'https://bytemeuh.phildaiguille.fr';
+const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 
 export default defineConfig({
   site: SITE_URL,
-  trailingSlash: 'always',
-  output: 'static',
+  trailingSlash: "always",
+  output: "static",
   experimental: {
     svgOptimizer: svgoOptimizer(),
   },
@@ -18,17 +18,17 @@ export default defineConfig({
       serialize(item) {
         return {
           ...item,
-          changefreq: 'weekly',
-          priority: item.url === SITE_URL + '/' ? 1.0 : 0.8,
+          changefreq: "weekly",
+          priority: item.url === SITE_URL + "/" ? 1.0 : 0.8,
         };
       },
     }),
     seoGraph({
       llmsTxt: {
-        title: 'Bytemeuh',
+        title: "Bytemeuh",
         siteUrl: SITE_URL,
         summary:
-          'Bytemeuh est une ferme française engagée dans une agriculture durable et une cuisine saine. Découvrez nos recettes, articles sur la biotechnologie agricole, l\'élevage intelligent et l\'alimentation responsable.',
+          "Bytemeuh est une ferme française engagée dans une agriculture durable et une cuisine saine. Découvrez nos recettes, articles sur la biotechnologie agricole, l'élevage intelligent et l'alimentation responsable.",
       },
       validate: {
         h1: true,

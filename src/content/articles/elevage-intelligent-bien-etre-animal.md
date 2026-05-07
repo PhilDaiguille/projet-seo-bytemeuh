@@ -28,6 +28,7 @@ Des capteurs intelligents non intrusifs analysent en temps réel des indicateurs
 Nos vaches bénéficient de colliers connectés qui collectent des données essentielles en temps réel.
 
 **Données collectées :**
+
 - L'activité physique : un indicateur clé pour détecter maladies ou stress.
 - La température corporelle : un paramètre crucial pour prévenir les infections.
 - L'hydratation : essentiel pour garantir leur santé.

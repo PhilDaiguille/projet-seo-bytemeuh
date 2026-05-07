@@ -1,0 +1,243 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { normalizeCuisine } from "../../../../utils/seo";
+
+const recettes = await getCollection("recettes");
+const cuisineList = [
+  ...new Set(recettes.map((r) => r.data.cuisine).filter(Boolean)),
+];
+
+const cuisineDescriptions: Record<string, string> = {
+  Française:
+    "Mijotés longs, sauces parfaites, desserts legends : la cuisine française est un art.",
+  "Cuisine américaine":
+    "Burgers gourmet, BBQ fumé, comfort food : la cuisine US réinventée.",
+  Méditerranéenne:
+    "Huile d'olive, légumes grillés, herbes fraîches : healthy et gourmand.",
+  Mexicaine:
+    "Tortillas maison, piments puissants, saveurs vibrantes : du soleil dans l'assiette.",
+  Chinoise:
+    "Wok brûlant, équilibre salé-umami, techniques ancestrales : millénaire.",
+  "Fusion Franco-Italienne":
+    "Pâte feuilletée + pizza artisanale = le meilleur des deux mondes.",
+  "Moyen-Orientale":
+    "Tahini, sumac, pomegranate : des saveurs qui traversent les frontières.",
+  Indienne:
+    "Curry parfumé, épices torréfiées, lait de coco : le palais voyage.",
+  "Fusion Hawaïenne-Japonaise":
+    "Poke bowls, poisson frais, riz vinaigré : santé et fraîcheur.",
+  "Fusion Asiatique-Française":
+    "Buns vapeur, bao, dim sum : la street food de qualité restaurant.",
+};
+
+const SITE_URL = "https://bytemeuh.phildaiguille.fr";
+
+const graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      name: "Recettes par cuisine — Bytemeuh",
+      description:
+        "Explorez nos recettes du monde entier : cuisine française, indienne, méditerranéenne et bien plus encore.",
+      url: `${SITE_URL}/blog/recettes/cuisine/`,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: `${SITE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${SITE_URL}/blog/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Recettes",
+          item: `${SITE_URL}/blog/recettes/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Cuisines",
+          item: `${SITE_URL}/blog/recettes/cuisine/`,
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Recettes par cuisine — Bytemeuh"
+  description="Explorez nos recettes du monde entier : cuisine française, indienne, méditerranéenne, chinoise et bien plus encore. Des saveurs internationales préparées avec des produits Bytemeuh."
+  canonical={`${SITE_URL}/blog/recettes/cuisine/`}
+  graph={graph}
+>
+  <nav aria-label="Fil d'ariane" class="breadcrumb">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li><a href="/blog/recettes/">Recettes</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li aria-current="page">Cuisines</li>
+    </ol>
+  </nav>
+
+  <header class="pseo-header">
+    <span class="pseo-badge">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        ><circle cx="12" cy="12" r="10"></circle><line
+          x1="2"
+          y1="12"
+          x2="22"
+          y2="12"></line><path
+          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+        ></path></svg
+      >
+      Monde entier
+    </span>
+    <h1>Recettes par cuisine</h1>
+    <p class="pseo-intro">
+      Voyagez à travers les saveurs du monde sans quitter votre cuisine. De la
+      ratatouille provençale au curry indien, chaque cuisine raconte une
+      histoire.
+    </p>
+  </header>
+
+  <div
+    class="pseo-grid"
+    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-6); margin: var(--space-8) 0;"
+  >
+    {
+      cuisineList.map((cuisine) => {
+        const slug = normalizeCuisine(cuisine!);
+        const count = recettes.filter(
+          (r) => normalizeCuisine(r.data.cuisine ?? "") === slug,
+        ).length;
+        return (
+          <a
+            href={`/blog/recettes/cuisine/${slug}/`}
+            class="pseo-card"
+            style="background: var(--color-surface); border-radius: var(--radius-lg); padding: var(--space-6); text-decoration: none; border: 1px solid var(--color-border); transition: all 0.2s ease; display: flex; flex-direction: column; gap: var(--space-3);"
+          >
+            <div style="display: flex; align-items: center; gap: var(--space-2);">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                style="color:var(--color-primary)"
+              >
+                <>
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </>
+              </svg>
+              <span style="font-weight: 700; color: var(--color-text);">
+                {cuisine}
+              </span>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--color-muted); flex: 1;">
+              {cuisineDescriptions[cuisine!] ??
+                `Découvrez nos recettes de ${cuisine?.toLowerCase()}.`}
+            </p>
+            <span style="font-size: var(--text-xs); color: var(--color-primary); font-weight: 600;">
+              {count} recette{count > 1 ? "s" : ""} →
+            </span>
+          </a>
+        );
+      })
+    }
+  </div>
+
+  <div
+    style="margin-top: var(--space-10); padding: var(--space-8); background: var(--color-surface); border-radius: var(--radius-lg); border: 1px solid var(--color-border);"
+  >
+    <h2
+      style="font-size: var(--text-xl); font-weight: 800; margin-bottom: var(--space-4);"
+    >
+      Pourquoi explorer les cuisines du monde ?
+    </h2>
+    <p style="color: var(--color-muted); margin-bottom: var(--space-4);">
+      Chaque cuisine traditionnelle reflects millennia of agricultural
+      knowledge, climate adaptation, and cultural exchange. When you cook a
+      curry indien, you connect with a food system built around millets and
+      spices adapted to monsoon climates. When you prepare a ratatouille
+      provençale, you honor the Mediterranean triad of wheat, olive oil, and
+      wine that shaped European civilization.
+    </p>
+    <p style="color: var(--color-muted);">
+      At Bytemeuh, we believe that understanding where your food comes from —
+      and how different cultures transformed the same ingredients into distinct
+      cuisines — makes you a more conscious eater. That's why we document not
+      just the recipe, but the story behind each dish.
+    </p>
+  </div>
+</BaseLayout>

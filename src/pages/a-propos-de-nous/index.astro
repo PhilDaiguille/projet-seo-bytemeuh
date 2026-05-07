@@ -1,9 +1,9 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
-import sarahImg from '../../assets/images/profil/sarah.webp';
-import thomasImg from '../../assets/images/profil/thomas.webp';
-import margueriteImg from '../../assets/images/profil/marguerite.webp';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import sarahImg from "../../assets/images/profil/sarah.webp";
+import thomasImg from "../../assets/images/profil/thomas.webp";
+import margueriteImg from "../../assets/images/profil/marguerite.webp";
 ---
 
 <BaseLayout
@@ -15,7 +15,18 @@ import margueriteImg from '../../assets/images/profil/marguerite.webp';
     <ol>
       <li><a href="/">Accueil</a></li>
       <li aria-hidden="true" class="breadcrumb-sep">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
       </li>
       <li aria-current="page">À Propos</li>
     </ol>
@@ -23,26 +34,49 @@ import margueriteImg from '../../assets/images/profil/marguerite.webp';
 
   <article>
     <section class="surface" style="margin-bottom: var(--space-6);">
-      <h1 style="font-size: var(--text-4xl); margin-bottom: var(--space-6); letter-spacing: -0.03em;">À Propos de Bytemeuh</h1>
+      <h1
+        style="font-size: var(--text-4xl); margin-bottom: var(--space-6); letter-spacing: -0.03em;"
+      >
+        À Propos de Bytemeuh
+      </h1>
 
       <div class="article-content">
         <h2>Notre histoire</h2>
-        <h3>ByteMeuh Farm : croquez l'inspiration culinaire à pleines dents !</h3>
+        <h3>
+          ByteMeuh Farm : croquez l'inspiration culinaire à pleines dents !
+        </h3>
 
         <p>
-          ByteMeuh est bien plus qu'un simple blog culinaire. Fondée en 2024 au cœur de Paris, notre équipe de passionnés est unie par l'amour de la gastronomie française. Notre projet est né d'une vision commune : celle de créer un pont entre tradition culinaire et modernité.
+          ByteMeuh est bien plus qu'un simple blog culinaire. Fondée en 2024 au
+          cœur de Paris, notre équipe de passionnés est unie par l'amour de la
+          gastronomie française. Notre projet est né d'une vision commune :
+          celle de créer un pont entre tradition culinaire et modernité.
         </p>
         <p>
-          Notre mission s'articule autour de trois piliers fondamentaux : transmettre les secrets d'une cuisine authentique, mettre en lumière les artisans et producteurs locaux qui font l'excellence de nos terroirs, et rendre accessible à tous les plaisirs d'une cuisine maison savoureuse.
+          Notre mission s'articule autour de trois piliers fondamentaux :
+          transmettre les secrets d'une cuisine authentique, mettre en lumière
+          les artisans et producteurs locaux qui font l'excellence de nos
+          terroirs, et rendre accessible à tous les plaisirs d'une cuisine
+          maison savoureuse.
         </p>
         <p>
-          En collaboration avec des chefs renommés et des producteurs passionnés, nous sillonnons les régions françaises pour dénicher les meilleurs produits et techniques. Nous créons une véritable communauté autour des valeurs de partage, d'authenticité et d'innovation culinaire responsable.
+          En collaboration avec des chefs renommés et des producteurs
+          passionnés, nous sillonnons les régions françaises pour dénicher les
+          meilleurs produits et techniques. Nous créons une véritable communauté
+          autour des valeurs de partage, d'authenticité et d'innovation
+          culinaire responsable.
         </p>
         <p>
-          Bytemeuh travaille en collaboration avec des producteurs, des chefs et des marques partageant leurs valeurs pour proposer du contenu de qualité à leurs lecteurs. Ces partenariats sont toujours transparents et n'influencent pas l'objectivité éditoriale du blog.
+          Bytemeuh travaille en collaboration avec des producteurs, des chefs et
+          des marques partageant leurs valeurs pour proposer du contenu de
+          qualité à leurs lecteurs. Ces partenariats sont toujours transparents
+          et n'influencent pas l'objectivité éditoriale du blog.
         </p>
         <p>
-          <a href="/blog/">Rejoignez-nous dans cette aventure culinaire et découvrez une nouvelle façon de vivre la cuisine !</a>
+          <a href="/blog/"
+            >Rejoignez-nous dans cette aventure culinaire et découvrez une
+            nouvelle façon de vivre la cuisine !</a
+          >
         </p>
 
         <h2>Nos valeurs</h2>
@@ -51,24 +85,72 @@ import margueriteImg from '../../assets/images/profil/marguerite.webp';
       <div class="expertise-grid">
         <div class="expertise-card">
           <div class="expertise-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+              ></path></svg
+            >
           </div>
           <p class="expertise-title">Authenticité</p>
-          <p class="expertise-desc">Nous croyons en une cuisine sincère qui respecte les produits et les traditions tout en restant ouverte aux innovations.</p>
+          <p class="expertise-desc">
+            Nous croyons en une cuisine sincère qui respecte les produits et les
+            traditions tout en restant ouverte aux innovations.
+          </p>
         </div>
         <div class="expertise-card">
           <div class="expertise-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              ></polygon></svg
+            >
           </div>
           <p class="expertise-title">Qualité</p>
-          <p class="expertise-desc">Nous sélectionnons méticuleusement nos ingrédients et partenaires pour vous garantir des recettes d'excellence.</p>
+          <p class="expertise-desc">
+            Nous sélectionnons méticuleusement nos ingrédients et partenaires
+            pour vous garantir des recettes d'excellence.
+          </p>
         </div>
         <div class="expertise-card">
           <div class="expertise-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+              ></path><circle cx="9" cy="7" r="4"></circle><path
+                d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path
+                d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg
+            >
           </div>
           <p class="expertise-title">Communauté</p>
-          <p class="expertise-desc">Notre communauté est au cœur de notre projet. Nous encourageons l'échange de savoirs et d'expériences culinaires.</p>
+          <p class="expertise-desc">
+            Notre communauté est au cœur de notre projet. Nous encourageons
+            l'échange de savoirs et d'expériences culinaires.
+          </p>
         </div>
       </div>
 
@@ -76,18 +158,51 @@ import margueriteImg from '../../assets/images/profil/marguerite.webp';
         <h2>Notre équipe</h2>
       </div>
       <div class="expertise-grid" style="margin-top: var(--space-6);">
-        <div class="expertise-card" style="text-align: center; align-items: center;">
-          <Image src={sarahImg} alt="Sarah Martin, chef cuisinière et fondatrice de Bytemeuh" width={100} height={100} loading="lazy" decoding="async" style="border-radius: 50%; object-fit: cover; margin-bottom: var(--space-3);" />
+        <div
+          class="expertise-card"
+          style="text-align: center; align-items: center;"
+        >
+          <Image
+            src={sarahImg}
+            alt="Sarah Martin, chef cuisinière et fondatrice de Bytemeuh"
+            width={100}
+            height={100}
+            loading="lazy"
+            decoding="async"
+            style="border-radius: 50%; object-fit: cover; margin-bottom: var(--space-3);"
+          />
           <p class="expertise-title">Sarah Martin</p>
           <p class="expertise-desc">Chef cuisinière &amp; fondatrice</p>
         </div>
-        <div class="expertise-card" style="text-align: center; align-items: center;">
-          <Image src={thomasImg} alt="Thomas Dupont, expert culinaire et rédacteur chez Bytemeuh" width={100} height={100} loading="lazy" decoding="async" style="border-radius: 50%; object-fit: cover; margin-bottom: var(--space-3);" />
+        <div
+          class="expertise-card"
+          style="text-align: center; align-items: center;"
+        >
+          <Image
+            src={thomasImg}
+            alt="Thomas Dupont, expert culinaire et rédacteur chez Bytemeuh"
+            width={100}
+            height={100}
+            loading="lazy"
+            decoding="async"
+            style="border-radius: 50%; object-fit: cover; margin-bottom: var(--space-3);"
+          />
           <p class="expertise-title">Thomas Dupont</p>
           <p class="expertise-desc">Expert culinaire &amp; rédacteur</p>
         </div>
-        <div class="expertise-card" style="text-align: center; align-items: center;">
-          <Image src={margueriteImg} alt="Mascotte vache Bytemeuh" width={100} height={100} loading="lazy" decoding="async" style="border-radius: 50%; object-fit: cover; margin-bottom: var(--space-3);" />
+        <div
+          class="expertise-card"
+          style="text-align: center; align-items: center;"
+        >
+          <Image
+            src={margueriteImg}
+            alt="Mascotte vache Bytemeuh"
+            width={100}
+            height={100}
+            loading="lazy"
+            decoding="async"
+            style="border-radius: 50%; object-fit: cover; margin-bottom: var(--space-3);"
+          />
           <p class="expertise-title">Meuh la Vache</p>
           <p class="expertise-desc">Mascotte vachement Meuh</p>
         </div>

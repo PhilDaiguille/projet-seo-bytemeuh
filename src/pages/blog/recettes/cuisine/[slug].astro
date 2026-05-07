@@ -1,0 +1,479 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import { normalizeCuisine } from "../../../../utils/seo";
+
+export async function getStaticPaths() {
+  const recettes = await getCollection("recettes");
+  const cuisines = [
+    ...new Set(recettes.map((r) => r.data.cuisine).filter(Boolean)),
+  ];
+
+  return cuisines.map((cuisine) => ({
+    params: { slug: normalizeCuisine(cuisine!) },
+    props: { cuisineName: cuisine! },
+  }));
+}
+
+const { slug } = Astro.params;
+const { cuisineName } = Astro.props;
+
+const recettes = await getCollection("recettes");
+const filtered = recettes
+  .filter((r) => normalizeCuisine(r.data.cuisine ?? "") === slug)
+  .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+if (filtered.length === 0) {
+  return Astro.redirect("/blog/recettes/");
+}
+
+const SITE_URL = "https://bytemeuh.phildaiguille.fr";
+const pageUrl = `${SITE_URL}/blog/recettes/cuisine/${slug}/`;
+
+const cuisineData: Record<
+  string,
+  { title: string; intro: string; tips: string[] }
+> = {
+  indienne: {
+    title: "Cuisine indienne",
+    intro:
+      "La cuisine indienne est l'une des plus anciennes et diversifiées au monde. Originaires des régions du Punjab, du Gujarat et du Karnataka, les curry de légumes sont préparés avec un mélange subtil d'épices torréfiées — cumin, curcuma, coriandre et garam masala. Le lait de coco apporte une douceur crémeuse qui équilibre les saveurs épicées. Chez Bytemeuh, nous cultivons les épices essentielles pour des curry authentiques, de la graine à l'assiette.",
+    tips: [
+      "Le curcuma doit être torréfié à sec pour libérer ses arômes",
+      "Le lait de coco se remplace par du yaourth pour une version plus légère",
+      "Ajoutez les légumes dans l'ordre : d'abord ceux qui prennent plus de temps",
+    ],
+  },
+  mexicaine: {
+    title: "Cuisine mexicaine",
+    intro:
+      "La cuisine mexicaine, patrimoine de l'UNESCO, marie le maïs, le piment et le cacao dans des créations audacieuses. Les tacos de bœuf incarnent cette tradition avec une viande marinée aux épices chaudes, servie dans des tortillas de maïs artisanales. Le cumin et le paprika créent la base aromatique, l'avocat apporte la fraîcheur crémeuse.",
+    tips: [
+      "Marinez la viande au minimum 2h pour que les épices pénètrent",
+      "Torréfiez les tortillas directement sur la flamme pour un goût fumé",
+      "L'avocat doit être bien mûr — il doit céder légèrement sous la pression",
+    ],
+  },
+  chinoise: {
+    title: "Cuisine chinoise",
+    intro:
+      "La cuisine chinoise révolutionne le rapport à la viande avec des techniques de wok ancestrales. Les ravioli chinois (jiaozi) symbolisent la cuisine du Nord : pâte fine emprisonnant une farce parfumée au bœuf, gingembre frais et sauce soja. La sauce huître crée un équilibre salé-umami caractéristique.",
+    tips: [
+      "La pâte à ravioli se travaille froide — réfrigérez 30min avant",
+      "Ne surchargez pas les ravioli : 1 cuillère à café de farce max",
+      "Faites blanchir les ravioli 1min de moins que recommandé — ils finissent dans le wok",
+    ],
+  },
+  mediterraneenne: {
+    title: "Cuisine méditerranéenne",
+    intro:
+      "La cuisine méditerranéenne célèbre les produits de la terre : huile d'olive, légumes grillés, herbes fraîches. Le kebab de bœuf et la salade de quinoa illustrent cette tradition avec des recettes parfumées au paprika et au cumin, où les légumes frais équilibrent la richesse de la viande.",
+    tips: [
+      "L'huile d'olive s'utilise à température ambiante pour préserver ses saveurs",
+      "Grillez les légumes jusqu'à obtenir des marques profondes",
+      "Le quinoa se rince toujours avant cuisson pour éliminer l'amertume",
+    ],
+  },
+  francaise: {
+    title: "Cuisine française",
+    intro:
+      "La cuisine française, pilier de la gastronomie mondiale, repose sur le respect des produits et des techniques classiques. La ratatouille provençale incarne cette philosophie : un mijotage lent où aubergines, courgettes et poivrons libèrent leurs sucs. Le thym et le laurier ancrent les saveurs, le basilic frais illumine le plat à la toute fin.",
+    tips: [
+      "Faites dégorger les aubergines avec du sel 30min avant cuisson",
+      "Chaque légume doit être sauté séparément pour garder sa texture",
+      "La ratatouille est meilleure le lendemain — les saveurs se développent",
+    ],
+  },
+  americaine: {
+    title: "Cuisine américaine",
+    intro:
+      'La cuisine américaine a évolué du hamburger de rue à une gastronomie raffinée. Le burger de bœuf maison illustre cette transformation : galette de bœuf 15% MG, cheddar fondant, légumes croquants. Une révolution "gourmet" qui revendique la qualité des ingrédients et le savoir-faire français.',
+    tips: [
+      "Formez les galettes plus larges que le pain — elles rétrécissent à la cuisson",
+      "Créez un creux au centre avec le pouce pour éviter le bombage",
+      "Ne retournez qu'une fois : 3-4 min par face à feu vif",
+    ],
+  },
+  "moyen-orientale": {
+    title: "Cuisine moyen-orientale",
+    intro:
+      "La cuisine moyen-orientale unit les saveurs de la Perse à la Méditerranée dans des plats généreux. Le shakshuka, roi des petits-déjeuners, pochée les œufs dans une sauce tomate épicée aux poivrons et cumin. Le pain pita permet de saucer sans manières — un plat de secours pour@faim qui traverse les frontières.",
+    tips: [
+      "La sauce doit être bien réduite avant d'y casser les œufs",
+      "Couvrez pendant la cuisson pour que les blancs prennent sans que les jaunes durcissent",
+      "Servez avec du persil frais et un filet d'huile d'olive",
+    ],
+  },
+  "fusion-franco-italienne": {
+    title: "Cuisine fusion franco-italienne",
+    intro:
+      "La fusion franco-italienne unit la maîtrise de la pâte feuilletée française à la créativité de la pizza transalpine. La pizza chèvre-miel illustre ce mariage : pâte maison croustillante, fromage de chèvre fondant, miel liquide coulant.",
+    tips: [
+      "Laissez reposer la pâte 24h au réfrigérateur pour une meilleure fermentation",
+      "Le chèvre doit être à température ambiante pour mieux fondre",
+      "Le miel s'ajoute en toute fin — trop tôt et il brûle",
+    ],
+  },
+  "fusion-hawaienne-japonaise": {
+    title: "Cuisine hawaïenne-japonaise",
+    intro:
+      "Le poke bowl est né à Hawaï de la rencontre entre pêcheurs japonais et communautés locales. Le tofu ferme absorbe la marinade soja-sésame, le riz sushi collant supporte les toppings fraîcheur : avocat crémeux, mangue sucrée, carotte croquante.",
+    tips: [
+      "Marinez le tofu minimum 2h pour qu'il goûte vraiment",
+      "Le riz doit être tiède — froid il n'absorbe pas la marinade",
+      "Ajoutez la sauce sriracha uniquement au moment de servir",
+    ],
+  },
+  "fusion-asiatique-francaise": {
+    title: "Cuisine fusion asiatique-française",
+    intro:
+      "Les bao buns marient la tradition chinoise du baozi à la sensibilité française. Ces petites buns vapotisées emprisonnent une farce de jack-fruit mariné, pickles croquants et coriandre fraîche. Une street food de qualité restaurant.",
+    tips: [
+      "La pâte doit être parfaitement lisse et reposer 1h à température ambiante",
+      "Le bain de vapeur ne doit pas bouillir — vapeur douce uniquement",
+      "Garnissez immédiatement après cuisson — les buns ramollissent vite",
+    ],
+  },
+};
+
+const cuisine = cuisineData[slug!] ?? {
+  title: cuisineName,
+  intro: `Découvrez nos recettes de ${cuisineName.toLowerCase()}. Des plats savoureux préparés avec des produits de ferme Bytemeuh, dans le respect des traditions et des saisons.`,
+  tips: [
+    "Utilisez des ingrédients de qualité pour des résultats optimaux",
+    "Adaptez les quantités selon le nombre de personnes",
+    "N'hésitez pas à ajuster les épices selon vos goûts",
+  ],
+};
+
+const allCuisines = [
+  ...new Set(recettes.map((r) => r.data.cuisine).filter(Boolean)),
+];
+
+const graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      name: `Recettes de ${cuisine.title} — Bytemeuh`,
+      description: cuisine.intro,
+      url: pageUrl,
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: filtered.map((r, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: `${SITE_URL}/blog/recettes/${r.id}/`,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: `${SITE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${SITE_URL}/blog/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Recettes",
+          item: `${SITE_URL}/blog/recettes/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Cuisines",
+          item: `${SITE_URL}/blog/recettes/cuisine/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          name: cuisine.title,
+          item: pageUrl,
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title={`Recettes de ${cuisine.title} — Bytemeuh`}
+  description={`${filtered.length} recette${filtered.length > 1 ? "s" : ""} de ${cuisine.title.toLowerCase()} à découvrir sur Bytemeuh. ${filtered.map((r) => r.data.title).join(", ")}.`}
+  canonical={pageUrl}
+  graph={graph}
+>
+  <nav aria-label="Fil d'ariane" class="breadcrumb">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li><a href="/blog/">Blog</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li><a href="/blog/recettes/">Recettes</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li><a href="/blog/recettes/cuisine/">Cuisines</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li aria-current="page">{cuisine.title}</li>
+    </ol>
+  </nav>
+
+  <header class="pseo-header">
+    <span class="pseo-badge">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        ><circle cx="12" cy="12" r="10"></circle><line
+          x1="2"
+          y1="12"
+          x2="22"
+          y2="12"></line><path
+          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+        ></path></svg
+      >
+      Cuisine
+    </span>
+    <h1>Recettes de {cuisine.title}</h1>
+    <p class="pseo-intro">{cuisine.intro}</p>
+  </header>
+
+  <section class="pseo-recipes" aria-label={`Recettes de ${cuisine.title}`}>
+    <div class="cards-grid">
+      {
+        filtered.map((recette) => (
+          <article class="card">
+            <a
+              href={`/blog/recettes/${recette.id}/`}
+              aria-label={`Recette : ${recette.data.title}`}
+            >
+              <div class="card-image">
+                {recette.data.featuredImage && (
+                  <Image
+                    src={recette.data.featuredImage}
+                    alt={recette.data.featuredImageAlt ?? recette.data.title}
+                    width={600}
+                    height={375}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
+                <span class="card-badge badge-recipe">Recette</span>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  {recette.data.totalTime && (
+                    <span class="card-meta-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                      {recette.data.totalTime
+                        .replace("PT", "")
+                        .replace("H", " h ")
+                        .replace("M", " min")
+                        .trim()}
+                    </span>
+                  )}
+                  {recette.data.difficulty && (
+                    <span class="card-meta-item">
+                      {recette.data.difficulty}
+                    </span>
+                  )}
+                  {recette.data.aggregateRating && (
+                    <span class="card-meta-item">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="#f59e0b"
+                        stroke="#f59e0b"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                      </svg>
+                      {recette.data.aggregateRating.ratingValue}
+                    </span>
+                  )}
+                </div>
+                <h2 class="card-title">{recette.data.title}</h2>
+                <p class="card-description">{recette.data.description}</p>
+              </div>
+              {recette.data.tags && recette.data.tags.length > 0 && (
+                <div class="card-footer">
+                  <div class="card-tags">
+                    {recette.data.tags.slice(0, 2).map((tag) => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="color:var(--color-primary)"
+                    aria-hidden="true"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </div>
+              )}
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="pseo-tips" aria-labelledby="tips-heading">
+    <h2 id="tips-heading" class="pseo-section-title">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        ><circle cx="12" cy="12" r="10"></circle><line
+          x1="12"
+          y1="8"
+          x2="12"
+          y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg
+      >
+      Astuces {cuisine.title}
+    </h2>
+    <ul class="pseo-tips-list">
+      {
+        cuisine.tips.map((tip) => (
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+            {tip}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="pseo-related-cuisines" aria-labelledby="cuisines-heading">
+    <h2 id="cuisines-heading" class="pseo-section-title">Autres cuisines</h2>
+    <div class="pseo-tags-grid">
+      {
+        allCuisines.map((c) => {
+          const cSlug = normalizeCuisine(c!);
+          if (cSlug === slug) return null;
+          return (
+            <a href={`/blog/recettes/cuisine/${cSlug}/`} class="pseo-tag-chip">
+              {c}
+            </a>
+          );
+        })
+      }
+    </div>
+  </section>
+</BaseLayout>

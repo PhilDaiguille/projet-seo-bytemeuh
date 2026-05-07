@@ -13,7 +13,13 @@ description: "Apps de suivi nutritionnel, objets connectés, nutrigénomique : c
 publishDate: 2024-10-31
 author: "Bytemeuh Farm"
 category: "Alimentation"
-tags: ["nutrition connectée", "suivi nutritionnel", "alimentation consciente", "bien-être alimentaire"]
+tags:
+  [
+    "nutrition connectée",
+    "suivi nutritionnel",
+    "alimentation consciente",
+    "bien-être alimentaire",
+  ]
 featuredImage: "../../assets/images/technologie-alimentaire.webp"
 featuredImageAlt: "Application mobile de suivi nutritionnel et alimentation saine"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/technologie-alimentaire.webp"
@@ -23,13 +29,14 @@ Dans notre monde hyperconnecté, la technologie s'invite désormais jusque dans 
 
 ## L'alimentation consciente à l'ère numérique
 
-L'alimentation consciente, ou *mindful eating*, est une pratique qui permet de développer une relation plus saine avec la nourriture. La technologie peut désormais nous aider à :
+L'alimentation consciente, ou _mindful eating_, est une pratique qui permet de développer une relation plus saine avec la nourriture. La technologie peut désormais nous aider à :
 
 - Écouter nos sensations corporelles.
 - Comprendre nos habitudes alimentaires.
 - Prendre conscience de nos besoins nutritionnels réels.
 
 **Moyens disponibles :**
+
 - Applications de suivi nutritionnel.
 - Capteurs intelligents qui analysent nos signaux de faim et de satiété.
 - Programmes en ligne pour manger de manière plus consciente.
@@ -46,11 +53,13 @@ Les applications de suivi alimentaire peuvent désormais :
 ## L'agriculture de demain pour une alimentation plus durable
 
 **Les fermes verticales urbaines permettent :**
+
 - Une consommation d'eau optimisée.
 - Un contrôle précis des nutriments.
 - Une production locale qui limite l'empreinte carbone.
 
 **La blockchain au service de la traçabilité :**
+
 - Suivre le parcours de nos aliments de la ferme à l'assiette.
 - Vérifier les conditions de production.
 - S'assurer de la qualité des produits.
@@ -58,15 +67,18 @@ Les applications de suivi alimentaire peuvent désormais :
 ## Des conseils pratiques pour allier tech et bien-être
 
 **Commencez doucement :**
+
 - Choisissez une app de suivi alimentaire simple.
 - Prenez le temps d'explorer ses fonctionnalités.
 - Définissez des objectifs réalistes.
 
 **Restez à l'écoute de votre corps :**
+
 - La technologie est un outil, pas une dictature.
 - Adaptez les recommandations à vos besoins.
 
 **Faites le tri dans les innovations :**
+
 - Privilégiez les solutions qui correspondent à vos valeurs.
 - Testez avant d'investir.
 - Gardez un œil critique sur les promesses marketing.

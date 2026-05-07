@@ -1,10 +1,10 @@
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
-import type { APIContext } from 'astro';
+import rss from "@astrojs/rss";
+import { getCollection } from "astro:content";
+import type { APIContext } from "astro";
 
 export async function GET(context: APIContext) {
-  const recettes = await getCollection('recettes');
-  const articles = await getCollection('articles');
+  const recettes = await getCollection("recettes");
+  const articles = await getCollection("articles");
 
   const allItems = [
     ...recettes.map((r) => ({
@@ -22,10 +22,11 @@ export async function GET(context: APIContext) {
   ].sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 
   return rss({
-    title: 'Bytemeuh — Agriculture durable & cuisine saine',
-    description: 'Recettes saines, articles sur la biotechnologie agricole et l\'alimentation responsable.',
+    title: "Bytemeuh — Agriculture durable & cuisine saine",
+    description:
+      "Recettes saines, articles sur la biotechnologie agricole et l'alimentation responsable.",
     site: context.site!,
     items: allItems,
-    customData: '<language>fr-fr</language>',
+    customData: "<language>fr-fr</language>",
   });
 }

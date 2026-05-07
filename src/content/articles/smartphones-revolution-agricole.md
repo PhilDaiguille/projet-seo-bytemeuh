@@ -26,6 +26,7 @@ Les temps changent, et les agriculteurs aussi ! Aujourd'hui, le smartphone s'inv
 Loin des clichés traditionnels, les agriculteurs d'aujourd'hui sont des professionnels connectés. Le smartphone est devenu un outil indispensable qui transforme radicalement la gestion quotidienne des exploitations agricoles.
 
 **Principaux usages :**
+
 - **Prévisions météorologiques** : Suivre en temps réel les conditions climatiques.
 - **Gestion des troupeaux** : Surveiller les animaux à distance.
 - **Suivi des cultures** : Analyser l'état des parcelles et planifier les traitements.

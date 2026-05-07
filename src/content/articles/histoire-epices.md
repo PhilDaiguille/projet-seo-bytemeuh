@@ -13,7 +13,14 @@ description: "Poivre monnaie d'échange, cannelle des pharaons, piment qui a cha
 publishDate: 2025-01-20
 author: "Bytemeuh Farm"
 category: "Culture"
-tags: ["histoire des épices", "gastronomie", "routes de la soie", "culinaire", "patrimoine"]
+tags:
+  [
+    "histoire des épices",
+    "gastronomie",
+    "routes de la soie",
+    "culinaire",
+    "patrimoine",
+  ]
 featuredImage: "../../assets/images/histoire-epices.webp"
 featuredImageAlt: "Collection d'épices colorées du monde entier — curcuma, cumin, cannelle, cardamome"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/histoire-epices.webp"
@@ -31,7 +38,7 @@ Dans la Grèce et la Rome antiques, les épices étaient avant tout des marqueur
 
 ## Le Moyen Âge : l'épice comme monnaie d'échange
 
-Au Moyen Âge européen, les épices ont atteint une valeur économique et symbolique difficile à concevoir aujourd'hui. Le poivre noir — originaire du sud-ouest de l'Inde — était si précieux qu'il servait littéralement de monnaie. On payait les loyers en poivre, on constituait des dots en poivre, on soldait des dettes avec du poivre. Des archives médiévales font état de transactions en "livres sterling de poivre" — l'expression "cher comme le poivre" (ou "poivre cher" en anglais *peppercorn rent*) trouve là son origine.
+Au Moyen Âge européen, les épices ont atteint une valeur économique et symbolique difficile à concevoir aujourd'hui. Le poivre noir — originaire du sud-ouest de l'Inde — était si précieux qu'il servait littéralement de monnaie. On payait les loyers en poivre, on constituait des dots en poivre, on soldait des dettes avec du poivre. Des archives médiévales font état de transactions en "livres sterling de poivre" — l'expression "cher comme le poivre" (ou "poivre cher" en anglais _peppercorn rent_) trouve là son origine.
 
 La demande européenne pour les épices — poivre, cannelle, gingembre, muscade, clou de girofle, cardamome — était considérable, mais les routes commerciales étaient longues, dangereuses et contrôlées par des intermédiaires (marchands arabes, puis Vénitiens) qui prélevaient d'énormes marges à chaque étape. La muscade et le clou de girofle, produits exclusivement dans les îles Moluques (actuelle Indonésie), devaient traverser l'Asie entière avant d'atteindre les tables européennes — un périple de plusieurs années qui multipliait leur prix par cent, voire mille.
 
@@ -57,7 +64,7 @@ Sa diffusion mondiale constitue l'une des grandes révolutions gastronomiques si
 
 Le curcuma (Curcuma longa) est cultivé et utilisé en Inde depuis plus de 4000 ans. Longtemps cantonné en Occident à la cuisine indienne et utilisé comme colorant alimentaire (E100), il a connu une renaissance spectaculaire dans les années 2010 sous l'étiquette "superfood". Et cette réputation est en partie méritée : la curcumine, son principe actif, fait l'objet de centaines d'études scientifiques pour ses propriétés anti-inflammatoires, antioxydantes et potentiellement neuroprotectrices.
 
-Mais les Indiens n'avaient pas attendu les chercheurs occidentaux pour l'apprécier : l'Ayurveda (médecine traditionnelle indienne) utilise le curcuma comme remède depuis des millénaires. Le "lait d'or" (golden milk) que les cafés branchés parisiens ont mis à la mode dans les années 2010 est en réalité le *haldi doodh* indien, consommé depuis des générations pour ses bienfaits sur la santé. Retrouvez cette épice au cœur de notre [curry de légumes maison](/blog/recettes/curry-legumes/).
+Mais les Indiens n'avaient pas attendu les chercheurs occidentaux pour l'apprécier : l'Ayurveda (médecine traditionnelle indienne) utilise le curcuma comme remède depuis des millénaires. Le "lait d'or" (golden milk) que les cafés branchés parisiens ont mis à la mode dans les années 2010 est en réalité le _haldi doodh_ indien, consommé depuis des générations pour ses bienfaits sur la santé. Retrouvez cette épice au cœur de notre [curry de légumes maison](/blog/recettes/curry-legumes/).
 
 ### La cannelle : l'épice des pharaons
 
@@ -81,18 +88,18 @@ Cette philosophie du "bien choisir ses ingrédients" irrigue toutes nos recettes
 
 ## Les grandes épices et leurs origines : tableau récapitulatif
 
-| Épice | Origine | Utilisée depuis | Usage principal |
-|---|---|---|---|
-| Poivre noir | Inde (Kerala) | 4000 ans | Universel |
-| Cannelle | Sri Lanka | 4000 ans | Sucrée-salée |
-| Curcuma | Inde | 4000 ans | Curry, colorant |
-| Gingembre | Chine / Inde | 5000 ans | Aromatique, médicinal |
-| Cumin | Proche-Orient | 5000 ans | Méditerranée, Inde |
-| Cardamome | Inde | 4000 ans | Café, cuisine moyen-orientale |
-| Piment | Amérique | 500 ans (en Europe) | Universel depuis XVIe |
-| Safran | Grèce / Asie centrale | 3500 ans | Colorant, aromatique |
-| Clou de girofle | Îles Moluques | 4000 ans | Sucré-salé, médicinal |
-| Muscade | Îles Moluques | 3000 ans | Sucré-salé, Europe médiévale |
+| Épice           | Origine               | Utilisée depuis     | Usage principal               |
+| --------------- | --------------------- | ------------------- | ----------------------------- |
+| Poivre noir     | Inde (Kerala)         | 4000 ans            | Universel                     |
+| Cannelle        | Sri Lanka             | 4000 ans            | Sucrée-salée                  |
+| Curcuma         | Inde                  | 4000 ans            | Curry, colorant               |
+| Gingembre       | Chine / Inde          | 5000 ans            | Aromatique, médicinal         |
+| Cumin           | Proche-Orient         | 5000 ans            | Méditerranée, Inde            |
+| Cardamome       | Inde                  | 4000 ans            | Café, cuisine moyen-orientale |
+| Piment          | Amérique              | 500 ans (en Europe) | Universel depuis XVIe         |
+| Safran          | Grèce / Asie centrale | 3500 ans            | Colorant, aromatique          |
+| Clou de girofle | Îles Moluques         | 4000 ans            | Sucré-salé, médicinal         |
+| Muscade         | Îles Moluques         | 3000 ans            | Sucré-salé, Europe médiévale  |
 
 ## Conclusion : les épices, ces ambassadrices silencieuses
 

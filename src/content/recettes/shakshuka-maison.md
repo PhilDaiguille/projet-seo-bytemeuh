@@ -15,7 +15,14 @@ publishDate: 2025-01-10
 author: "Bytemeuh Farm"
 category: "Plat principal"
 cuisine: "Moyen-Orientale"
-tags: ["shakshuka", "œufs pochés", "cuisine moyen-orientale", "recette healthy", "plat végétarien"]
+tags:
+  [
+    "shakshuka",
+    "œufs pochés",
+    "cuisine moyen-orientale",
+    "recette healthy",
+    "plat végétarien",
+  ]
 featuredImage: "../../assets/images/shakshuka-maison.webp"
 featuredImageAlt: "Shakshuka aux œufs pochés dans une sauce tomate épicée aux poivrons"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/shakshuka-maison.webp"

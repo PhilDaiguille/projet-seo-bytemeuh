@@ -13,7 +13,13 @@ description: "Réfrigérateurs intelligents, balances connectées, réalité aug
 publishDate: 2024-11-02
 author: "Bytemeuh Farm"
 category: "Cuisine"
-tags: ["équipements connectés cuisine", "cuisine intelligente", "appareils connectés", "cuisine maison"]
+tags:
+  [
+    "équipements connectés cuisine",
+    "cuisine intelligente",
+    "appareils connectés",
+    "cuisine maison",
+  ]
 featuredImage: "../../assets/images/tech-cuisine.webp"
 featuredImageAlt: "Cuisine moderne équipée d'appareils technologiques connectés"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/tech-cuisine.webp"
@@ -36,6 +42,7 @@ La technologie transforme nos cuisines en véritables espaces d'innovation :
 L'IA nous aide à choisir nos repas ! Elle analyse nos goûts, nos besoins et même ce qu'il y a dans notre frigo.
 
 **Les réfrigérateurs intelligents permettent de :**
+
 - Suivre les dates de péremption.
 - Créer des listes de courses automatiquement.
 - Proposer des recettes avec les ingrédients disponibles.
@@ -46,6 +53,7 @@ L'IA nous aide à choisir nos repas ! Elle analyse nos goûts, nos besoins et m�
 Les balances connectées et thermomètres intelligents permettent de cuire à la perfection.
 
 **Les thermomètres connectés offrent :**
+
 - Un suivi de la température à distance.
 - Des notifications quand c'est prêt.
 - L'enregistrement des températures pour reproduire des cuissons parfaites.

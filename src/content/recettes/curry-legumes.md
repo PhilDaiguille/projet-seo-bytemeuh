@@ -15,7 +15,14 @@ publishDate: 2025-01-15
 author: "Bytemeuh Farm"
 category: "Plat principal"
 cuisine: "Indienne"
-tags: ["curry de légumes", "vegan", "cuisine indienne", "recette végétarienne", "lait de coco"]
+tags:
+  [
+    "curry de légumes",
+    "vegan",
+    "cuisine indienne",
+    "recette végétarienne",
+    "lait de coco",
+  ]
 featuredImage: "../../assets/images/curry-legumes.webp"
 featuredImageAlt: "Curry de légumes maison avec lait de coco et riz basmati"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/curry-legumes.webp"

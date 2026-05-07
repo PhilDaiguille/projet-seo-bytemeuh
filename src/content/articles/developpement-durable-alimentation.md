@@ -62,11 +62,11 @@ Dans nos cuisines, cela se traduit par des recettes qui valorisent les légumes 
 
 ## Chiffres clés
 
-| Indicateur | Valeur |
-|---|---|
-| Exploitations françaises en agroécologie | **14,3 %** |
-| Projets alimentaires territoriaux labellisés en 2023 | **428** |
-| Émissions mondiales issues des systèmes alimentaires | **30 %** |
+| Indicateur                                           | Valeur     |
+| ---------------------------------------------------- | ---------- |
+| Exploitations françaises en agroécologie             | **14,3 %** |
+| Projets alimentaires territoriaux labellisés en 2023 | **428**    |
+| Émissions mondiales issues des systèmes alimentaires | **30 %**   |
 
 ## Conclusion
 

@@ -26,11 +26,13 @@ Les recettes de famille, souvent oubliées, retrouvent aujourd'hui une nouvelle 
 Les recettes familiales sont bien plus que de simples instructions de cuisine. Elles sont des récits vivants, des fragments de mémoire transmis de génération en génération.
 
 **Comment la technologie préserve nos traditions :**
+
 - Numérisation des recettes.
 - Généalogie culinaire.
 - Partage intergénérationnel.
 
 **Innovation et tradition :**
+
 - Adapter les recettes traditionnelles aux régimes alimentaires contemporains.
 - Documenter les variations régionales.
 - Créer des communautés autour du patrimoine culinaire.
@@ -38,12 +40,14 @@ Les recettes familiales sont bien plus que de simples instructions de cuisine. E
 ## L'héritage culinaire à l'ère du numérique
 
 **Préserver la mémoire familiale :**
+
 - Créer des archives familiales numériques.
 - Convertir les recettes en formats interactifs.
 - Filmer des techniques de cuisine en vidéo.
 - Partager les recettes facilement.
 
 **De nouvelles façons de transmettre :**
+
 - Faire des ateliers de cuisine en ligne.
 - Enregistrer des vidéos ou audios avec les conseils des anciens.
 - Créer des livres de recettes interactifs.
@@ -52,12 +56,14 @@ Les recettes familiales sont bien plus que de simples instructions de cuisine. E
 ## Préserver les traditions régionales
 
 **Cartographier les recettes locales :**
+
 - Créer des cartes des spécialités locales.
 - Documenter les méthodes de production traditionnelles.
 - Recenser les anciennes variétés de fruits et légumes.
 - Mettre en avant les producteurs locaux.
 
 **Préserver les techniques anciennes :**
+
 - Enregistrer les gestes des artisans.
 - Créer des tutoriels interactifs.
 - Préserver des recettes anciennes avec précision.
@@ -65,12 +71,14 @@ Les recettes familiales sont bien plus que de simples instructions de cuisine. E
 ## Partager la cuisine de manière nouvelle
 
 **Les nouveaux rituels culinaires :**
+
 - Faire des sessions de cuisine en groupe en ligne.
 - Participer à des défis culinaires entre amis ou famille.
 - Partager des moments de dégustation à distance.
 - Créer des bibliothèques de recettes collaboratives.
 
 **Faire évoluer les traditions :**
+
 - Combiner les techniques anciennes et modernes.
 - Adapter les recettes aux régimes modernes.
 - Créer de nouvelles versions respectueuses des recettes originales.
@@ -78,12 +86,14 @@ Les recettes familiales sont bien plus que de simples instructions de cuisine. E
 ## Défis et avenir
 
 **Défis :**
+
 - Préserver l'authenticité des recettes.
 - Protéger les secrets de famille.
 - Garder l'aspect émotionnel de la cuisine.
 - Équilibrer tradition et innovation.
 
 **Opportunités :**
+
 - De nouvelles façons de documenter les recettes.
 - Des plateformes de partage spécialisées.
 - Des outils comme la réalité augmentée.
