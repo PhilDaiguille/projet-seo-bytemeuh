@@ -15,7 +15,7 @@ export default defineConfig({
 
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: 'viewport',
+    defaultStrategy: "viewport",
   },
 
   rustCompiler: true,
@@ -52,6 +52,6 @@ export default defineConfig({
     }),
   ],
   image: {
-    quality: 82,
+    quality: 70,
   },
 });

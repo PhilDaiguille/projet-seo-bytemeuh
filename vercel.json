@@ -55,22 +55,7 @@
         }
       ]
     },
-    {
-      "source": "/(.*).webp",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
-      ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap-index.xml",
-      "statusCode": 301
-    },
+
     {
       "source": "/blog/article.html",
       "destination": "/blog/recettes/tacos-boeuf/",

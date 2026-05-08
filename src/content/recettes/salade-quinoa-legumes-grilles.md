@@ -14,7 +14,7 @@ descriptionLong: "La recette signature de la salade de quinoa et légumes grill�
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
 category: "Salade Végétalienne"
-cuisine: "Cuisine Méditerranéenne"
+cuisine: "Méditerranéenne"
 tags: ["salade de quinoa", "vegan", "méditerranéen", "healthy"]
 featuredImage: "../../assets/images/salade-quinoa-legumes-grilles.webp"
 featuredImageAlt: "Salade de quinoa avec légumes grillés colorés et feta"

@@ -3,6 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import { Image } from "astro:assets";
 import RelatedRecettes from "../components/RelatedRecettes.astro";
 import FaqSection from "../components/FaqSection.astro";
+import { normalizeCuisine } from "../utils/seo";
 import { slugify } from "../utils/seo";
 import type { CollectionEntry } from "astro:content";
 
@@ -261,7 +262,7 @@ const graph = {
             alt={data.featuredImageAlt ?? data.title}
             width={800}
             height={533}
-            quality={82}
+            quality={70}
             loading="eager"
             decoding="async"
             fetchpriority="high"
@@ -659,10 +660,7 @@ const graph = {
               >
                 {data.cuisine && (
                   <a
-                    href={`/blog/recettes/cuisine/${data.cuisine
-                      .toLowerCase()
-                      .replace(/^cuisine\s+/i, "")
-                      .replace(/\s+/g, "-")}/`}
+                    href={`/blog/recettes/cuisine/${normalizeCuisine(data.cuisine)}/`}
                     class="sidebar-badge"
                     style="padding: var(--space-1) var(--space-3); background: var(--color-primary); color: white; border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 600; text-decoration: none;"
                   >
