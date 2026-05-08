@@ -2,8 +2,6 @@ import { defineConfig, svgoOptimizer } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import seoGraph from "@jdevalk/astro-seo-graph/integration";
 
-import vercel from "@astrojs/vercel";
-
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 
 export default defineConfig({
