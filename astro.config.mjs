@@ -56,10 +56,4 @@ export default defineConfig({
   image: {
     quality: 82,
   },
-
-  adapter: vercel({
-    devImageService: 'sharp',
-    imageService: true,
-    isr: true,
-  }),
 });
