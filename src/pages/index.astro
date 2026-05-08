@@ -144,6 +144,7 @@ const graph = {
       alt="Paysage de la ferme Bytemeuh en France — agriculture durable"
       width={1200}
       height={520}
+      quality={82}
       loading="eager"
       decoding="async"
       fetchpriority="high"
@@ -271,9 +272,10 @@ const graph = {
                   <Image
                     src={recette.data.featuredImage}
                     alt={recette.data.featuredImageAlt ?? recette.data.title}
-                    width={600}
-                    height={375}
+                    width={400}
+                    height={267}
                     loading="lazy"
+                    quality={82}
                     decoding="async"
                   />
                 )}
@@ -478,9 +480,10 @@ const graph = {
                   <Image
                     src={article.data.featuredImage}
                     alt={article.data.featuredImageAlt ?? article.data.title}
-                    width={600}
-                    height={375}
+                    width={400}
+                    height={267}
                     loading="lazy"
+                    quality={82}
                     decoding="async"
                   />
                 )}

@@ -69,9 +69,10 @@ const related: CollectionEntry<"articles">[] = [
                   <Image
                     src={article.data.featuredImage}
                     alt={article.data.featuredImageAlt ?? article.data.title}
-                    width={480}
-                    height={300}
+                    width={400}
+                    height={267}
                     loading="lazy"
+                    quality={82}
                     decoding="async"
                   />
                   {article.data.category && (
