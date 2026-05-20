@@ -1624,6 +1624,45 @@ details[open] .faq-icon {
   flex-shrink: 0;
   margin-top: 2px;
 }
+.pseo-editorial {
+  margin: var(--space-10) 0;
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+}
+.pseo-editorial-content {
+  max-width: 72rem;
+}
+.pseo-editorial-content h2 {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin: var(--space-8) 0 var(--space-4);
+}
+.pseo-editorial-content h2:first-child {
+  margin-top: 0;
+}
+.pseo-editorial-content p {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+.pseo-editorial-content ul {
+  margin: var(--space-4) 0 var(--space-6) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.pseo-editorial-content li {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+.pseo-editorial-content strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
 .pseo-tags-grid {
   display: flex;
   flex-wrap: wrap;

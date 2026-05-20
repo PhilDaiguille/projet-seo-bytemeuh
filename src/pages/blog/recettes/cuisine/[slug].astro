@@ -33,16 +33,42 @@ const pageUrl = `${SITE_URL}/blog/recettes/cuisine/${slug}/`;
 
 const cuisineData: Record<
   string,
-  { title: string; intro: string; tips: string[] }
+  { title: string; intro: string; tips: string[]; editorial?: string }
 > = {
   indienne: {
     title: "Cuisine indienne",
     intro:
-      "La cuisine indienne est l'une des plus anciennes et diversifiées au monde. Originaires des régions du Punjab, du Gujarat et du Karnataka, les curry de légumes sont préparés avec un mélange subtil d'épices torréfiées — cumin, curcuma, coriandre et garam masala. Le lait de coco apporte une douceur crémeuse qui équilibre les saveurs épicées. Chez Bytemeuh, nous cultivons les épices essentielles pour des curry authentiques, de la graine à l'assiette.",
+      "La cuisine indienne est l'une des plus riches et diversifiées au monde, forte de millénaires de traditions culinaires. Des plaines du Punjab aux côtes du Kerala, chaque région possède ses propres codes : épices torréfiées, cuisson lente, équilibre subtil entre chaleur, douceur et acidité. Chez Bytemeuh, nous nous inspirons de ces traditions pour des recettes accessibles, savoureuses et ancrées dans le respect des produits.",
+    editorial: `
+      <h2>La cuisine indienne : bien plus que du curry</h2>
+      <p>Quand on évoque la cuisine indienne, le mot « curry » vient immédiatement à l'esprit — mais c'est réduire à une seule note une symphonie d'une incroyable complexité. En réalité, la cuisine indienne regroupe des dizaines de traditions régionales aussi distinctes que la cuisine provençale l'est de la cuisine alsacienne.</p>
+      <p>Au nord, dans les États du Punjab et de l'Uttar Pradesh, règnent les <strong>dal makhani</strong> (lentilles beurrées), les <strong>rotis</strong> cuits au tandoor et les currys crémeux enrichis de ghee. Le beurre clarifié — le ghee — est ici un ingrédient central, porteur de saveurs profondes et d'une grande richesse aromatique.</p>
+      <p>Au sud, le registre change radicalement. Le riz remplace le pain, le lait de coco fait son apparition en force, et les currys se font plus liquides, plus acides, parfumés au tamarin et aux feuilles de curry fraîches. La cuisine du Kerala, en particulier, est reconnue mondialement pour ses poissons marinés aux épices et ses <strong>appam</strong> (crêpes de riz fermentées) servis avec du lait de coco chaud.</p>
+
+      <h2>Les épices : l'âme de la cuisine indienne</h2>
+      <p>La maîtrise des épices est au cœur de chaque recette indienne. Contrairement aux idées reçues, la cuisine indienne n'est pas systématiquement très piquante — elle est avant tout <strong>aromatique</strong>. Le cumin, la coriandre, le curcuma, la cardamome, le fenouil et le fenugrec composent la base de la plupart des mélanges. Le piment, lui, est dosé selon les régions et les goûts.</p>
+      <p>La technique de <strong>torréfaction à sec</strong> est fondamentale : faire chauffer les épices entières dans une poêle sans matière grasse libère des huiles essentielles qui décuplent leur puissance aromatique. C'est cette étape que beaucoup négligent à tort dans les recettes occidentalisées.</p>
+      <p>Le <strong>garam masala</strong> — littéralement « mélange d'épices chaudes » — est un autre pilier. Chaque famille, chaque région, chaque cuisinier possède sa propre recette. Poivre noir, clous de girofle, cannelle, cardamome verte et muscade en constituent le fond commun, mais les proportions varient infiniment.</p>
+
+      <h2>Les ingrédients phares à avoir dans sa cuisine</h2>
+      <p>Pour cuisiner indien à la maison, quelques ingrédients clés font toute la différence :</p>
+      <ul>
+        <li><strong>Le ghee (beurre clarifié)</strong> : supporte de hautes températures, donne une saveur incomparable aux currys et aux pains.</li>
+        <li><strong>Le lait de coco</strong> : indispensable pour les currys du sud. Choisissez une version entière pour un résultat crémeux et équilibré.</li>
+        <li><strong>Les lentilles corail</strong> : base du dal, elles cuisent rapidement et absorbent parfaitement les épices.</li>
+        <li><strong>Le yaourt entier</strong> : utilisé en marinade (notamment pour le poulet tandoori) et pour adoucir les sauces.</li>
+        <li><strong>La pâte de gingembre-ail</strong> : presque systématiquement présente en début de cuisson, elle constitue la base aromatique de la majorité des plats.</li>
+      </ul>
+
+      <h2>Les recettes indiennes chez Bytemeuh</h2>
+      <p>Nos recettes de cuisine indienne cherchent à respecter l'authenticité des techniques tout en utilisant des produits disponibles en France. Nous travaillons principalement autour des <strong>currys de légumes de saison</strong>, des <strong>dal épicés</strong> et des plats végans — une tradition profondément ancrée dans la culture indienne, notamment dans les communautés jaïnes et végétariennes du Gujarat.</p>
+      <p>Chaque recette est pensée pour être reproductible à la maison, sans équipement spécial, avec un niveau d'explication adapté aussi bien aux débutants qu'aux cuisiniers expérimentés. L'objectif : que vous sentiez en cuisine cette même curiosité et ce même respect du produit qui animent la gastronomie indienne depuis des millénaires.</p>
+    `,
     tips: [
-      "Le curcuma doit être torréfié à sec pour libérer ses arômes",
-      "Le lait de coco se remplace par du yaourth pour une version plus légère",
-      "Ajoutez les légumes dans l'ordre : d'abord ceux qui prennent plus de temps",
+      "Torréfiez toujours vos épices entières à sec avant de les moudre — c'est la clé de la profondeur aromatique",
+      "Le lait de coco entier se remplace par du yaourt entier pour une version plus légère et plus acidulée",
+      "Ajoutez les légumes par ordre de dureté : d'abord les racines, puis les cucurbitacées, et les feuilles en tout dernier",
+      "Une pincée de sucre de palme en fin de cuisson équilibre l'acidité de la tomate dans les currys",
     ],
   },
   mexicaine: {
@@ -108,11 +134,36 @@ const cuisineData: Record<
   "fusion-franco-italienne": {
     title: "Cuisine fusion franco-italienne",
     intro:
-      "La fusion franco-italienne unit la maîtrise de la pâte feuilletée française à la créativité de la pizza transalpine. La pizza chèvre-miel illustre ce mariage : pâte maison croustillante, fromage de chèvre fondant, miel liquide coulant.",
+      "La fusion franco-italienne naît de la rencontre entre deux grandes traditions culinaires européennes : la rigueur technique française — ses sauces, ses pâtes levées, son goût pour les produits du terroir — et la générosité méditerranéenne italienne, ses herbes fraîches, ses fromages affinés, son huile d'olive. Chez Bytemeuh, nous explorons ce dialogue entre les deux cultures à travers des recettes qui rendent hommage aux deux côtés des Alpes.",
+    editorial: `
+      <h2>Quand la France rencontre l'Italie en cuisine</h2>
+      <p>Les frontières culinaires entre la France et l'Italie ont toujours été poreuses. Des Alpes à la Méditerranée, les échanges entre les deux cultures gastronomiques remontent à des siècles — des cuisiniers florentins amenés à la cour de France par Catherine de Médicis aux influences niçoises et provençales qui s'entremêlent à chaque repas de bord de mer. La cuisine fusion franco-italienne ne cherche pas à fusionner pour le plaisir de la modernité : elle révèle des affinités profondes et naturelles.</p>
+      <p>Ce dialogue culinaire s'exprime à travers des ingrédients partagés — le fromage, les herbes aromatiques, le vin en cuisine, les pâtes et les pâtes levées — mais aussi à travers des techniques complémentaires. La <strong>précision française</strong> de la pâtisserie s'allie à la <strong>spontanéité italienne</strong> de la cuisine du quotidien.</p>
+
+      <h2>Les grands ingrédients de ce mariage culinaire</h2>
+      <p>Quelques ingrédients phares incarnent ce dialogue entre les deux traditions :</p>
+      <ul>
+        <li><strong>Le fromage de chèvre</strong> : très ancré dans la tradition fromagère française (Sainte-Maure, Crottin de Chavignol), il dialogue parfaitement avec les tomates séchées, le basilic et l'huile d'olive italiens.</li>
+        <li><strong>La pâte à pizza maison</strong> : la technique française de la <em>pousse lente au réfrigérateur</em> transforme une recette italienne en quelque chose de plus complexe, plus croustillant, plus digeste.</li>
+        <li><strong>Le miel du terroir</strong> : utilisé en touche finale sur des bases salées, il crée un contraste sucré-salé qui rappelle les agrodolci italiens mais avec les arômes floraux du miel français.</li>
+        <li><strong>Les herbes fraîches</strong> : basilic, thym, romarin — les deux cuisines partagent un même amour des herbes méditerranéennes, utilisées en quantité généreuse et ajoutées à cru pour préserver leur fraîcheur.</li>
+        <li><strong>L'huile d'olive extra vierge</strong> : présente dans les deux traditions, elle apporte fruité et longueur en bouche, aussi bien dans les sauces françaises que dans les garnitures italiennes.</li>
+      </ul>
+
+      <h2>Les techniques au service du goût</h2>
+      <p>La cuisine franco-italienne chez Bytemeuh repose sur quelques principes fondamentaux :</p>
+      <p>La <strong>fermentation longue de la pâte</strong> est l'une de nos signatures. Contrairement aux pâtes à pizza préparées dans l'heure, une pâte laissée 24 à 48 heures au réfrigérateur développe une complexité aromatique incomparable, des bulles d'air plus légères et une croûte plus croustillante à la cuisson. C'est la technique des <em>pizzaiolos napolitains</em> réinterprétée avec la patience des boulangers français.</p>
+      <p>L'utilisation du <strong>fromage à température ambiante</strong> est un autre point d'attention. Un fromage de chèvre sorti du réfrigérateur une heure avant d'être utilisé fondera plus uniformément, libérera mieux ses arômes et créera cette texture crémeuse caractéristique que l'on cherche dans ce type de recettes.</p>
+
+      <h2>Les recettes fusion franco-italiennes chez Bytemeuh</h2>
+      <p>Nos recettes explorent différentes facettes de ce dialogue culinaire. De la <strong>pizza chèvre-miel</strong> — notre recette phare — aux tarts flambées revisitées avec des ingrédients italiens, en passant par des risottos enrichis de techniques françaises de réduction, chaque plat cherche à mettre en valeur le meilleur des deux cultures.</p>
+      <p>L'idée n'est jamais la fusion pour la fusion, mais de trouver des associations qui ont du sens : des saveurs complémentaires, des textures qui se répondent, un équilibre entre la richesse française et la légèreté méditerranéenne italienne. Des recettes ancrées dans une vraie tradition, servies avec le goût du partage qui est au cœur de Bytemeuh.</p>
+    `,
     tips: [
-      "Laissez reposer la pâte 24h au réfrigérateur pour une meilleure fermentation",
-      "Le chèvre doit être à température ambiante pour mieux fondre",
-      "Le miel s'ajoute en toute fin — trop tôt et il brûle",
+      "Laissez reposer la pâte 24h au réfrigérateur pour une fermentation lente qui développe les arômes et la légèreté",
+      "Le fromage de chèvre doit être sorti 1h avant utilisation pour mieux fondre et libérer ses arômes",
+      "Le miel s'ajoute toujours en toute fin de cuisson ou après sortie du four — trop tôt et il caramélise et brûle",
+      "Une cuisson à très haute température (250°C ou plus) est la clé d'une pizza croustillante à la base et moelleuse au centre",
     ],
   },
   "fusion-hawaienne-japonaise": {
@@ -414,6 +465,12 @@ const graph = {
       }
     </div>
   </section>
+
+  {cuisine.editorial && (
+    <section class="pseo-editorial" aria-label={`À propos de la ${cuisine.title}`}>
+      <div class="pseo-editorial-content" set:html={cuisine.editorial} />
+    </section>
+  )}
 
   <section class="pseo-tips" aria-labelledby="tips-heading">
     <h2 id="tips-heading" class="pseo-section-title">
