@@ -84,7 +84,7 @@ Après des siècles de domination des épices "industrielles" — ces poudres un
 
 Cette attention croissante à la qualité et à la provenance des épices s'inscrit dans une tendance plus large : celle d'une alimentation consciente, où chaque ingrédient est choisi avec soin, en connaissance de cause. C'est une démarche que nous défendons chez Bytemeuh — cuisiner avec de bonnes épices, c'est aussi soutenir des filières équitables et des agriculteurs qui travaillent avec soin dans des régions souvent fragiles économiquement.
 
-Cette philosophie du "bien choisir ses ingrédients" irrigue toutes nos recettes : du [curry de légumes](/blog/recettes/curry-legumes/) au [kebab de bœuf maison](/blog/recettes/kebab-boeuf/), en passant par la [shakshuka aux épices moyen-orientales](/blog/recettes/shakshuka-maison/). Parce que dans une bonne recette, chaque épice a une histoire — et ça se sent dans l'assiette.
+Cette philosophie du "bien choisir ses ingrédients" irrigue toutes nos recettes : du [curry de légumes](/blog/recettes/curry-legumes/) au [kebab de bœuf maison](/blog/recettes/kebab-boeuf/), en passant par la [shakshuka aux épices moyen-orientales](/blog/recettes/shakshuka-maison/), les [tacos de bœuf cumin-paprika](/blog/recettes/tacos-boeuf/), le [ramen végan au miso et gingembre](/blog/recettes/ramen-miso/) ou la [ratatouille provençale au thym et laurier](/blog/recettes/ratatouille-provencale/). Parce que dans une bonne recette, chaque épice a une histoire — et ça se sent dans l'assiette.
 
 ## Les grandes épices et leurs origines : tableau récapitulatif
 

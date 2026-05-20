@@ -119,7 +119,7 @@ Le risotto se mange immédiatement — pas de 'wait 5 minutes' comme avec un ste
 
 Les vins parfaits : un vin blanc sec italien jeune, type Soave ou Pinot Grigio. Évitez les vins trop acidity ou boisés — ils compétitionneraient avec le parmesan. En rouge, un Barbera d'Alba accompagne bien les champignons.
 
-Pour une alternative plus légère, découvrez notre [salade quinoa aux légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/), ou explorez les [équipements connectés qui transforment la cuisine](/blog/articles/technologies-transforment-cuisine/).
+Pour une alternative plus légère, découvrez notre [salade quinoa aux légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/), ou explorez les [équipements connectés qui transforment la cuisine](/blog/articles/technologies-transforment-cuisine/). Le risotto est aussi une recette anti-gaspi par excellence : champignons un peu vieillissants, restes de parmesan ou de vin blanc — tout trouve sa place dans ce plat. Pour aller plus loin sur la cuisine zéro déchet, notre [guide contre le gaspillage alimentaire](/blog/articles/gaspillage-alimentaire/) vous donnera des astuces concrètes. Et pour rester dans la cuisine italienne, notre [pizza chèvre-miel maison](/blog/recettes/pizza-chevre-miel/) est une autre façon élégante de célébrer le terroir transalpin.
 
 ## Conclusion : practice makes perfect
 

@@ -128,7 +128,7 @@ Le ramen se mange avec les yeux. Chaque topping a une fonction :
 
 L'ordre deconstruction du bol : commencez par les nouilles, trempez-les dans le bouillon avec des baguettes, puis attrapez un topping avec chaque bouchée. Le timing между les composants crée l'expérience.
 
-Découvrez d'autres bowls nourrissants dans notre collection : le [poke bowl végan](/blog/recettes/poke-bowl-vegan/) partage cette philosophie de bowl complet, tandis que le [curry de légumes](/blog/recettes/curry-legumes/) offre une alternative plus établic but tout aussi réconfortante.
+Découvrez d'autres bowls nourrissants dans notre collection végétale : le [poke bowl végan](/blog/recettes/poke-bowl-vegan/) partage cette philosophie de bowl complet, les [bao buns au jack-fruit](/blog/recettes/bao-buns-vegan/) offrent une autre façon de cuisiner à la vapeur, tandis que la [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/) propose une alternative fraîche et protéinée. Le [curry de légumes](/blog/recettes/curry-legumes/) reste une alternative plus établie mais tout aussi réconfortante.
 
 ## Conclusion : votre kitchen becomes ramen-ya
 

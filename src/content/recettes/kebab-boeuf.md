@@ -81,13 +81,15 @@ Le kebab maison, ça vous tente ? Vous ne le savez peut-être pas, mais cette p�
 
 Après 15 ans passés dans la restauration rapide, je partage enfin MA recette signature du kebab de bœuf. L'astuce ? Choisir une belle pièce de bœuf local et des légumes ultra-frais du marché. Exit la culpabilité, bonjour le plaisir — votre famille va adorer ce kebab version healthy !
 
-Dans notre labo culinaire Bytemeuh, on a testé et re-testé cette recette pendant des mois pour trouver LE parfait équilibre entre la tradition du kebab et les attentes modernes. Cerise sur le gâteau : vous maîtrisez exactement ce qui se trouve dans votre assiette. Si vous êtes curieux de voir comment on marie les recettes de grand-mère aux innovations d'aujourd'hui, jetez un œil à notre article sur les [Traditions culinaires à l'ère numérique](/blog/articles/traditions-culinaires-ere-numerique/). Chez Bytemeuh, on croit dur comme fer que manger sain ne doit jamais rimer avec fade !
+Dans notre labo culinaire Bytemeuh, on a testé et re-testé cette recette pendant des mois pour trouver LE parfait équilibre entre la tradition du kebab et les attentes modernes. Cerise sur le gâteau : vous maîtrisez exactement ce qui se trouve dans votre assiette. Si vous voulez comprendre d'où viennent les épices qui font le caractère de ce plat, lisez notre fascinant article sur l'[histoire des épices à travers les siècles](/blog/articles/histoire-epices/). Chez Bytemeuh, on croit dur comme fer que manger sain ne doit jamais rimer avec fade !
 
 ## Conseils pour choisir votre viande
 
 La clé d'un kebab réussi réside avant tout dans la qualité de la viande. Optez pour un bœuf français issu d'[élevages responsables](/blog/articles/elevage-intelligent-bien-etre-animal/) — une race à viande comme la Charolaise ou la Limousine donnera une texture fondante incomparable. Demandez à votre boucher de la couper en lamelles ultra-fines, ou congelez légèrement la pièce pendant 30 minutes pour faciliter le travail au couteau.
 
 La marinade joue elle aussi un rôle crucial : le mélange paprika-cumin-origan n'est pas anodin. Ces épices méditerranéennes attendrissent naturellement les fibres musculaires tout en apportant ce goût caractéristique qui fait toute la différence avec un kebab industriel. Comptez au minimum 2 heures de marinade, idéalement une nuit entière au réfrigérateur.
+
+Le bœuf se décline en de nombreuses recettes conviviales : retrouvez aussi nos [burgers de bœuf juteux maison](/blog/recettes/burgers-boeuf/), nos [tacos de bœuf épicés](/blog/recettes/tacos-boeuf/) et nos [ravioli chinois au bœuf](/blog/recettes/ravioli-chinois-boeuf/) pour d'autres façons généreuses d'utiliser une belle viande française.
 
 ## Instructions
 

@@ -85,6 +85,8 @@ Le tofu, souvent décrié pour son manque de goût, révèle tout son potentiel 
 
 Un poke bowl, c'est aussi une œuvre d'art culinaire. La disposition des ingrédients n'est pas anodine : chaque élément occupe sa propre "case" dans le bol, créant un tableau multicolore. Les teintes orangées de la carotte et de la mangue, le vert de l'avocat et de la coriandre, le blanc du riz et le beige doré du tofu — tout est pensé pour séduire le regard avant le palais. C'est la [technologie qui transforme nos cuisines](/blog/articles/technologies-transforment-cuisine/) qui nous a inspiré cette approche visuelle et sensorielle de la gastronomie.
 
+Pour d'autres bowls végétaux tout aussi généreux, découvrez notre [ramen végan au miso](/blog/recettes/ramen-miso/), nos [bao buns au jack-fruit](/blog/recettes/bao-buns-vegan/) et notre [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/).
+
 ## Instructions
 
 ### Étape 1 : Préparation du riz

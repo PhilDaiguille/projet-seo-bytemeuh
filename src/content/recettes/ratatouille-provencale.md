@@ -84,7 +84,7 @@ Cette dernière approche est bien plus laborieuse, mais les résultats sont inco
 
 La ratatouille ne se fait qu'en été. Ce n'est pas un caprice de puriste, mais une nécessité gustative : hors saison, les aubergines sont insipides, les courgettes aqueuses, les poivrons sans caractère et les tomates en carton. En plein été, ces mêmes légumes, cultivés en plein soleil et récoltés à maturité, développent des concentrations en sucres et en arômes qui en font des ingrédients d'exception.
 
-Si vous avez la chance d'habiter près d'un marché provençal ou d'un producteur local, profitez-en. Les variétés anciennes — tomate cœur de bœuf, aubergine ronde de valence, poivron cappadoce — apportent une complexité aromatique que les variétés industrielles ne peuvent offrir. Découvrez également notre [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/) pour une autre façon de sublimer les légumes d'été.
+Si vous avez la chance d'habiter près d'un marché provençal ou d'un producteur local, profitez-en. Les variétés anciennes — tomate cœur de bœuf, aubergine ronde de valence, poivron cappadoce — apportent une complexité aromatique que les variétés industrielles ne peuvent offrir. Découvrez également notre [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/) pour une autre façon de sublimer les légumes d'été, notre [shakshuka maison](/blog/recettes/shakshuka-maison/) pour une version épicée avec des œufs pochés, ou notre [ramen végan au miso](/blog/recettes/ramen-miso/) si vous cherchez un plat chaud plus hivernal.
 
 ## Instructions
 

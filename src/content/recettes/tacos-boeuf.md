@@ -66,6 +66,8 @@ variations:
 
 Les tacos de bœuf, c'est la cuisine mexicaine dans toute sa splendeur : simple, généreuse, épicée juste ce qu'il faut, et réunissant la table en quelques minutes. Quand on les prépare avec du bœuf français de qualité et des épices soigneusement sélectionnées, on transcende le simple plat de semaine pour atteindre quelque chose de vraiment mémorable. Chez Bytemeuh, on adore ces fusions qui mêlent le meilleur du terroir français à la vivacité des cuisines du monde. Explorez nos [traditions culinaires à l'ère numérique](/blog/articles/traditions-culinaires-ere-numerique/) pour comprendre comment ces échanges culinaires façonnent notre façon de manger.
 
+Cette recette s'intègre parfaitement dans une cuisine zéro gaspillage : le bœuf épicé se prépare facilement en grande quantité et se conserve 3 jours au réfrigérateur ou se congèle très bien. Pour des conseils complets sur la réduction du gaspillage en cuisine, lisez notre [guide zero waste](/blog/articles/gaspillage-alimentaire/).
+
 ## Le taco : 10 000 ans d'histoire mexicaine
 
 Le taco est l'un des aliments les plus anciens des Amériques. Des archéologues ont retrouvé des traces de galettes de maïs (tortillas) consommées dans la région de Mexico il y a plus de 10 000 ans. Les Aztèques utilisaient ces galettes comme "ustensiles comestibles" pour transporter et manger toutes sortes de garnitures — viandes, haricots, piments, légumes.
@@ -82,7 +84,7 @@ Notre recette s'inscrit dans la tradition mexicaine authentique, avec des tortil
 
 La combinaison cumin-paprika est la signature aromatique des tacos de bœuf. Le cumin, avec ses notes terreuses et légèrement amères, est l'épice pilier de la cuisine mexicaine — comme du monde arabe, du Moyen-Orient et de l'Inde, ce qui dit bien son ancienneté et son universalité. Le paprika (doux ou fumé) apporte couleur et une douceur poivrée qui équilibre le cumin.
 
-Ces deux épices ensemble, cuisant dans la matière grasse avec l'oignon et l'ail, créent un fond aromatique puissant qui imprègne toute la viande. N'hésitez pas à être généreux — les épices ne sont jamais trop présentes dans un bon taco. Retrouvez aussi notre [recette de burgers de bœuf juteux](/blog/recettes/burgers-boeuf/) pour une autre façon de sublimer le bœuf français en version street food.
+Ces deux épices ensemble, cuisant dans la matière grasse avec l'oignon et l'ail, créent un fond aromatique puissant qui imprègne toute la viande. N'hésitez pas à être généreux — les épices ne sont jamais trop présentes dans un bon taco. Retrouvez aussi notre [recette de burgers de bœuf juteux](/blog/recettes/burgers-boeuf/) pour une autre façon de sublimer le bœuf français, ou partez en voyage asiatique avec nos [ravioli chinois au bœuf](/blog/recettes/ravioli-chinois-boeuf/) et notre [kebab de bœuf maison](/blog/recettes/kebab-boeuf/).
 
 ## Instructions
 

@@ -80,7 +80,7 @@ Le jack-fruit jeune (non mûr) est celui qu'on utilise en culinaire salé : il e
 
 Dans notre cuisine expérimentale, on a passé plusieurs semaines à tester différentes marinades avant de trouver LA combinaison parfaite. Le secret réside dans l'équilibre entre la sauce soja (pour l'umami), le vinaigre de riz (pour l'acidité) et une pointe de coriandre fraîche (pour la fraîcheur). Et pour les pains ? On utilise exclusivement de la farine T45 bio et du lait de soja pour une pâte vapeur d'une douceur incomparable.
 
-Ces bao buns sont parfaits pour un apéritif festif, un brunch dominical ou un dîner décontracté entre amis. Ils se prêtent aussi à une belle présentation, ce qui en fait un plat idéal pour impressionner vos convives tout en restant fidèle à vos valeurs. Explorez aussi notre [recette de poke bowl végan](/blog/recettes/poke-bowl-vegan/) pour compléter votre menu végétal signature.
+Ces bao buns sont parfaits pour un apéritif festif, un brunch dominical ou un dîner décontracté entre amis. Ils se prêtent aussi à une belle présentation, ce qui en fait un plat idéal pour impressionner vos convives tout en restant fidèle à vos valeurs. Explorez aussi notre [recette de poke bowl végan](/blog/recettes/poke-bowl-vegan/), notre [ramen végan au miso](/blog/recettes/ramen-miso/) et notre [salade de quinoa aux légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/) pour compléter votre répertoire de cuisine végétale signature.
 
 ## Instructions
 

@@ -78,7 +78,7 @@ Pour des burgers parfaits, choisissez une viande hachée avec 15 à 20% de mati�
 
 ## Le secret des chefs : la galette parfaite
 
-Le façonnage de la galette est une étape souvent négligée. Quelques règles d'or : ne surtravaillez pas la viande (quelques malaxages suffisent), formez des galettes légèrement plus larges que votre pain (elles rétrécissent à la cuisson), et créez un creux au centre avec votre pouce pour éviter qu'elles ne gonflent. Une cuisson à feu vif et court (4-5 minutes de chaque côté) garantit une galette dorée à l'extérieur et juteuse à cœur. Envie de varier les plaisirs ? Essayez aussi notre [recette de kebab de bœuf maison](/blog/recettes/kebab-boeuf/) pour un autre classique revisité.
+Le façonnage de la galette est une étape souvent négligée. Quelques règles d'or : ne surtravaillez pas la viande (quelques malaxages suffisent), formez des galettes légèrement plus larges que votre pain (elles rétrécissent à la cuisson), et créez un creux au centre avec votre pouce pour éviter qu'elles ne gonflent. Une cuisson à feu vif et court (4-5 minutes de chaque côté) garantit une galette dorée à l'extérieur et juteuse à cœur. Envie de varier les plaisirs avec le bœuf ? Essayez aussi notre [kebab de bœuf maison mariné aux épices](/blog/recettes/kebab-boeuf/), nos [tacos de bœuf à la mexicaine](/blog/recettes/tacos-boeuf/) ou nos [ravioli chinois au bœuf](/blog/recettes/ravioli-chinois-boeuf/) pour explorer d'autres façons de sublimer le bœuf français.
 
 ## Instructions
 

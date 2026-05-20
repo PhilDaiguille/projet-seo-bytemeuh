@@ -58,6 +58,10 @@ Remplacez les sauces industrielles par des assaisonnements faits maison. Utilise
 - [Salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/)
 - [Ratatouille provençale](/blog/recettes/ratatouille-provencale/)
 - [Burgers de bœuf juteux](/blog/recettes/burgers-boeuf/)
+- [Poke bowl végan signature](/blog/recettes/poke-bowl-vegan/)
+- [Shakshuka maison aux œufs pochés](/blog/recettes/shakshuka-maison/)
+- [Curry de légumes maison](/blog/recettes/curry-legumes/)
+- [Ramen végan au miso et champignons](/blog/recettes/ramen-miso/)
 
 ## Conclusion
 

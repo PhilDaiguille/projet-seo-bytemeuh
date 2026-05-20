@@ -78,7 +78,7 @@ L'aubergine, fondante et légèrement amère crue, devient crémeuse et presque 
 
 L'une des grandes joies de cette salade, c'est sa modularité. La base quinoa + légumes grillés + vinaigrette citron-huile d'olive est parfaite telle quelle. Mais elle se prête à d'innombrables variations selon vos envies, le contenu de votre réfrigérateur ou les saisons. Ajoutez de la feta émiettée pour une touche méditerranéenne salée, des pois chiches grillés pour un boost protéique supplémentaire, des grenades pour une explosion sucrée-acidulée, ou des herbes fraîches (menthe, basilic, persil) pour la fraîcheur.
 
-Cette salade est aussi parfaite pour la meal prep : préparez-la en grand format le dimanche, conservez-la au réfrigérateur sans la sauce, et dégustez-la tout au long de la semaine. Envie d'autres idées végétales ? Notre [ratatouille provençale](/blog/recettes/ratatouille-provencale/) est un autre incontournable de la cuisine végétarienne méditerranéenne.
+Cette salade est aussi parfaite pour la meal prep : préparez-la en grand format le dimanche, conservez-la au réfrigérateur sans la sauce, et dégustez-la tout au long de la semaine. Envie d'autres idées végétales ? Notre [ratatouille provençale](/blog/recettes/ratatouille-provencale/) est un autre incontournable de la cuisine végétarienne méditerranéenne. Pour varier davantage, notre [curry de légumes maison](/blog/recettes/curry-legumes/) et notre [poke bowl végan](/blog/recettes/poke-bowl-vegan/) complètent idéalement ce répertoire de repas sains et généreux.
 
 ## Instructions
 

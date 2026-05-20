@@ -66,7 +66,7 @@ variations:
   - "Incorporez quelques feuilles de roquette fraîche à la sortie du four."
 ---
 
-La pizza chèvre-miel, c'est la rencontre inattendue entre le salé et le sucré, entre l'Italie et la France, entre la tradition fromagère et l'apiculture. Cette combinaison, devenue un classique incontournable des trattorias parisiennes et des pizzerias branchées, peut s'inviter chez vous en moins d'une heure. Et la version maison ? Elle surpasse largement toutes les autres. Explorez comment nos [traditions culinaires évoluent à l'ère numérique](/blog/articles/traditions-culinaires-ere-numerique/) tout en restant ancrées dans leur terroir.
+La pizza chèvre-miel, c'est la rencontre inattendue entre le salé et le sucré, entre l'Italie et la France, entre la tradition fromagère et l'apiculture. Cette combinaison, devenue un classique incontournable des trattorias parisiennes et des pizzerias branchées, peut s'inviter chez vous en moins d'une heure. Et la version maison ? Elle surpasse largement toutes les autres. La pizza a une histoire vieille de 3000 ans — et le thym qui la parfume en est un personnage central : lisez notre [histoire des épices](/blog/articles/histoire-epices/) pour comprendre comment ces ingrédients ont voyagé jusqu'à nos assiettes.
 
 ## La pizza : 3000 ans d'histoire avant la tomate
 
@@ -84,7 +84,7 @@ Pour cette recette, le choix du miel est crucial. Un miel d'acacia, doux et dél
 
 Beaucoup hésitent à faire leur pâte à pizza maison, redoutant la complexité du levage. Pourtant, le processus est étonnamment simple et les résultats incomparables. La différence fondamentale entre une pâte maison et une pâte industrielle tient en un mot : le temps. Deux heures de levée permettent au gluten de se développer et aux arômes de s'épanouir, créant cette texture à la fois croustillante en bordure et légèrement aérée au cœur.
 
-Notre pâte utilise une farine T45 (fine et riche en gluten) pour une texture classique napolitaine. Laissez-vous tenter aussi par notre [recette de ratatouille provençale](/blog/recettes/ratatouille-provencale/) pour composer un repas entièrement ancré dans les saveurs du terroir français.
+Notre pâte utilise une farine T45 (fine et riche en gluten) pour une texture classique napolitaine. Laissez-vous tenter aussi par notre [risotto crémeux aux champignons](/blog/recettes/risotto-champignons/) pour une autre recette emblématique de la cuisine italienne, ou notre [ratatouille provençale](/blog/recettes/ratatouille-provencale/) pour composer un repas entièrement ancré dans les saveurs du terroir français.
 
 ## Instructions
 

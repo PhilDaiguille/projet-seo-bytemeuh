@@ -98,7 +98,7 @@ La grande erreur que font beaucoup de cuisiniers débutants avec la shakshuka, c
 
 L'ordre d'ajout des épices est également crucial. Le cumin et le paprika doivent être ajoutés en début de cuisson, directement dans l'huile chaude avec l'oignon et l'ail — c'est ce qu'on appelle le "blooming" des épices. Cette technique, universelle de l'Inde au Mexique, permet aux molécules aromatiques liposolubles de se libérer dans l'huile et d'imprégner l'ensemble du plat. La coriandre fraîche, elle, ne se met qu'au dernier moment pour préserver sa fraîcheur. Découvrez comment les [traditions culinaires s'adaptent à l'ère numérique](/blog/articles/traditions-culinaires-ere-numerique/) tout en conservant ces gestes techniques fondamentaux.
 
-Envie de compléter ce repas méditerranéen ? Notre [curry de légumes maison](/blog/recettes/curry-legumes/) est un autre voyage vers les cuisines du monde, tout aussi réconfortant et parfumé.
+Envie de compléter ce repas méditerranéen ? Notre [curry de légumes maison](/blog/recettes/curry-legumes/) est un autre voyage vers les cuisines du monde, tout aussi réconfortant et parfumé. Pour d'autres repas végétariens inspirants, découvrez aussi notre [ratatouille provençale](/blog/recettes/ratatouille-provencale/), notre [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/) et notre [ramen végan au miso](/blog/recettes/ramen-miso/). La shakshuka est par ailleurs un plat anti-gaspi idéal : elle transforme des boîtes de tomates, des poivrons un peu défraîchis et des œufs en repas complet. Consultez notre [guide zero waste en cuisine](/blog/articles/gaspillage-alimentaire/) pour d'autres idées de ce type.
 
 ## Instructions
 

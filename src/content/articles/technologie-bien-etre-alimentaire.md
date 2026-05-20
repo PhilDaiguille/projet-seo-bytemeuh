@@ -85,6 +85,6 @@ Les applications de suivi alimentaire peuvent désormais :
 
 ## Conclusion
 
-La technologie nous offre des outils formidables pour prendre soin de notre alimentation et de notre bien-être. L'important est de l'utiliser avec discernement, comme un support plutôt qu'une contrainte. Pour mettre en pratique cette alimentation consciente, explorez nos recettes équilibrées comme la [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/) ou le [curry de légumes maison aux épices naturelles](/blog/recettes/curry-legumes/).
+La technologie nous offre des outils formidables pour prendre soin de notre alimentation et de notre bien-être. L'important est de l'utiliser avec discernement, comme un support plutôt qu'une contrainte. Pour mettre en pratique cette alimentation consciente, explorez nos recettes équilibrées comme la [salade de quinoa et légumes grillés](/blog/recettes/salade-quinoa-legumes-grilles/), le [curry de légumes maison aux épices naturelles](/blog/recettes/curry-legumes/), le [poke bowl végan signature](/blog/recettes/poke-bowl-vegan/), la [shakshuka maison aux œufs pochés](/blog/recettes/shakshuka-maison/) ou le [ramen végan au miso](/blog/recettes/ramen-miso/) — des recettes pensées pour nourrir et satisfaire en même temps.
 
 La meilleure technologie est celle qui nous aide à retrouver notre nature profonde, pas celle qui nous en éloigne.
