@@ -9,7 +9,7 @@ faq:
   - question: "Comment partager des recettes régionales avec une communauté plus large ?"
     answer: "Des plateformes comme Marmiton, Instagram ou des groupes Facebook locaux permettent de diffuser. Mais aussi des associations de patrimoine gastronomique régional qui documentent et préservent."
 title: "Traditions culinaires à l'ère numérique"
-description: "Numérisation, livres interactifs, ateliers en ligne : comment préserver et enrichir les traditions culinaires familiales grâce aux outils numériques d'aujourd'hui."
+description: "Livres interactifs, ateliers en ligne, numérisation : comment préserver et enrichir les traditions culinaires familiales grâce aux outils numériques d'aujourd'hui."
 publishDate: 2024-11-02
 author: "Bytemeuh Farm"
 category: "Culture"

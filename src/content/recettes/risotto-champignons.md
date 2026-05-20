@@ -8,8 +8,8 @@ faq:
     answer: "Oui, mais il perd sa texture crémeuse. Pour une soirée, préparez le risotto à 80% et finishelez à la dernière minute avec le parmesan et le beurre. Sinon, le risotto sec (reprise) se réchauffe bien avec un peu de bouillon."
   - question: "Comment nettoyer les champignons sans les tremper ?"
     answer: "Utilisez un pinceau sec ou une mushroom brush pour retirer la terre. Pour les champignons plus sales, essuyez-les avec un chiffon humide — ne les plongez jamais dans l'eau, ils absorbent liquid and become spongieux."
-title: "Recette de risotto crémeux aux champignons et parmesan"
-description: "Riz carnaroli, champignons forestiers, parmesan aged 24 mois : la vraie recette du risotto milanese revisité. Une texture crémeuse impossible à reproduire avec un autre grain."
+title: "Recette de risotto crémeux aux champignons"
+description: "Riz carnaroli, champignons forestiers, parmesan 24 mois : la vraie recette du risotto milanese revisité. Une texture crémeuse impossible à reproduire avec un autre grain."
 descriptionLong: "Le risotto aux champignons de Bytemeuh : un plat de cuisine italienne classique préparé avec du riz carnaroli premium, des champignons des bois, et du parmesan affiné. La technique 'all'onda' pour un résultat restaurant."
 publishDate: 2025-02-15
 author: "Bytemeuh Farm"

@@ -9,7 +9,7 @@ faq:
   - question: "L'agriculture biologique peut-elle nourrir la planète à grande échelle ?"
     answer: "C'est un débat scientifique actif. Les études montrent des rendements en bio inférieurs de 19-25 % en moyenne, mais cela varie selon les cultures. Les coûts cachés de l'agriculture conventionnelle (pollution, santé) doivent aussi être intégrés."
 title: "La biotechnologie au service de l'agriculture bio"
-description: "Biostimulants, capteurs sol, cultures résistantes : comment la biotechnologie moderne révolutionne l'agriculture bio à la ferme Bytemeuh pour une alimentation plus saine."
+description: "Biostimulants, capteurs sol, cultures résistantes : comment la biotechnologie révolutionne l'agriculture bio à la ferme Bytemeuh pour une alimentation plus saine."
 publishDate: 2024-10-31
 author: "Bytemeuh Farm"
 category: "Agriculture"

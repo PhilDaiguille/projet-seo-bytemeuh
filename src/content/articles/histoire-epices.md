@@ -8,8 +8,8 @@ faq:
     answer: "À l'abri de la lumière, de l'humidité et de la chaleur, dans des contenants hermétiques. Les épices entières (poivre en grains, cardamome, cannelle bâton) se conservent 3-4 ans. Moulues, 1-2 ans maximum."
   - question: "Quelle est la différence entre épices et aromates ?"
     answer: "Les épices sont des parties séchées de plantes (graines, écorces, racines). Les aromates sont des herbes fraîches ou séchées (basilic, thym, persil). La distinction est culinaire plus que botanique."
-title: "Histoire des épices : routes de la soie et gastronomie"
-description: "Poivre monnaie d'échange, cannelle des pharaons, piment qui a changé la gastronomie mondiale : l'histoire fascinante des épices, de l'Antiquité à nos assiettes."
+title: "Histoire des épices : routes de la soie et cuisine"
+description: "Poivre monnaie d'échange, cannelle des pharaons, piment révolutionnaire : l'histoire fascinante des épices, des routes de la soie à nos assiettes d'aujourd'hui."
 publishDate: 2025-01-20
 author: "Bytemeuh Farm"
 category: "Culture"

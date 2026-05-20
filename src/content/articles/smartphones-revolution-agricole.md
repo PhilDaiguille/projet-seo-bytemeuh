@@ -8,8 +8,8 @@ faq:
     answer: "Mes Parcelles (SMAG), Agriconomie, MétéoAgriculture, Farmstar (ARVALIS) pour le blé, et des applications coopératives régionales. L'offre se multiplie avec la montée de l'agritech."
   - question: "La fracture numérique est-elle un problème dans le monde agricole ?"
     answer: "Oui, particulièrement chez les agriculteurs plus âgés et dans les zones peu couvertes. Des programmes de formation numérique agricole existent (Chambre d'Agriculture, VIVEA) pour réduire cet écart."
-title: "Comment les smartphones révolutionnent l'agriculture"
-description: "Prévisions météo, gestion des troupeaux, analyse des sols : les smartphones transforment le quotidien des agriculteurs. Un tour d'horizon de la ferme connectée à la Bytemeuh."
+title: "Les smartphones révolutionnent l'agriculture"
+description: "Prévisions météo, gestion des troupeaux, analyse des sols : les smartphones transforment le quotidien des agriculteurs. Tour d'horizon de la ferme connectée Bytemeuh."
 publishDate: 2024-11-17
 author: "Bytemeuh Farm"
 category: "Agriculture"

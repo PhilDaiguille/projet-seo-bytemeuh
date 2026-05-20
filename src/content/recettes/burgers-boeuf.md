@@ -8,8 +8,8 @@ faq:
     answer: "À cœur 65 °C minimum pour un bœuf haché (contrairement aux steaks entiers). Evitez le saignant avec du haché, surtout en industriel — rosé à cœur reste acceptable si fait maison."
   - question: "Peut-on préparer les steaks à l'avance ?"
     answer: "Oui, formez les steaks, séparez-les avec du papier cuisson et réfrigérez jusqu'à 24 h. Vous pouvez aussi les congeler crus jusqu'à 3 mois."
-title: "Recette de burgers de bœuf juteux et moelleux maison"
-description: "Galette dorée, bœuf français 15 % MG, cheddar fondu : réalisez à la maison des burgers juteux dignes d'un restaurant, avec nos conseils de pro pour un résultat parfait."
+title: "Recette de burgers de bœuf juteux maison"
+description: "Galette dorée, bœuf français 15 % MG, cheddar fondu : réalisez à la maison des burgers juteux dignes d'un restaurant avec nos conseils de pro pour un résultat parfait."
 descriptionLong: "Les burgers de bœuf faits maison sont un régal pour toute la famille. Faciles à préparer, ils sont parfaits pour un repas convivial. Notre bœuf, issu exclusivement d'élevages français responsables, garantit des burgers d'exception."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"

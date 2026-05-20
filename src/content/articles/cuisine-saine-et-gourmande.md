@@ -8,8 +8,8 @@ faq:
     answer: "Le batch cooking le week-end (légumineuses cuites, légumes rôtis, céréales) permet d'assembler des repas sains en moins de 15 min. L'organisation est la clé."
   - question: "Les matières grasses sont-elles à éviter dans une cuisine saine ?"
     answer: "Non. Les bonnes graisses (huile d'olive, avocat, noix, poissons gras) sont indispensables. Ce sont les graisses trans et les graisses saturées en excès qui posent problème."
-title: "Cuisine Saine et Gourmande : Une Approche Équilibrée"
-description: "Découvrez comment adopter une cuisine saine et gourmande avec Bytemeuh. Des recettes équilibrées, des ingrédients locaux et des astuces pour une alimentation savoureuse et nutritive."
+title: "Cuisine Saine et Gourmande : approche équilibrée"
+description: "Adoptez une cuisine saine et gourmande avec Bytemeuh. Recettes équilibrées, ingrédients locaux et astuces pour une alimentation savoureuse, nutritive et accessible au quotidien."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
 category: "Cuisine"

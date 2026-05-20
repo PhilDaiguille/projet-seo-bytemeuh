@@ -191,6 +191,7 @@ const graph = {
             href={`/blog/recettes/${recette.id}/`}
             aria-label={`Recette : ${recette.data.title}`}
           >
+            <span class="sr-only">{recette.data.title}</span>
             <div class="card-image">
               {recette.data.featuredImage && (
                 <Image

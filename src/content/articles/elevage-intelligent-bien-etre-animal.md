@@ -9,7 +9,7 @@ faq:
   - question: "Quel lien entre bien-être animal et qualité de la viande ?"
     answer: "Direct : le stress libère du cortisol qui modifie la structure musculaire (viande plus dure, moins savoureuse). Un animal bien traité, peu stressé à l'abattage, donne une viande de meilleure qualité gustative."
 title: "Élevage Intelligent : Tech & Bien-être Animal"
-description: "Colliers connectés, IA, gestion individualisée : comment Bytemeuh utilise la technologie pour allier bien-être animal et élevage bovin responsable et durable."
+description: "Colliers connectés, IA, gestion individualisée : comment Bytemeuh allie technologie, bien-être animal et élevage bovin responsable et durable."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
 category: "Élevage"

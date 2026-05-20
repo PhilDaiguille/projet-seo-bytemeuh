@@ -8,7 +8,7 @@ faq:
     answer: "Oui, c'est même recommandé : elle se congèle parfaitement jusqu'à 3 mois. Elle est souvent meilleure réchauffée le lendemain, les saveurs ayant eu le temps de se mélanger."
   - question: "Avec quoi servir la ratatouille provençale ?"
     answer: "En accompagnement d'une viande grillée, sur des pâtes, avec des œufs pochés, sur des bruschetta, ou simplement avec du pain de campagne. Elle est aussi délicieuse froide en entrée."
-title: "Recette de ratatouille provençale aux légumes d'été"
+title: "Recette de ratatouille provençale aux légumes"
 description: "Aubergines, courgettes, poivrons et tomates d'été mijotés à l'huile d'olive : la vraie ratatouille provençale, cuite légume par légume pour un résultat incomparable."
 descriptionLong: "Une recette authentique de ratatouille provençale, ce chef-d'œuvre emblématique de la cuisine méditerranéenne transmis de génération en génération dans les villages du Sud de la France."
 publishDate: 2024-09-01

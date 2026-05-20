@@ -9,7 +9,7 @@ faq:
   - question: "Que signifie le label Agriculture Biologique par rapport à la durabilité ?"
     answer: "Le bio interdit les pesticides de synthèse et les OGM, favorise la biodiversité et les sols vivants. Mais il ne garantit pas la durabilité sociale ou le circuit court — il faut croiser avec d'autres labels."
 title: "Développement durable et alimentation durable"
-description: "30 % des émissions mondiales viennent des systèmes alimentaires. Comprendre les enjeux environnementaux, sociaux et économiques pour adopter une alimentation véritablement durable."
+description: "30 % des émissions mondiales viennent des systèmes alimentaires. Enjeux environnementaux, sociaux et économiques pour adopter une alimentation véritablement durable."
 publishDate: 2024-12-28
 author: "Bytemeuh Farm"
 category: "Développement Durable"
