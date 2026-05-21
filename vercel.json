@@ -211,6 +211,31 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/recettes/cuisine/fran%C3%A7aise/",
+      "destination": "/blog/recettes/cuisine/francaise/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/recettes/cuisine/am%C3%A9ricaine/",
+      "destination": "/blog/recettes/cuisine/americaine/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/recettes/cuisine/m%C3%A9diterran%C3%A9enne/",
+      "destination": "/blog/recettes/cuisine/mediterraneenne/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/recettes/cuisine/fusion-asiatique-fran%C3%A7aise/",
+      "destination": "/blog/recettes/cuisine/fusion-asiatique-francaise/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/recettes/cuisine/fusion-hawa%C3%AFenne-japonaise/",
+      "destination": "/blog/recettes/cuisine/fusion-hawaienne-japonaise/",
+      "statusCode": 301
     }
   ]
 }

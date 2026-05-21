@@ -1,5 +1,5 @@
 import { defineConfig, svgoOptimizer } from "astro/config";
-import sitemap from "@astrojs/sitemap";
+import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import seoGraph from "@jdevalk/astro-seo-graph/integration";
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
@@ -23,12 +23,33 @@ export default defineConfig({
   integrations: [
     sitemap({
       entryLimit: 1000,
+      // Exclure les URLs accentuées (elles redirigent 301 vers leur version sans accents)
+      filter: (page) => !/\/(fran%C3%A7aise|am%C3%A9ricaine|m%C3%A9diterran%C3%A9enne|fusion-asiatique-fran%C3%A7aise|fusion-hawa%C3%AFenne-japonaise)\//.test(page),
+      // serialize s'applique à toutes les URLs avant le découpage en chunks
       serialize(item) {
+        if (/\/blog\/recettes\//.test(item.url)) {
+          return { ...item, changefreq: ChangeFreqEnum.WEEKLY, priority: 0.9 };
+        }
+        if (/\/blog\/articles\//.test(item.url)) {
+          return { ...item, changefreq: ChangeFreqEnum.WEEKLY, priority: 0.85 };
+        }
+        // Routes classiques : accueil, à propos, contact, mentions légales
         return {
           ...item,
-          changefreq: "weekly",
-          priority: item.url === SITE_URL + "/" ? 1.0 : 0.8,
+          changefreq: ChangeFreqEnum.MONTHLY,
+          priority: item.url === SITE_URL + "/" ? 1.0 : 0.7,
         };
+      },
+      chunks: {
+        // sitemap-recettes-0.xml
+        recettes: (item) => {
+          if (/\/blog\/recettes\//.test(item.url)) return item;
+        },
+        // sitemap-articles-0.xml
+        articles: (item) => {
+          if (/\/blog\/articles\//.test(item.url)) return item;
+        },
+        // Les URLs restantes vont automatiquement dans sitemap-pages-0.xml
       },
     }),
     seoGraph({
