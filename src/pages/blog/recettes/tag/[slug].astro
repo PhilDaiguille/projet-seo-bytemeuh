@@ -40,7 +40,7 @@ const pageUrl = `${SITE_URL}/blog/recettes/tag/${slug}/`;
 
 const tagData: Record<
   string,
-  { title: string; intro: string; tips: string[] }
+  { title: string; intro: string; tips: string[]; editorial?: string }
 > = {
   vegan: {
     title: "Recettes vegan",
@@ -97,9 +97,32 @@ const tagData: Record<
     intro:
       "La cuisine asiatique maîtrise comme nulle part ailleurs l'art de l'équilibre : salé, sucré, amer, umami, épicé. Le wok brûlant crée ce goût de \"wok hei\" irrésistible. Chaque technique (vapeur pour les buns, friture pour les ravioli croustillants, marinade longue pour le tofu) transforme des ingrédients simples en plats complexes.",
     tips: [
-      "Le wok doit être brûlant avant d'ajouter les ingrédients — heat up first",
-      "Les sauces asiatiques (soja, huître) sont déjà salées — attention à la surrensation",
+      "Le wok doit être brûlant avant d'ajouter les ingrédients — chauffez à vide 3 minutes",
+      "Les sauces asiatiques (soja, huître) sont déjà salées — attention à la sursalaison",
       "Le riz jasmin se rince 3 fois avant cuisson pour éliminer l'amidon en excès",
+    ],
+  },
+  "cuisine-italienne": {
+    title: "Recettes cuisine italienne",
+    intro:
+      "La cuisine italienne est une affaire de produits et de techniques. Des pâtes al dente enrobées d'une sauce qui leur colle à l'âme, une pizza à la pâte fermentée 24h avec une croûte alvéolée, un risotto onctueux qui s'étale dans l'assiette : chaque plat italien célèbre la perfection dans la simplicité.",
+    editorial: `
+      <h2>La cuisine italienne : l'éloge de la simplicité technique</h2>
+      <p>La cuisine italienne a cette particularité rare : ses plats les plus célèbres — carbonara, cacio e pepe, pizza margherita, risotto alla milanese — n'utilisent que 4 à 6 ingrédients. Mais leur maîtrise demande des années. C'est la philosophie inverse de la cuisine fusion ou moléculaire : la complexité est dans la technique, pas dans la liste d'ingrédients.</p>
+      <p>La <strong>carbonara</strong>, par exemple, n'est faite que de spaghetti, guanciale, œufs entiers + jaunes, pecorino romano et poivre noir. Pas de crème — jamais. La sauce se forme grâce à l'émulsion des œufs avec l'eau de cuisson des pâtes et le gras du guanciale. C'est une technique précise qui exige de maîtriser la température exacte pour éviter que les œufs ne coagulent.</p>
+
+      <h2>L'eau de cuisson : l'ingrédient secret des pâtes italiennes</h2>
+      <p>L'eau de cuisson des pâtes est l'ingrédient le plus sous-estimé de la cuisine italienne. Chargée en amidon après la cuisson des pâtes, elle sert de liant naturel pour les sauces. En Italie, on dit qu'une sauce sans eau de cuisson est une sauce orpheline.</p>
+      <p>La technique : avant d'égoutter vos pâtes, prélevez <strong>toujours une tasse d'eau de cuisson</strong>. Ajoutez-la en fin de cuisson de la sauce, cuillère par cuillère, en remuant pour créer cette texture crémeuse qui enrobe chaque brin de pasta. L'eau doit être salée comme la mer — les pâtes s'assaisonnent dans l'eau, pas dans l'assiette.</p>
+
+      <h2>Les recettes de cuisine italienne chez Bytemeuh</h2>
+      <p>Nos recettes italiennes respectent les codes de l'authenticité régionale tout en restant accessibles. Des pâtes maison aux sauces mijotées, chaque recette est accompagnée d'explications sur la technique et les pièges à éviter. L'Italie culinaire est un voyage sans fin — et Bytemeuh est votre guide de voyage.</p>
+    `,
+    tips: [
+      "L'eau de cuisson des pâtes est votre meilleur allié pour lier une sauce",
+      "Les pâtes se finissent toujours dans la sauce — jamais égouttées puis nappées",
+      "La carbonara n'a pas de crème : les œufs + eau de cuisson créent la sauce",
+      "Le pecorino romano et le parmesan ne se substituent pas — ils ont des profils très différents",
     ],
   },
   "street-food": {
@@ -388,6 +411,12 @@ const graph = {
       }
     </div>
   </section>
+
+  {tag.editorial && (
+    <section class="pseo-editorial" aria-label={`À propos du tag ${tag.title}`}>
+      <div class="pseo-editorial-content" set:html={tag.editorial} />
+    </section>
+  )}
 
   <section class="pseo-tips">
     <h2 id="tips-heading" class="pseo-section-title">

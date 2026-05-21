@@ -33,12 +33,24 @@ const pageUrl = `${SITE_URL}/blog/recettes/categorie/${slug}/`;
 
 const categoryData: Record<
   string,
-  { title: string; intro: string; tips: string[] }
+  { title: string; intro: string; tips: string[]; editorial?: string }
 > = {
   "plat-principal": {
     title: "Plats principaux",
     intro:
       "Les plats principaux sont le cœur de chaque repas — celui qui rassasie, nourrit et rappelle pourquoi on cuisine. Qu'il s'agisse d'un burger gourmet, d'un curry parfumé ou d'une ratatouille mijotée, le plat principal définit le menu. Chez Bytemeuh, nous le préparons toujours avec une protéine de qualité et des légumes de saison.",
+    editorial: `
+      <h2>Qu'est-ce qui fait un grand plat principal ?</h2>
+      <p>Un plat principal réussi n'est pas simplement un plat qui nourrit — c'est un plat qui <strong>satisfait</strong>. Il réunit trois éléments fondamentaux : une protéine (viande, poisson, légumineuse ou tofu), un féculent (riz, pâtes, pain, pomme de terre) et des légumes. Cet équilibre n'est pas arbitraire : il répond aux besoins nutritionnels et gustatiifs d'un repas complet.</p>
+      <p>La cuisson est l'étape qui fait la différence entre le bon et l'exceptionnel. Pour les viandes, la réaction de Maillard — cette caramélisation des protéines à haute température — crée cette croûte dorée qui concentre les saveurs. Pour les légumes, la cuisson juste (al dente pour les légumes croquants, fondant pour les mijotés) préserve textures et nutriments.</p>
+
+      <h2>L'art de la mise en place</h2>
+      <p>La <em>mise en place</em> — terme emprunté à la cuisine professionnelle — désigne la préparation de tous les ingrédients avant de commencer à cuisiner. C'est l'un des secrets les mieux gardés des cuisiniers professionnels, et l'habitude qui fait le plus défaut aux cuisiniers amateurs.</p>
+      <p>Préparer tous ses légumes taillés, ses sauces mesurées, ses épices dosées avant de mettre le feu sous la première poêle transforme radicalement l'expérience de cuisine. Fini le stress de couper l'oignon alors que la viande brûle — tout est là, prêt. La cuisine devient un plaisir, pas une course.</p>
+
+      <h2>Les plats principaux chez Bytemeuh</h2>
+      <p>Nos plats principaux couvrent tout le spectre : du burger gourmet au bœuf français aux currys de légumes indiens, en passant par les ratatouilles provençales et les poke bowls hawaïens. Dans chaque recette, nous précisons le niveau de difficulté, le temps de préparation et les astuces clés pour réussir le plat — même la première fois.</p>
+    `,
     tips: [
       "Un plat principal se compose toujours de 3 éléments : protéine, féculent, légume",
       "La cuisson haute température (saisir, griller) crée la saveur — finissez au four",
@@ -48,7 +60,19 @@ const categoryData: Record<
   "plat-vegan": {
     title: "Plats vegan",
     intro:
-      "Les plats vegans démontrent qu'absence de produit animal ne signifie pas absence de goût. Le tofu absorbe les saveurs, les légumineuses créent du corps, les épices font voyager. Un burger végan bien préparé concurrence n'importe quel burger classique — et il digeste mieux.",
+      "Les plats vegans démontrent qu'absence de produit animal ne signifie pas absence de goût. Le tofu absorbe les saveurs, les légumineuses créent du corps, les épices font voyager. Un burger végan bien préparé concurrence n'importe quel burger classique — et il digère mieux.",
+    editorial: `
+      <h2>Le vegan en cuisine : une créativité libérée</h2>
+      <p>Cuisiner végan force à la créativité. Quand les protéines animales ne sont plus le pivot du plat, on redécouvre la richesse des légumineuses, la versatilité du tofu, la richesse umami des champignons, la générosité des céréales complètes. Des ingrédients qui existent depuis des millénaires dans les cuisines indienne, chinoise, moyen-orientale — cuisines où le végétalisme n'est pas une mode mais une tradition.</p>
+      <p>Le <strong>tofu ferme</strong> est peut-être l'ingrédient vegan le plus polyvalent. Il absorbe toutes les marinades, prend toutes les textures (soyeux cru, croustillant frit, fondant poêlé), s'intègre dans toutes les cuisines. Le secret : ne jamais l'utiliser sans l'avoir préalablement mariné et pressé pour éliminer l'excès d'eau.</p>
+
+      <h2>Les protéines végétales : diversité et complémentarité</h2>
+      <p>L'une des idées reçues sur la cuisine végan est qu'elle manque de protéines. C'est faux — mais il faut comprendre comment les combiner. Les protéines végétales sont dites "incomplètes" parce qu'elles ne contiennent pas tous les acides aminés essentiels dans les bonnes proportions. La solution : les combiner.</p>
+      <p>Riz + légumineuses (pois chiches, lentilles, haricots) forment un profil protéique complet. Ce mariage n'est pas une découverte moderne — il est au cœur de cuisines qui pratiquent le végétalisme depuis des siècles : le dal chawal indien (lentilles + riz), le houmous + pain pita libanais, les haricots noirs + tortillas mexicains.</p>
+
+      <h2>Les plats vegans chez Bytemeuh</h2>
+      <p>Nos recettes veganes sont pensées pour être satisfaisantes, gourmandes et reproductibles. Du burger vegan au jackfruit aux bao buns véganes en passant par les currys de pois chiches et les poke bowls au tofu, chaque plat est construit autour d'une combinaison protéique équilibrée et d'un soin particulier apporté à la texture et aux saveurs. Le vegan chez Bytemeuh n'est pas un compromis — c'est un choix délibéré et assumé.</p>
+    `,
     tips: [
       "Texture et température sont les clés d'un bon plat végan : croquant + chaud",
       "La marinade fait toute la différence — minimum 1h, idéalement une nuit",
@@ -58,19 +82,43 @@ const categoryData: Record<
   "street-food-vegetal": {
     title: "Street food végétal",
     intro:
-      "La street food végétal袭 le meilleur de la cuisine de rue mondiale : bao buns chinois, tacos mexiciens, bowls hawaïens — tous revisités sans produit animal. L'objectif ? Démocratiser une alimentation végétale en la rendant fun, accessible et réconfortante. Chaque plat est un concentré de culture et de technique.",
+      "La street food végétal reprend le meilleur de la cuisine de rue mondiale : bao buns chinois, tacos mexicains, bowls hawaïens — tous revisités sans produit animal. L'objectif ? Démocratiser une alimentation végétale en la rendant fun, accessible et réconfortante. Chaque plat est un concentré de culture et de technique.",
+    editorial: `
+      <h2>La street food végétale : un mouvement mondial</h2>
+      <p>La street food végétale n'est pas une tendance récente — elle est au cœur des cuisines de rue asiatiques depuis des siècles. Les marchés de nuit taiwanais, les vendeurs ambulants indiens, les stands de falafels du Moyen-Orient : une grande partie de la street food mondiale a toujours été végétale par tradition, par économie ou par conviction religieuse.</p>
+      <p>Ce qui est nouveau, c'est la <strong>visibilité</strong> de cette street food végétale en France, portée par une nouvelle génération de cuisiniers et de consommateurs qui cherchent une alimentation plus consciente sans sacrifier le plaisir et la convivialité. Le bao bun végane, le taco au jackfruit, le burger de haricots noirs — autant de plats qui font honneur à leurs traditions d'origine tout en proposant une alternative gourmande.</p>
+
+      <h2>La texture : clé de voûte de la street food</h2>
+      <p>La street food se mange debout, à la main, dans la rue. Elle doit donc être pratique à tenir, mais surtout <strong>satisfaisante texturalement</strong>. Le croquant, le fondant, le crémeux — ces contrastes de texture sont ce qui rend une bouchée mémorable. Un bao bun sans pickles croquants, c'est un bao bun monotone. Des tacos sans la fraîcheur du chou rouge, c'est des tacos qui s'effondrent texturalement.</p>
+      <p>Pour la street food végétale, la texture est encore plus cruciale parce qu'on ne peut pas compter sur la richesse naturelle des protéines animales. Il faut la construire : tofu pressé et mariné pour la mâche, légumineuses croustillantes pour le croquant, avocat crémeux pour le fondant, pickles acidulés pour la fraîcheur.</p>
+
+      <h2>La street food végétale chez Bytemeuh</h2>
+      <p>Nous explorons la street food végétale à travers les traditions qui lui ont donné naissance. Nos bao buns au jackfruit s'inspirent directement des baozi chinois. Nos tacos au tofu fumé rendent hommage à la tradition mexicaine du taco al pastor. Nos poke bowls véganes célèbrent la fusion hawaïenne-japonaise. Dans chaque recette, nous expliquons la technique, les substitutions possibles et les astuces pour reproduire la magie de la street food chez soi.</p>
+    `,
     tips: [
       "La street food se mange avec les mains — travaillez la texture pour ce contexte",
-      "Les pickles sont incontournabledans chaque bowl — préparez-les la veille",
+      "Les pickles sont incontournables dans chaque bowl — préparez-les la veille",
       "La vapeur est votre meilleur allié : bao buns, dim sum, gyoza",
     ],
   },
   "salade-vegetalienne": {
     title: "Salades végétariennes",
     intro:
-      "LesSalades ne sont pas une option — elles sont un art. Une bonne salade combine textures (croquant, fondant), températures (chaud-froid), et saveurs (acide, doux, amer). La vinaigrette fait 80% du travail : équilibre huile-acide-sel. Chez Bytemeuh, nous croyons que la meilleure vinaigrette est celle qui met en valeur les légumes, pas celle qui les masque.",
+      "Les salades ne sont pas une option — elles sont un art. Une bonne salade combine textures (croquant, fondant), températures (chaud-froid), et saveurs (acide, doux, amer). La vinaigrette fait 80% du travail : équilibre huile-acide-sel. Chez Bytemeuh, nous croyons que la meilleure vinaigrette est celle qui met en valeur les légumes, pas celle qui les masque.",
+    editorial: `
+      <h2>La salade : un plat à part entière</h2>
+      <p>La salade a longtemps souffert d'une mauvaise réputation : synonyme de régime, de contrainte, de repas triste. Cette réputation est injuste — elle vient d'une mauvaise exécution. Une vraie salade végétarienne, bien composée, est l'un des plats les plus satisfaisants qui soit. Fraîche, colorée, texturée, parfumée : elle célèbre les légumes dans leur meilleure expression.</p>
+      <p>Le secret d'une bonne salade végétarienne ? La <strong>composition en couches</strong>. Une base (feuilles, céréales, légumineuses). Une protéine végétale (œuf mollet, fromage, pois chiches rôtis). Des éléments de texture (noix, graines, croûtons). Des éléments de couleur et de fraîcheur (herbes fraîches, légumes crus). Et une vinaigrette qui lie le tout sans noyer les saveurs individuelles.</p>
+
+      <h2>La vinaigrette : l'âme de la salade</h2>
+      <p>La vinaigrette est le chef d'orchestre de la salade. Elle doit être émulsionnée — c'est-à-dire que l'huile et le vinaigre, naturellement antagonistes, doivent être liés en une préparation homogène. Pour ce faire : ajoutez le vinaigre avec la moutarde et le sel dans un bol, puis incorporez l'huile en filet fin en fouettant énergiquement. La moutarde joue le rôle d'émulsifiant — elle contient des molécules qui s'accrochent à la fois à l'eau et à l'huile.</p>
+      <p>La règle de base : <strong>3 parts d'huile pour 1 part de vinaigre</strong>. Cette proportion peut varier selon l'acidité du vinaigre (vinaigre balsamique = plus sucré = 2:1, vinaigre de vin rouge = 3:1). Goûtez et ajustez : une vinaigrette doit être assez acide pour "réveiller" les légumes, pas assez pour les assécher.</p>
+
+      <h2>Les salades végétariennes chez Bytemeuh</h2>
+      <p>Nos salades végétariennes sont pensées comme des plats complets. Chaque recette contient une source de protéines (fromage de chèvre, œuf, légumineuses), une source de bons gras (avocat, noix, huile d'olive), et une source de glucides complexes (quinoa, boulgour, pois chiches). Elles se suffisent à elles-mêmes — aucun besoin d'un plat principal en accompagnement. De la salade César végétarienne à la salade de quinoa méditerranéenne, chaque recette est une invitation à redécouvrir ce que peut être une vraie salade.</p>
+    `,
     tips: [
-      "La vinaigrette se fait emulsifier — mixez ou secouez pour lier huile et vinaigre",
+      "La vinaigrette se fait émulsifier — mixez ou secouez pour lier huile et vinaigre",
       "Ajoutez les feuilles au dernier moment pour éviter qu'elles flétrissent",
       "Un peu de fromage (feta, chèvre) transforme une salade en plat complet",
     ],
@@ -353,6 +401,12 @@ const graph = {
       }
     </div>
   </section>
+
+  {category.editorial && (
+    <section class="pseo-editorial" aria-label={`À propos de la catégorie ${category.title}`}>
+      <div class="pseo-editorial-content" set:html={category.editorial} />
+    </section>
+  )}
 
   <section class="pseo-tips">
     <h2 id="tips-heading" class="pseo-section-title">
