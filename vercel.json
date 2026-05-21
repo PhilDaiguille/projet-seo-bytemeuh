@@ -206,6 +206,11 @@
       "source": "/blog/traditions-culinaires-ere-numerique/",
       "destination": "/blog/articles/traditions-culinaires-ere-numerique/",
       "statusCode": 301
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "statusCode": 301
     }
   ]
 }
