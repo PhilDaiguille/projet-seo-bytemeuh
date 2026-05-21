@@ -10,14 +10,39 @@ export async function getStaticPaths() {
     ...new Set(recettes.map((r) => r.data.cuisine).filter(Boolean)),
   ];
 
-  return cuisines.map((cuisine) => ({
-    params: { slug: normalizeCuisine(cuisine!) },
-    props: { cuisineName: cuisine! },
-  }));
+  const paths: { params: { slug: string }; props: { cuisineName: string; redirectTo?: string } }[] = [];
+
+  for (const cuisine of cuisines) {
+    const normalizedSlug = normalizeCuisine(cuisine!);
+    // Chemin canonique normalisé (sans accents)
+    paths.push({
+      params: { slug: normalizedSlug },
+      props: { cuisineName: cuisine! },
+    });
+    // Alias avec le nom brut en minuscules si différent (ex: "française" -> redirige vers "francaise")
+    const rawSlug = cuisine!
+      .toLowerCase()
+      .replace(/^cuisine\s+/i, "")
+      .replace(/\s+/g, "-")
+      .replace(/[^\w\u00C0-\u024F-]/g, "");
+    if (rawSlug !== normalizedSlug) {
+      paths.push({
+        params: { slug: rawSlug },
+        props: { cuisineName: cuisine!, redirectTo: normalizedSlug },
+      });
+    }
+  }
+
+  return paths;
 }
 
 const { slug } = Astro.params;
-const { cuisineName } = Astro.props;
+const { cuisineName, redirectTo } = Astro.props;
+
+// Redirection 301 pour les slugs accentués vers leur équivalent normalisé
+if (redirectTo) {
+  return Astro.redirect(`/blog/recettes/cuisine/${redirectTo}/`, 301);
+}
 
 const recettes = await getCollection("recettes");
 const filtered = recettes
