@@ -22,18 +22,7 @@ export async function getStaticPaths() {
       params: { slug: normalizedSlug },
       props: { cuisineName: cuisine! },
     });
-    // Alias avec le nom brut en minuscules si différent (ex: "française" -> redirige vers "francaise")
-    const rawSlug = cuisine!
-      .toLowerCase()
-      .replace(/^cuisine\s+/i, "")
-      .replace(/\s+/g, "-")
-      .replace(/[^\w\u00C0-\u024F-]/g, "");
-    if (rawSlug !== normalizedSlug) {
-      paths.push({
-        params: { slug: rawSlug },
-        props: { cuisineName: cuisine!, redirectTo: normalizedSlug },
-      });
-    }
+    // Pas d'alias : les redirections d'URL accentuées sont gérées par Vercel (vercel.json)
   }
 
   return paths;

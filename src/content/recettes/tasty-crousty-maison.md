@@ -8,7 +8,7 @@ faq:
     answer: "Oui : enfournez les morceaux panés à 200 °C (chaleur tournante) pendant 20-25 minutes en retournant à mi-cuisson. Vaporisez d'huile d'olive avant d'enfourner pour favoriser le dorage."
   - question: "Quel riz utiliser et faut-il le préparer d'une façon particulière ?"
     answer: "Un riz à grains longs (basmati ou jasmin) donne la meilleure texture. Rincez-le plusieurs fois à l'eau froide avant cuisson pour enlever l'excès d'amidon — le résultat est bien plus léger et les grains restent séparés."
-title: "Recette de Tasty Crousty maison : riz, poulet frit et sauce"
+title: "Tasty Crousty maison : riz, poulet frit et sauce"
 description: "Riz basmati moelleux, poulet frit croustillant et sauce crémeuse épicée : réalisez le Tasty Crousty maison, la tendance fast-food français-belge en version healthy."
 descriptionLong: "La recette maison du Tasty Crousty, le plat tendance des fast-foods franco-belges : un bol généreux de riz basmati, des morceaux de poulet frit dorés au panko et une sauce crémeuse épicée maison. Simple, savoureux, et bien meilleur que la version du restaurant."
 publishDate: 2026-05-21

@@ -9,7 +9,7 @@ faq:
   - question: "Les matières grasses sont-elles à éviter dans une cuisine saine ?"
     answer: "Non. Les bonnes graisses — huile d'olive extra vierge, avocat, noix et amandes, poissons gras — sont indispensables à l'organisme. Ce sont les graisses trans et les graisses saturées en excès qui posent réellement problème."
 title: "Cuisine saine et gourmande : l'approche Bytemeuh"
-description: "Manger sain sans sacrifier le plaisir : les clés d'une cuisine équilibrée, généreuse et savoureuse. Ingrédients de qualité, techniques simples, recettes anti-ennui pour une alimentation consciente au quotidien."
+description: "Manger sain sans sacrifier le plaisir : les clés d'une cuisine équilibrée et savoureuse. Ingrédients de qualité, recettes anti-ennui pour une alimentation consciente au quotidien."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
 category: "Cuisine"

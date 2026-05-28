@@ -1,6 +1,7 @@
 import { defineConfig, svgoOptimizer } from "astro/config";
 import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import seoGraph from "@jdevalk/astro-seo-graph/integration";
+import {satteri} from "@astrojs/markdown-satteri";
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 
@@ -11,6 +12,11 @@ export default defineConfig({
   experimental: {
     svgOptimizer: svgoOptimizer(),
     clientPrerender: true,
+  },
+  markdown: {
+    processor: satteri({
+      features: { directive: true },
+    }),
   },
 
   prefetch: {
@@ -76,6 +82,6 @@ export default defineConfig({
     }),
   ],
   image: {
-    quality: 70,
+    quality: 60,
   },
 });
