@@ -10,7 +10,10 @@ export async function getStaticPaths() {
     ...new Set(recettes.map((r) => r.data.cuisine).filter(Boolean)),
   ];
 
-  const paths: { params: { slug: string }; props: { cuisineName: string; redirectTo?: string } }[] = [];
+  const paths: {
+    params: { slug: string };
+    props: { cuisineName: string; redirectTo?: string };
+  }[] = [];
 
   for (const cuisine of cuisines) {
     const normalizedSlug = normalizeCuisine(cuisine!);
@@ -489,7 +492,10 @@ const graph = {
 
 <BaseLayout
   title={`Recettes de ${cuisine.title}`}
-  description={`${filtered.length} recette${filtered.length > 1 ? "s" : ""} de ${cuisine.title.toLowerCase()} à découvrir sur Bytemeuh. ${filtered.map((r) => r.data.title).join(", ")}.`.slice(0, 155)}
+  description={`${filtered.length} recette${filtered.length > 1 ? "s" : ""} de ${cuisine.title.toLowerCase()} à découvrir sur Bytemeuh. ${filtered.map((r) => r.data.title).join(", ")}.`.slice(
+    0,
+    155,
+  )}
   canonical={pageUrl}
   graph={graph}
 >
@@ -695,11 +701,16 @@ const graph = {
     </div>
   </section>
 
-  {cuisine.editorial && (
-    <section class="pseo-editorial" aria-label={`À propos de la ${cuisine.title}`}>
-      <div class="pseo-editorial-content" set:html={cuisine.editorial} />
-    </section>
-  )}
+  {
+    cuisine.editorial && (
+      <section
+        class="pseo-editorial"
+        aria-label={`À propos de la ${cuisine.title}`}
+      >
+        <div class="pseo-editorial-content" set:html={cuisine.editorial} />
+      </section>
+    )
+  }
 
   <section class="pseo-tips" aria-labelledby="tips-heading">
     <h2 id="tips-heading" class="pseo-section-title">

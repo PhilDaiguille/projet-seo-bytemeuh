@@ -13,7 +13,14 @@ description: "10 millions de tonnes gaspillées chaque année en France. Guide p
 publishDate: 2025-03-01
 author: "Bytemeuh Farm"
 category: "Durabilité"
-tags: ["gaspillage alimentaire", "zéro déchet", "cuisine durable", "économie", "anti-gaspi"]
+tags:
+  [
+    "gaspillage alimentaire",
+    "zéro déchet",
+    "cuisine durable",
+    "économie",
+    "anti-gaspi",
+  ]
 featuredImage: "../../assets/images/gaspillage-alimentaire.webp"
 featuredImageAlt: "Légumes frais bien conservés dans une cuisine zéro déchet"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/gaspillage-alimentaire.webp"

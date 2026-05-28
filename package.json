@@ -9,13 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/compiler-rs": "^0.1.10",
+    "@astrojs/compiler-rs": "^0.2.1",
     "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/sitemap": "^3.7.3",
     "@jdevalk/astro-seo-graph": "^2.0.0",
-    "@lucide/astro": "^1.14.0",
+    "@lucide/astro": "^1.17.0",
     "@resvg/resvg-js": "^2.6.2",
-    "astro": "^6.3.1",
+    "astro": "^6.4.2",
     "satori": "^0.26.0",
     "sharp": "^0.34.5"
   },

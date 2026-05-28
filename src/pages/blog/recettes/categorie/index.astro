@@ -11,10 +11,14 @@ const categories = [
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 
 const categoryDescriptions: Record<string, string> = {
-  "Plat principal": "Les grands plats qui rassasient et définissent le repas : burgers, currys, ratatouilles et bien plus.",
-  "Plat vegan": "Des plats véganes gourmands et protéinés, qui prouvent qu'on ne manque de rien sans produit animal.",
-  "Street food végétal": "La cuisine de rue mondiale revisitée sans produit animal : bao buns, tacos, bowls.",
-  "Salade végétarienne": "Des salades complètes et généreuses, pensées comme des plats à part entière.",
+  "Plat principal":
+    "Les grands plats qui rassasient et définissent le repas : burgers, currys, ratatouilles et bien plus.",
+  "Plat vegan":
+    "Des plats véganes gourmands et protéinés, qui prouvent qu'on ne manque de rien sans produit animal.",
+  "Street food végétal":
+    "La cuisine de rue mondiale revisitée sans produit animal : bao buns, tacos, bowls.",
+  "Salade végétarienne":
+    "Des salades complètes et généreuses, pensées comme des plats à part entière.",
 };
 
 const graph = {
@@ -166,7 +170,8 @@ const graph = {
               {cat}
             </span>
             <p style="font-size: var(--text-sm); color: var(--color-muted); flex: 1;">
-              {categoryDescriptions[cat!] ?? `${count} recette${count > 1 ? "s" : ""}`}
+              {categoryDescriptions[cat!] ??
+                `${count} recette${count > 1 ? "s" : ""}`}
             </p>
             <span style="font-size: var(--text-sm); color: var(--color-primary); font-weight: 600;">
               {count} recette{count > 1 ? "s" : ""} →
@@ -185,11 +190,25 @@ const graph = {
     >
       Comment choisir sa catégorie ?
     </h2>
-    <p style="color: var(--color-muted); margin-bottom: var(--space-4); line-height: 1.65;">
-      Les <strong>plats principaux</strong> sont faits pour nourrir complètement — ils associent toujours protéine, féculent et légumes de saison. Les <strong>plats vegans</strong> prouvent qu'une cuisine sans produit animal peut être gourmande et satisfaisante : tofu mariné, légumineuses créatives, épices du monde. La <strong>street food végétale</strong> reprend les codes de la cuisine de rue internationale — bao buns, tacos, bowls — revisités sans compromis sur le goût. Enfin, les <strong>salades végétariennes</strong> sont des plats complets en elles-mêmes, avec une source de protéines, de bons gras et des herbes fraîches.
+    <p
+      style="color: var(--color-muted); margin-bottom: var(--space-4); line-height: 1.65;"
+    >
+      Les <strong>plats principaux</strong> sont faits pour nourrir complètement —
+      ils associent toujours protéine, féculent et légumes de saison. Les <strong
+        >plats vegans</strong
+      > prouvent qu'une cuisine sans produit animal peut être gourmande et satisfaisante
+      : tofu mariné, légumineuses créatives, épices du monde. La <strong
+        >street food végétale</strong
+      > reprend les codes de la cuisine de rue internationale — bao buns, tacos, bowls
+      — revisités sans compromis sur le goût. Enfin, les <strong
+        >salades végétariennes</strong
+      > sont des plats complets en elles-mêmes, avec une source de protéines, de bons
+      gras et des herbes fraîches.
     </p>
     <p style="color: var(--color-muted); line-height: 1.65;">
-      Chez Bytemeuh, chaque catégorie est pensée comme une philosophie culinaire à part entière — pas seulement un filtre de recherche. Explorez, essayez, adaptez : c'est comme ça qu'on apprend à cuisiner.
+      Chez Bytemeuh, chaque catégorie est pensée comme une philosophie culinaire
+      à part entière — pas seulement un filtre de recherche. Explorez, essayez,
+      adaptez : c'est comme ça qu'on apprend à cuisiner.
     </p>
   </div>
 </BaseLayout>

@@ -13,7 +13,14 @@ description: "Manger sain sans sacrifier le plaisir : les clés d'une cuisine é
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
 category: "Cuisine"
-tags: ["cuisine saine", "alimentation équilibrée", "recettes healthy", "bien-être", "nutrition"]
+tags:
+  [
+    "cuisine saine",
+    "alimentation équilibrée",
+    "recettes healthy",
+    "bien-être",
+    "nutrition",
+  ]
 featuredImage: "../../assets/images/cuisine-saine-gourmande.webp"
 featuredImageAlt: "Cuisine saine et gourmande avec des légumes frais, herbes aromatiques et produits de qualité"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/cuisine-saine-gourmande.webp"

@@ -73,9 +73,9 @@ Le Tasty Crousty, c'est LE plat qui fait fureur depuis quelques mois dans les fa
 
 ## L'histoire du Tasty Crousty : une tendance qui vient de loin
 
-Le Tasty Crousty est né dans la mouvance des fast-foods français nouvelle génération qui s'installent en Belgique depuis 2023-2024. Le concept est simple et malin : proposer un plat inspiré des *chicken rice bowls* asiatiques — très populaires en Corée, au Japon et en Asie du Sud-Est depuis des décennies — mais adapté aux goûts et aux codes de la restauration rapide occidentale.
+Le Tasty Crousty est né dans la mouvance des fast-foods français nouvelle génération qui s'installent en Belgique depuis 2023-2024. Le concept est simple et malin : proposer un plat inspiré des _chicken rice bowls_ asiatiques — très populaires en Corée, au Japon et en Asie du Sud-Est depuis des décennies — mais adapté aux goûts et aux codes de la restauration rapide occidentale.
 
-L'idée du riz + poulet frit + sauce en bowl n'est pas nouvelle. Les *cai png* de Singapour, les bowls coréens au poulet frit (dakgalbi) ou encore le célèbre hainan chicken rice en sont les ancêtres directs. Ce que la chaîne Tasty Crousty a réussi, c'est de rendre ce format accessible, rapide et addictif sur le marché franco-belge — en faisant de la sauce crémeuse épicée sa vraie signature.
+L'idée du riz + poulet frit + sauce en bowl n'est pas nouvelle. Les _cai png_ de Singapour, les bowls coréens au poulet frit (dakgalbi) ou encore le célèbre hainan chicken rice en sont les ancêtres directs. Ce que la chaîne Tasty Crousty a réussi, c'est de rendre ce format accessible, rapide et addictif sur le marché franco-belge — en faisant de la sauce crémeuse épicée sa vraie signature.
 
 ## Pourquoi faire un Tasty Crousty maison ?
 

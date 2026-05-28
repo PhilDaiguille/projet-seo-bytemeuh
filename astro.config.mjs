@@ -24,7 +24,10 @@ export default defineConfig({
     sitemap({
       entryLimit: 1000,
       // Exclure les URLs accentuées (elles redirigent 301 vers leur version sans accents)
-      filter: (page) => !/\/(fran%C3%A7aise|am%C3%A9ricaine|m%C3%A9diterran%C3%A9enne|fusion-asiatique-fran%C3%A7aise|fusion-hawa%C3%AFenne-japonaise)\//.test(page),
+      filter: (page) =>
+        !/\/(fran%C3%A7aise|am%C3%A9ricaine|m%C3%A9diterran%C3%A9enne|fusion-asiatique-fran%C3%A7aise|fusion-hawa%C3%AFenne-japonaise)\//.test(
+          page,
+        ),
       // serialize s'applique à toutes les URLs avant le découpage en chunks
       serialize(item) {
         if (/\/blog\/recettes\//.test(item.url)) {

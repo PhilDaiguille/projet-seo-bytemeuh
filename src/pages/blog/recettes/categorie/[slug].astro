@@ -402,11 +402,16 @@ const graph = {
     </div>
   </section>
 
-  {category.editorial && (
-    <section class="pseo-editorial" aria-label={`À propos de la catégorie ${category.title}`}>
-      <div class="pseo-editorial-content" set:html={category.editorial} />
-    </section>
-  )}
+  {
+    category.editorial && (
+      <section
+        class="pseo-editorial"
+        aria-label={`À propos de la catégorie ${category.title}`}
+      >
+        <div class="pseo-editorial-content" set:html={category.editorial} />
+      </section>
+    )
+  }
 
   <section class="pseo-tips">
     <h2 id="tips-heading" class="pseo-section-title">

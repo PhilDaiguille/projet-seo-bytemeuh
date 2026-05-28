@@ -110,8 +110,8 @@ variations:
 
 ## Exemple de slug valide
 
-| Nom recette              | Slug                    |
-|--------------------------|-------------------------|
-| Poulet tikka masala      | `poulet-tikka-masala`   |
-| Tarte tatin aux pommes   | `tarte-tatin-pommes`    |
-| Soupe miso japonaise     | `soupe-miso-japonaise`  |
+| Nom recette            | Slug                   |
+| ---------------------- | ---------------------- |
+| Poulet tikka masala    | `poulet-tikka-masala`  |
+| Tarte tatin aux pommes | `tarte-tatin-pommes`   |
+| Soupe miso japonaise   | `soupe-miso-japonaise` |
