@@ -52,16 +52,18 @@ const graph = {
       name: data.title,
       description: data.descriptionLong ?? data.description,
       image: [imageUrl],
-      video: data.video
+      ...(data.video
         ? {
-            "@type": "VideoObject",
-            name: `${data.title} - Video`,
-            description: data.descriptionLong ?? data.description,
-            thumbnailUrl: imageUrl,
-            contentUrl: data.video,
-            uploadDate: data.publishDate.toISOString(),
+            video: {
+              "@type": "VideoObject",
+              name: `${data.title} - Video`,
+              description: data.descriptionLong ?? data.description,
+              thumbnailUrl: imageUrl,
+              contentUrl: data.video,
+              uploadDate: data.publishDate.toISOString(),
+            },
           }
-        : undefined,
+        : {}),
       author: {
         "@type": "Person",
         name: data.author,
@@ -90,35 +92,39 @@ const graph = {
       totalTime: data.totalTime ?? data.prepTime,
       recipeYield: data.servings,
       recipeIngredient: data.ingredients.map((ing) => String(ing).trim()),
-      ...(data.steps &&
-        data.steps.length > 0 && {
-          recipeInstructions: data.steps.map((step, i) => ({
-            "@type": "HowToStep",
-            position: i + 1,
-            name: step.name,
-            text: step.text,
-            url: pageUrl,
-            ...(step.image && { image: step.image }),
-          })),
-        }),
+      recipeInstructions:
+        data.steps && data.steps.length > 0
+          ? data.steps.map((step, i) => ({
+              "@type": "HowToStep",
+              position: i + 1,
+              name: step.name,
+              text: step.text,
+              url: pageUrl,
+              image: step.image || imageUrl || undefined,
+            }))
+          : undefined,
       mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
       keywords: data.tags ? data.tags.join(", ") : data.title,
-      ...(data.nutrition && {
-        nutrition: {
-          "@type": "NutritionInformation",
-          calories: data.nutrition.calories,
-          proteinContent: data.nutrition.protein,
-          carbohydrateContent: data.nutrition.carbs,
-          fatContent: data.nutrition.fat,
-        },
-      }),
-      ...(data.aggregateRating && {
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: data.aggregateRating.ratingValue,
-          reviewCount: data.aggregateRating.reviewCount,
-        },
-      }),
+      ...(data.nutrition?.calories
+        ? {
+            nutrition: {
+              "@type": "NutritionInformation",
+              calories: data.nutrition.calories,
+              proteinContent: data.nutrition.protein,
+              carbohydrateContent: data.nutrition.carbs,
+              fatContent: data.nutrition.fat,
+            },
+          }
+        : {}),
+      ...(data.aggregateRating?.ratingValue
+        ? {
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: data.aggregateRating.ratingValue,
+              reviewCount: data.aggregateRating.reviewCount,
+            },
+          }
+        : {}),
     },
     {
       "@type": "BreadcrumbList",

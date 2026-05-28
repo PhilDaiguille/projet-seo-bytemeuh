@@ -43,6 +43,9 @@ nutrition:
   protein: "28g"
   carbs: "35g"
   fat: "22g"
+aggregateRating:
+  ratingValue: "4.8"
+  reviewCount: "16"
 tips:
   - "Pour plus de saveur, préparez la viande quelques heures à l'avance et laissez-la mariner avec les épices."
   - "Choisissez des tortillas de taille moyenne pour faciliter la dégustation."
