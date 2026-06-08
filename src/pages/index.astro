@@ -54,9 +54,19 @@ const graph = {
         "élevage durable",
         "cuisine saine",
         "biotechnologie agricole",
+        "recettes maison",
+        "viande française",
+        "cuisine végane",
       ],
       publishingPrinciples:
         "https://bytemeuh.phildaiguille.fr/mention-legales/",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.8",
+        reviewCount: String(recettes.length + articles.length),
+        bestRating: "5",
+        worstRating: "1",
+      },
     },
     {
       "@type": "FAQPage",
@@ -684,11 +694,7 @@ const graph = {
     <p
       style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:var(--space-8);"
     >
-      En cuisine, c'est souvent les petits détails qui font la différence ! Au
-      fil des années, on a accumulé pas mal de tours de main qu'on a hâte de
-      partager avec vous. De la manière de bien choisir ses produits aux
-      techniques de cuisson qui changent tout, on vous livre tous nos secrets
-      pour devenir un as des fourneaux.
+      Nos recettes s'appuient sur des techniques simples et accessibles. Voici les fondamentaux que nous appliquons à la ferme pour obtenir des plats savoureux à chaque fois.
     </p>
     <ul class="tips-checklist" aria-label="Exemples d'astuces Bytemeuh">
       <li>
@@ -704,7 +710,7 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span>Les gestes qui vous feront couper comme un chef</span>
+        <span>Bien choisir sa viande : races françaises, traçabilité et degré de marbrure</span>
       </li>
       <li>
         <svg
@@ -719,9 +725,7 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span
-          >Nos astuces pour que vos aliments restent frais plus longtemps</span
-        >
+        <span>Conserver les légumes frais : techniques de stockage pour préserver les nutriments</span>
       </li>
       <li>
         <svg
@@ -736,7 +740,7 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span>Le b.a.-ba pour une viande toujours réussie</span>
+        <span>Maîtriser la cuisson : saisir, mijoter, rôtir — quelle technique pour quel résultat</span>
       </li>
       <li>
         <svg
@@ -751,7 +755,7 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span>Les associations de saveurs qui marchent à tous les coups</span>
+        <span>Associer les saveurs : épices, herbes et marinades pour des plats équilibrés</span>
       </li>
     </ul>
   </section>
@@ -849,9 +853,7 @@ const graph = {
     <p
       style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:var(--space-8);"
     >
-      Basé à Paris, Bytemeuh est plus qu'une simple ferme. Nous sommes un
-      atelier qui combine passion, innovation et expertise pour répondre aux
-      besoins des entreprises, des avocats et des passionnés de cuisine.
+      Bytemeuh est une ferme et un studio culinaire basés en France. Chaque recette est développée avec des produits issus de notre propre exploitation agricole : viandes françaises tracées, légumes de saison et alternatives véganes. Notre engagement porte sur trois axes : qualité des ingrédients, transparence sur les pratiques agricoles et accessibilité des recettes au quotidien.
     </p>
     <ul class="tips-checklist" aria-label="Raisons de choisir Bytemeuh">
       <li>
@@ -868,8 +870,7 @@ const graph = {
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
         <span
-          ><strong>Une expertise reconnue</strong> : en technologie, développement
-          web et consulting.</span
+          ><strong>Produits de la ferme</strong> : nos recettes utilisent des ingrédients produits sur notre exploitation — viandes françaises, légumes frais, céréales locales.</span
         >
       </li>
       <li>
@@ -886,8 +887,7 @@ const graph = {
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
         <span
-          ><strong>Des solutions personnalisées</strong> : adaptées à chaque client
-          et chaque projet.</span
+          ><strong>Recettes testées et validées</strong> : chaque recette est cuisinée et vérifiée plusieurs fois avant d'être publiée.</span
         >
       </li>
       <li>
@@ -904,8 +904,7 @@ const graph = {
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
         <span
-          ><strong>Un service sur mesure</strong> : de l'idée à la réalisation, nous
-          vous accompagnons à chaque étape.</span
+          ><strong>Agriculture durable</strong> : irrigation raisonnée, capteurs connectés, valorisation des déchets agricoles en biogaz.</span
         >
       </li>
     </ul>

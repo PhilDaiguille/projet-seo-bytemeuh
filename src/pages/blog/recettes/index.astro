@@ -17,6 +17,8 @@ recettes.forEach((r) => {
   });
 });
 
+const SITE_URL = "https://bytemeuh.phildaiguille.fr";
+
 const graph = {
   "@context": "https://schema.org",
   "@graph": [
@@ -27,21 +29,50 @@ const graph = {
           "@type": "ListItem",
           position: 1,
           name: "Accueil",
-          item: "https://bytemeuh.phildaiguille.fr/",
+          item: `${SITE_URL}/`,
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Blog",
-          item: "https://bytemeuh.phildaiguille.fr/blog/",
+          item: `${SITE_URL}/blog/`,
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Recettes",
-          item: "https://bytemeuh.phildaiguille.fr/blog/recettes/",
+          item: `${SITE_URL}/blog/recettes/`,
         },
       ],
+    },
+    {
+      "@type": "ItemList",
+      name: "Recettes Bytemeuh",
+      description: "Toutes les recettes de cuisine saine et gourmande de Bytemeuh Farm",
+      url: `${SITE_URL}/blog/recettes/`,
+      numberOfItems: sorted.length,
+      itemListElement: sorted.map((recette, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: recette.data.title,
+        description: recette.data.description,
+        url: `${SITE_URL}/blog/recettes/${recette.id}/`,
+        ...(recette.data.aggregateRating
+          ? {
+              item: {
+                "@type": "Recipe",
+                name: recette.data.title,
+                description: recette.data.description,
+                url: `${SITE_URL}/blog/recettes/${recette.id}/`,
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: recette.data.aggregateRating.ratingValue,
+                  reviewCount: recette.data.aggregateRating.reviewCount,
+                },
+              },
+            }
+          : {}),
+      })),
     },
   ],
 };
