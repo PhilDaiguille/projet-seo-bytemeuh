@@ -23,6 +23,7 @@ prepTime: "PT45M"
 cookTime: "PT20M"
 totalTime: "PT2H"
 servings: "8 Bao Buns"
+difficulty: "Moyen"
 ingredients:
   - "300g de farine T45 bio"
   - "7g de levure sèche"

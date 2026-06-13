@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FaqSection from "../components/FaqSection.astro";
 import heroImg from "../assets/images/background.webp";
 
 const recettes = await getCollection("recettes");
@@ -14,6 +15,44 @@ const latestRecettes = recettes
 const latestArticles = articles
   .sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime())
   .slice(0, 6);
+
+const homeFaq = [
+  {
+    question: "Qu'est-ce que Bytemeuh ?",
+    answer:
+      "Bytemeuh est une ferme française engagée dans une agriculture durable, combinant technologies innovantes et pratiques respectueuses de l'environnement. Nous partageons nos recettes, nos connaissances et notre passion pour une alimentation saine et responsable.",
+  },
+  {
+    question: "Quels types de recettes propose Bytemeuh ?",
+    answer:
+      "Bytemeuh propose des recettes saines et gourmandes : plats végans (bao buns au jack-fruit, poke bowl), végétariens (ratatouille provençale) et plats de viande française de qualité comme nos recettes de viande grillée (burgers, tacos, kebab, ravioli au bœuf).",
+  },
+  {
+    question: "Comment Bytemeuh s'engage pour l'environnement ?",
+    answer:
+      "Bytemeuh utilise des technologies innovantes comme les capteurs connectés, les systèmes d'irrigation intelligents et la valorisation des déchets en biogaz pour réduire son impact environnemental et promouvoir une agriculture plus durable.",
+  },
+  {
+    question: "Les recettes Bytemeuh conviennent-elles aux débutants ?",
+    answer:
+      "Oui. Chaque recette indique le temps de préparation, le niveau de difficulté et des étapes détaillées. La plupart de nos plats sont accessibles aux débutants, et nos conseils de chef vous aident à réussir du premier coup.",
+  },
+  {
+    question: "Bytemeuh propose-t-il des recettes de viande grillée ?",
+    answer:
+      "Oui. Nous proposons plusieurs recettes de viande grillée à base de bœuf français élevé en plein air : burgers, kebabs, tacos et brochettes. Nous expliquons comment choisir la viande, la mariner et maîtriser la cuisson au gril pour un résultat juteux.",
+  },
+  {
+    question: "Faut-il des produits de la ferme pour cuisiner vos recettes ?",
+    answer:
+      "Non. Nos recettes sont développées avec nos produits de ferme, mais elles se réalisent parfaitement avec des ingrédients du commerce. Nous privilégions des produits accessibles, de saison et faciles à trouver.",
+  },
+  {
+    question: "À quelle fréquence publiez-vous de nouvelles recettes ?",
+    answer:
+      "Nous publions régulièrement de nouvelles recettes et de nouveaux articles. Chaque contenu est testé et relu avant publication. Suivez notre flux RSS ou la page Recettes pour découvrir les dernières nouveautés.",
+  },
+];
 
 const graph = {
   "@context": "https://schema.org",
@@ -70,72 +109,42 @@ const graph = {
     },
     {
       "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Qu'est-ce que Bytemeuh ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Bytemeuh est une ferme française engagée dans une agriculture durable, combinant technologies innovantes et pratiques respectueuses de l'environnement. Nous partageons nos recettes, nos connaissances et notre passion pour une alimentation saine et responsable.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Quels types de recettes propose Bytemeuh ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Bytemeuh propose des recettes saines et gourmandes, incluant des plats végans (bao buns jack-fruit, poke bowl), végétariens (ratatouille provençale) et des viandes françaises de qualité (burgers, tacos, kebab, ravioli au bœuf).",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Comment Bytemeuh s'engage pour l'environnement ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Bytemeuh utilise des technologies innovantes comme les capteurs connectés, les systèmes d'irrigation intelligents et la valorisation des déchets en biogaz pour réduire son impact environnemental et promouvoir une agriculture plus durable.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Quels types de projets réalisez-vous ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Nous travaillons avec des avocats, des entreprises et des passionnés de cuisine pour développer des sites web, des plateformes interactives, des outils de gestion et bien plus encore. Chaque projet est traité avec une approche sur mesure.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Comment intégrer la technologie dans votre entreprise ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Nos services de consulting vous permettent d'adopter des solutions tech modernes adaptées à vos besoins spécifiques, que ce soit pour automatiser des processus, améliorer votre présence en ligne ou optimiser votre expérience client.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Proposez-vous des solutions adaptées aux petites entreprises et start-ups ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Oui, nous accompagnons les petites entreprises et start-ups en leur proposant des solutions accessibles et évolutives, allant de la création de sites web professionnels à la mise en place de stratégies digitales innovantes.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Travaillez-vous avec des professionnels de la cuisine ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Absolument ! Nous créons des plateformes pour les passionnés de cuisine et les professionnels, comme des sites de recettes interactifs, des outils pour gérer des cours de cuisine en ligne ou des applications de gestion de restaurant.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Pourquoi choisir Bytemeuh pour votre projet digital ?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Basés à Paris, nous sommes un atelier spécialisé dans le développement web et le consulting. Notre approche combine expertise, créativité et innovation pour répondre aux besoins spécifiques des avocats, des entreprises et des passionnés de cuisine.",
-          },
-        },
-      ],
+      mainEntity: homeFaq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    },
+    {
+      "@type": "ItemList",
+      name: "Dernières recettes Bytemeuh",
+      description:
+        "Sélection des dernières recettes saines et gourmandes de la ferme Bytemeuh.",
+      url: "https://bytemeuh.phildaiguille.fr/",
+      numberOfItems: latestRecettes.length,
+      itemListElement: latestRecettes.map((recette, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `https://bytemeuh.phildaiguille.fr/blog/recettes/${recette.id}/`,
+        name: recette.data.title,
+        ...(recette.data.aggregateRating
+          ? {
+              item: {
+                "@type": "Recipe",
+                name: recette.data.title,
+                description: recette.data.description,
+                url: `https://bytemeuh.phildaiguille.fr/blog/recettes/${recette.id}/`,
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: recette.data.aggregateRating.ratingValue,
+                  reviewCount: recette.data.aggregateRating.reviewCount,
+                  bestRating: "5",
+                  worstRating: "1",
+                },
+              },
+            }
+          : {}),
+      })),
     },
   ],
 };
@@ -694,7 +703,9 @@ const graph = {
     <p
       style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:var(--space-8);"
     >
-      Nos recettes s'appuient sur des techniques simples et accessibles. Voici les fondamentaux que nous appliquons à la ferme pour obtenir des plats savoureux à chaque fois.
+      Nos recettes s'appuient sur des techniques simples et accessibles. Voici
+      les fondamentaux que nous appliquons à la ferme pour obtenir des plats
+      savoureux à chaque fois.
     </p>
     <ul class="tips-checklist" aria-label="Exemples d'astuces Bytemeuh">
       <li>
@@ -710,7 +721,10 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span>Bien choisir sa viande : races françaises, traçabilité et degré de marbrure</span>
+        <span
+          >Bien choisir sa viande : races françaises, traçabilité et degré de
+          marbrure</span
+        >
       </li>
       <li>
         <svg
@@ -725,7 +739,10 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span>Conserver les légumes frais : techniques de stockage pour préserver les nutriments</span>
+        <span
+          >Conserver les légumes frais : techniques de stockage pour préserver
+          les nutriments</span
+        >
       </li>
       <li>
         <svg
@@ -740,7 +757,10 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span>Maîtriser la cuisson : saisir, mijoter, rôtir — quelle technique pour quel résultat</span>
+        <span
+          >Maîtriser la cuisson : saisir, mijoter, rôtir — quelle technique pour
+          quel résultat</span
+        >
       </li>
       <li>
         <svg
@@ -755,7 +775,10 @@ const graph = {
           stroke-linejoin="round"
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
-        <span>Associer les saveurs : épices, herbes et marinades pour des plats équilibrés</span>
+        <span
+          >Associer les saveurs : épices, herbes et marinades pour des plats
+          équilibrés</span
+        >
       </li>
     </ul>
   </section>
@@ -853,7 +876,12 @@ const graph = {
     <p
       style="color:var(--color-muted);font-size:var(--text-sm);margin-bottom:var(--space-8);"
     >
-      Bytemeuh est une ferme et un studio culinaire basés en France. Chaque recette est développée avec des produits issus de notre propre exploitation agricole : viandes françaises tracées, légumes de saison et alternatives véganes. Notre engagement porte sur trois axes : qualité des ingrédients, transparence sur les pratiques agricoles et accessibilité des recettes au quotidien.
+      Bytemeuh est une ferme et un studio culinaire basés en France. Chaque
+      recette est développée avec des produits issus de notre propre
+      exploitation agricole : viandes françaises tracées, légumes de saison et
+      alternatives véganes. Notre engagement porte sur trois axes : qualité des
+      ingrédients, transparence sur les pratiques agricoles et accessibilité des
+      recettes au quotidien.
     </p>
     <ul class="tips-checklist" aria-label="Raisons de choisir Bytemeuh">
       <li>
@@ -870,7 +898,9 @@ const graph = {
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
         <span
-          ><strong>Produits de la ferme</strong> : nos recettes utilisent des ingrédients produits sur notre exploitation — viandes françaises, légumes frais, céréales locales.</span
+          ><strong>Produits de la ferme</strong> : nos recettes utilisent des ingrédients
+          produits sur notre exploitation — viandes françaises, légumes frais, céréales
+          locales.</span
         >
       </li>
       <li>
@@ -887,7 +917,8 @@ const graph = {
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
         <span
-          ><strong>Recettes testées et validées</strong> : chaque recette est cuisinée et vérifiée plusieurs fois avant d'être publiée.</span
+          ><strong>Recettes testées et validées</strong> : chaque recette est cuisinée
+          et vérifiée plusieurs fois avant d'être publiée.</span
         >
       </li>
       <li>
@@ -904,7 +935,8 @@ const graph = {
           aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg
         >
         <span
-          ><strong>Agriculture durable</strong> : irrigation raisonnée, capteurs connectés, valorisation des déchets agricoles en biogaz.</span
+          ><strong>Agriculture durable</strong> : irrigation raisonnée, capteurs connectés,
+          valorisation des déchets agricoles en biogaz.</span
         >
       </li>
     </ul>
@@ -931,251 +963,5 @@ const graph = {
   </section>
 
   <!-- FAQ -->
-  <section class="surface" aria-labelledby="faq-heading">
-    <h2
-      class="section-title"
-      id="faq-heading"
-      style="margin-bottom:var(--space-6);"
-    >
-      <span class="section-title-accent" aria-hidden="true"></span>
-      Questions fréquentes
-    </h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <details>
-          <summary>
-            Qu'est-ce que Bytemeuh ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Bytemeuh est une ferme française engagée dans une agriculture
-            durable, combinant technologies innovantes et pratiques
-            respectueuses de l'environnement. Nous partageons nos recettes, nos
-            connaissances et notre passion pour une alimentation saine et
-            responsable.
-          </p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>
-            Quels types de recettes propose Bytemeuh ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Bytemeuh propose des recettes saines et gourmandes, incluant des
-            plats végans (bao buns jack-fruit, poke bowl), végétariens
-            (ratatouille provençale) et des viandes françaises de qualité
-            (burgers, tacos, kebab, ravioli au bœuf).
-          </p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>
-            Comment Bytemeuh s'engage pour l'environnement ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Bytemeuh utilise des technologies innovantes comme les capteurs
-            connectés, les systèmes d'irrigation intelligents et la valorisation
-            des déchets en biogaz pour réduire son impact environnemental et
-            promouvoir une agriculture plus durable.
-          </p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>
-            Quels types de projets réalisez-vous ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Nous travaillons avec des avocats, des entreprises et des passionnés
-            de cuisine pour développer des sites web, des plateformes
-            interactives, des outils de gestion et bien plus encore. Chaque
-            projet est traité avec une approche sur mesure.
-          </p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>
-            Comment intégrer la technologie dans votre entreprise ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Nos services de consulting vous permettent d'adopter des solutions
-            tech modernes adaptées à vos besoins spécifiques, que ce soit pour
-            automatiser des processus, améliorer votre présence en ligne ou
-            optimiser votre expérience client.
-          </p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>
-            Proposez-vous des solutions adaptées aux petites entreprises et
-            start-ups ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Oui, nous accompagnons les petites entreprises et start-ups en leur
-            proposant des solutions accessibles et évolutives, allant de la
-            création de sites web professionnels à la mise en place de
-            stratégies digitales innovantes.
-          </p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>
-            Travaillez-vous avec des professionnels de la cuisine ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Absolument ! Nous créons des plateformes pour les passionnés de
-            cuisine et les professionnels, comme des sites de recettes
-            interactifs, des outils pour gérer des cours de cuisine en ligne ou
-            des applications de gestion de restaurant.
-          </p>
-        </details>
-      </div>
-      <div class="faq-item">
-        <details>
-          <summary>
-            Pourquoi choisir Bytemeuh pour votre projet digital ?
-            <svg
-              class="faq-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-              ><line x1="12" y1="5" x2="12" y2="19"></line><line
-                x1="5"
-                y1="12"
-                x2="19"
-                y2="12"></line></svg
-            >
-          </summary>
-          <p>
-            Basés à Paris, nous sommes un atelier spécialisé dans le
-            développement web et le consulting. Notre approche combine
-            expertise, créativité et innovation pour répondre aux besoins
-            spécifiques des avocats, des entreprises et des passionnés de
-            cuisine.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
+  <FaqSection items={homeFaq} />
 </BaseLayout>

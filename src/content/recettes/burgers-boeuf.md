@@ -5,7 +5,7 @@ faq:
   - question: "Comment obtenir un burger bien juteux maison ?"
     answer: "Ne pas trop travailler la viande, former des steaks d'environ 150 g sans les écraser, et les cuire à feu vif 2-3 min par face en ne les retournant qu'une seule fois."
   - question: "Quelle cuisson pour le bœuf haché en burger ?"
-    answer: "À cœur 65 °C minimum pour un bœuf haché (contrairement aux steaks entiers). Evitez le saignant avec du haché, surtout en industriel — rosé à cœur reste acceptable si fait maison."
+    answer: "À cœur 65 °C minimum pour un bœuf haché (contrairement aux steaks entiers). Évitez le saignant avec du haché, surtout en industriel — rosé à cœur reste acceptable si fait maison."
   - question: "Peut-on préparer les steaks à l'avance ?"
     answer: "Oui, formez les steaks, séparez-les avec du papier cuisson et réfrigérez jusqu'à 24 h. Vous pouvez aussi les congeler crus jusqu'à 3 mois."
 title: "Recette de burgers de bœuf juteux maison"

@@ -15,7 +15,14 @@ publishDate: 2024-09-01
 author: "Bytemeuh Farm"
 category: "Plat principal"
 cuisine: "Méditerranéenne"
-tags: ["kebab de boeuf", "recette kebab", "kebab maison", "street food", "viande grillée"]
+tags:
+  [
+    "kebab de boeuf",
+    "recette kebab",
+    "kebab maison",
+    "street food",
+    "viande grillée",
+  ]
 featuredImage: "../../assets/images/kebab-boeuf.webp"
 featuredImageAlt: "Kebab de bœuf maison avec légumes frais et sauce blanche"
 ogImage: "https://bytemeuh.phildaiguille.fr/assets/images/kebab-boeuf.webp"
@@ -109,13 +116,13 @@ La qualité de la viande est déterminante. Pour un kebab maison au bœuf, voici
 
 La marinade paprika-cumin est au cœur de la saveur du kebab. Chaque épice a un rôle précis. Pour en savoir plus sur l'histoire de ces ingrédients, lisez notre article sur l'[histoire des épices à travers les siècles](/blog/articles/histoire-epices/).
 
-| Épice | Rôle |
-|-------|------|
-| Paprika | Couleur dorée, saveur légèrement fumée |
-| Cumin | Arôme chaud et terreux, caractéristique du kebab |
-| Origan | Note herbacée méditerranéenne |
-| Thym | Parfum délicat, aide à la conservation |
-| Ail | Intensifie les saveurs, attendrit la viande |
+| Épice   | Rôle                                             |
+| ------- | ------------------------------------------------ |
+| Paprika | Couleur dorée, saveur légèrement fumée           |
+| Cumin   | Arôme chaud et terreux, caractéristique du kebab |
+| Origan  | Note herbacée méditerranéenne                    |
+| Thym    | Parfum délicat, aide à la conservation           |
+| Ail     | Intensifie les saveurs, attendrit la viande      |
 
 La marinade doit reposer au minimum 2 heures. Une nuit complète au réfrigérateur donne le meilleur résultat.
 

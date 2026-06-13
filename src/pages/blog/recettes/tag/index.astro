@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import FaqSection from "../../../../components/FaqSection.astro";
 import { slugify } from "../../../../utils/seo";
 
 const recettes = await getCollection("recettes");
@@ -27,6 +28,25 @@ const tagsWithCount = Object.entries(tagCounts)
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 
+const faq = [
+  {
+    question: "À quoi servent les tags de recettes sur Bytemeuh ?",
+    answer:
+      "Les tags regroupent les recettes par thème transversal — vegan, healthy, cuisine du monde, street food — indépendamment de leur catégorie. Ils permettent de croiser les cuisines et de trouver rapidement une recette correspondant à une envie ou un régime alimentaire précis.",
+  },
+  {
+    question: "Comment trouver uniquement des recettes véganes ?",
+    answer:
+      "Sélectionnez le tag « vegan » : il rassemble toutes nos recettes sans produit animal, venues de Chine, d'Inde, du Mexique ou de France. Le chiffre entre parenthèses indique le nombre de recettes associées à chaque tag.",
+  },
+  {
+    question:
+      "Un tag « healthy » signifie-t-il que la recette est pauvre en calories ?",
+    answer:
+      "Pas nécessairement. Le tag « healthy » identifie les plats pensés pour l'équilibre nutritionnel — bonne source de protéines, légumes de saison, matières grasses de qualité — sans forcément être hypocaloriques. Chaque fiche recette détaille ses informations nutritionnelles.",
+  },
+];
+
 const graph = {
   "@context": "https://schema.org",
   "@graph": [
@@ -34,8 +54,16 @@ const graph = {
       "@type": "CollectionPage",
       name: "Recettes par tag — Bytemeuh",
       description:
-        "Explorez nos recettes par thème : vegan, healthy, without viande, cuisine du monde. Chaque tag révèle une facette de notre cuisine.",
+        "Explorez nos recettes par thème : vegan, healthy, sans viande, cuisine du monde. Chaque tag révèle une facette de notre cuisine.",
       url: `${SITE_URL}/blog/recettes/tag/`,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
     },
     {
       "@type": "BreadcrumbList",
@@ -72,7 +100,7 @@ const graph = {
 
 <BaseLayout
   title="Recettes par tag — Bytemeuh"
-  description="Explorez nos recettes par thème : vegan, healthy, without viande, cuisine du monde. Trouvez facilement le plat qui vous correspond."
+  description="Explorez nos recettes par thème : vegan, healthy, sans viande, cuisine du monde. Trouvez facilement le plat qui vous correspond."
   canonical={`${SITE_URL}/blog/recettes/tag/`}
   graph={graph}
 >
@@ -148,9 +176,11 @@ const graph = {
     </span>
     <h1>Recettes par tag</h1>
     <p class="pseo-intro">
-      Chaque tag raconte une philosophy culinaire. Vegan pour ceux qui
-      valorisent les protéines végétales, healthy pour les apprentis
-      nutritionnistes, cuisine du monde pour les globe-trotteurs gastronomes.
+      Chaque tag raconte une philosophie culinaire. Vegan pour ceux qui
+      valorisent les protéines végétales, healthy pour les amateurs d'équilibre
+      nutritionnel, cuisine du monde pour les globe-trotteurs gastronomes.
+      Combinez les thèmes pour affiner votre recherche et découvrir de nouvelles
+      idées de plats au fil de vos envies.
     </p>
   </header>
 
@@ -196,7 +226,13 @@ const graph = {
     <p style="color: var(--color-muted); line-height: 1.65;">
       Chaque tag est un fil rouge dans notre cuisine. Les chiffres entre
       parenthèses indiquent le nombre de recettes associées — plus le chiffre
-      est élevé, plus le thème est central dans notre approche culinaire.
+      est élevé, plus le thème est central dans notre approche culinaire. Les
+      tags sont particulièrement utiles lorsque vous cuisinez avec une
+      contrainte précise : un régime végétalien, une recherche de plats
+      équilibrés, ou l'envie de voyager à travers les cuisines du monde sans
+      quitter votre cuisine.
     </p>
   </div>
+
+  <FaqSection items={faq} />
 </BaseLayout>

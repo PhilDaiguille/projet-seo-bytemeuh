@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import FaqSection from "../../../../components/FaqSection.astro";
 import { slugify } from "../../../../utils/seo";
 
 const recettes = await getCollection("recettes");
@@ -9,6 +10,27 @@ const categories = [
 ];
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
+
+const faq = [
+  {
+    question:
+      "Quelle est la différence entre une catégorie et un tag de recette ?",
+    answer:
+      "La catégorie décrit le type de plat (plat principal, plat vegan, street food, salade), tandis que le tag décrit un thème transversal (vegan, healthy, cuisine du monde) qui peut traverser plusieurs catégories. Une même recette appartient à une seule catégorie mais peut porter plusieurs tags.",
+  },
+  {
+    question:
+      "Comment choisir une catégorie quand on cuisine pour plusieurs personnes ?",
+    answer:
+      "Privilégiez la catégorie « plats principaux » pour un repas complet et rassasiant, ou « street food végétal » pour un format convivial à partager. Chaque fiche recette précise le nombre de portions et la difficulté pour vous aider à adapter les quantités.",
+  },
+  {
+    question:
+      "Les catégories contiennent-elles uniquement des recettes véganes ?",
+    answer:
+      "Non. Bytemeuh propose des recettes véganes, végétariennes et à base de viande française élevée en plein air. Les catégories « plat vegan » et « street food végétal » regroupent les recettes sans produit animal, tandis que « plats principaux » mélange les deux approches.",
+  },
+];
 
 const categoryDescriptions: Record<string, string> = {
   "Plat principal":
@@ -30,6 +52,14 @@ const graph = {
       description:
         "Explorez nos recettes par type : plats principaux, plats vegans, street food, salades. Trouvez le plat qui vous correspond.",
       url: `${SITE_URL}/blog/recettes/categorie/`,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
     },
     {
       "@type": "BreadcrumbList",
@@ -145,9 +175,11 @@ const graph = {
     </span>
     <h1>Recettes par catégorie</h1>
     <p class="pseo-intro">
-      Chaque catégorie raconte une philosophy de cuisine. Les plats principaux
+      Chaque catégorie raconte une philosophie de cuisine. Les plats principaux
       nourrissent, les vegan révèlent les protéines végétales, la street food
-      célèbre le fun, les salades prouvent que léger peut rimer avec délicieux.
+      célèbre le plaisir, les salades prouvent que léger peut rimer avec
+      délicieux. Parcourez nos familles de recettes pour trouver l'inspiration
+      selon l'occasion, le temps dont vous disposez et vos envies du moment.
     </p>
   </header>
 
@@ -207,8 +239,14 @@ const graph = {
     </p>
     <p style="color: var(--color-muted); line-height: 1.65;">
       Chez Bytemeuh, chaque catégorie est pensée comme une philosophie culinaire
-      à part entière — pas seulement un filtre de recherche. Explorez, essayez,
-      adaptez : c'est comme ça qu'on apprend à cuisiner.
+      à part entière — pas seulement un filtre de recherche. Nos recettes sont
+      développées et testées en cuisine avant publication, avec des ingrédients
+      accessibles et des étapes détaillées. Que vous cherchiez un repas du soir
+      rapide, un plat à partager le week-end ou une option végétale pour varier,
+      vous trouverez une catégorie adaptée. Explorez, essayez, adaptez : c'est
+      comme ça qu'on apprend à cuisiner.
     </p>
   </div>
+
+  <FaqSection items={faq} />
 </BaseLayout>

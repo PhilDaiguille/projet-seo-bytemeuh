@@ -23,6 +23,7 @@ prepTime: "PT30M"
 cookTime: "PT15M"
 totalTime: "PT45M"
 servings: "2 Poke Bowls"
+difficulty: "Facile"
 ingredients:
   - "200g de riz sushi"
   - "360ml d'eau"

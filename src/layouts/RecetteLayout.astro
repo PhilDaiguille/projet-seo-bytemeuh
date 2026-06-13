@@ -5,6 +5,7 @@ import RelatedRecettes from "../components/RelatedRecettes.astro";
 import FaqSection from "../components/FaqSection.astro";
 import { normalizeCuisine } from "../utils/seo";
 import { slugify } from "../utils/seo";
+import { resolveAuthor, authorUrl } from "../data/authors";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -13,6 +14,9 @@ interface Props {
 
 const { recette } = Astro.props;
 const { data } = recette;
+
+const author = resolveAuthor(data.author, "recettes");
+const authorPageUrl = authorUrl(author);
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 const pageUrl = new URL(Astro.url.pathname, SITE_URL).toString();
@@ -66,12 +70,15 @@ const graph = {
         : {}),
       author: {
         "@type": "Person",
-        name: data.author,
-        url: SITE_URL,
-        jobTitle: "Chef & expert culinaire",
+        "@id": `${authorPageUrl}#person`,
+        name: author.name,
+        url: authorPageUrl,
+        image: author.imageUrl,
+        jobTitle: author.jobTitle,
+        ...(author.sameAs.length > 0 ? { sameAs: author.sameAs } : {}),
         worksFor: {
           "@type": "Organization",
-          name: "Bytemeuh Farm",
+          name: "Bytemeuh",
           url: SITE_URL,
         },
       },
@@ -243,8 +250,14 @@ const graph = {
           itemtype="https://schema.org/AggregateRating"
           style="display:none"
         >
-          <meta itemprop="ratingValue" content={data.aggregateRating.ratingValue} />
-          <meta itemprop="reviewCount" content={data.aggregateRating.reviewCount} />
+          <meta
+            itemprop="ratingValue"
+            content={data.aggregateRating.ratingValue}
+          />
+          <meta
+            itemprop="reviewCount"
+            content={data.aggregateRating.reviewCount}
+          />
           <meta itemprop="bestRating" content="5" />
           <meta itemprop="worstRating" content="1" />
         </div>
@@ -542,6 +555,31 @@ const graph = {
         </div>
       )
     }
+
+    <!-- Auteur (byline EEAT) -->
+    <p
+      style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);font-size:var(--text-sm);color:var(--color-muted);"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+        ><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle
+          cx="12"
+          cy="7"
+          r="4"></circle></svg
+      >
+      Recette par <a href={authorPageUrl} rel="author"
+        ><strong>{author.name}</strong></a
+      >, {author.jobTitle}
+    </p>
 
     <!-- Intro description -->
     {

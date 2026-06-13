@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import { authors } from "../../data/authors";
+
+const SITE_URL = "https://bytemeuh.phildaiguille.fr";
+const list = Object.values(authors);
+
+const graph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: `${SITE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Auteurs",
+          item: `${SITE_URL}/auteurs/`,
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="L'équipe Bytemeuh — Nos auteurs et expertise"
+  description="Découvrez l'équipe éditoriale de Bytemeuh : chef cuisinière, expert culinaire et rédacteurs derrière nos recettes et articles sur l'alimentation responsable."
+  canonical={`${SITE_URL}/auteurs/`}
+  graph={graph}
+>
+  <nav aria-label="Fil d'ariane" class="breadcrumb">
+    <ol>
+      <li><a href="/">Accueil</a></li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><polyline points="9 18 15 12 9 6"></polyline></svg
+        >
+      </li>
+      <li aria-current="page">Auteurs</li>
+    </ol>
+  </nav>
+
+  <article class="surface" style="margin-bottom: var(--space-6);">
+    <h1
+      style="font-size: var(--text-4xl); margin-bottom: var(--space-6); letter-spacing: -0.03em;"
+    >
+      L'équipe Bytemeuh
+    </h1>
+
+    <div class="expertise-grid">
+      {
+        list.map((author) => (
+          <a
+            href={`/auteurs/${author.slug}/`}
+            class="expertise-card"
+            style="text-align: center; align-items: center; text-decoration: none; color: inherit;"
+          >
+            <Image
+              src={author.image}
+              alt={`Photo de ${author.name}`}
+              width={100}
+              height={100}
+              loading="lazy"
+              decoding="async"
+              style="border-radius: 50%; object-fit: cover; margin-bottom: var(--space-3);"
+            />
+            <p class="expertise-title">{author.name}</p>
+            <p class="expertise-desc">{author.short}</p>
+          </a>
+        ))
+      }
+    </div>
+  </article>
+</BaseLayout>
