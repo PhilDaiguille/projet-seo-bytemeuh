@@ -25,7 +25,9 @@ export default defineConfig({
 
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: "viewport",
+    // "hover" précharge au survol/focus plutôt que toutes les cartes visibles :
+    // navigation toujours quasi instantanée, sans gaspiller de bande passante.
+    defaultStrategy: "hover",
   },
 
   rustCompiler: true,
