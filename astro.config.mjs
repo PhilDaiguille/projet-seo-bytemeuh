@@ -1,4 +1,4 @@
-import {defineConfig, memoryCache, svgoOptimizer} from "astro/config";
+import {defineConfig, svgoOptimizer} from "astro/config";
 import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import seoGraph from "@jdevalk/astro-seo-graph/integration";
 import { satteri } from "@astrojs/markdown-satteri";
@@ -18,6 +18,9 @@ export default defineConfig({
     clientPrerender: true,
   },
   compressHTML: true,
+  build: {
+    inlineStylesheets: "always",
+  },
   markdown: {
     processor: satteri({
       features: { directive: true },
@@ -78,7 +81,7 @@ export default defineConfig({
         internalLinks: true,
       },
     }),
-    compressor({ gzip: true, brotli: true, zstd: true }),
+    compressor({ gzip: true, brotli: true }),
     playformCompress({
       CSS: true,
       HTML: true,
