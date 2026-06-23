@@ -93,6 +93,6 @@ export default defineConfig({
   ],
 
   image: {
-    quality: 60,
+    quality: 50,
   },
 });
