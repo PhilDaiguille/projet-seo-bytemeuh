@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import RelatedArticles from "../components/RelatedArticles.astro";
 import FaqSection from "../components/FaqSection.astro";
 import { resolveAuthor, authorUrl } from "../data/authors";
@@ -196,12 +196,12 @@ const dateFormatted = data.publishDate.toLocaleDateString("fr-FR", {
           class="article-hero"
           aria-label={data.featuredImageAlt ?? data.title}
         >
-          <Image
+          <Picture
             src={data.featuredImage}
             alt={data.featuredImageAlt ?? data.title}
             width={800}
             height={533}
-            quality={55}
+            quality={50} formats={["avif", "webp"]}
             loading="eager"
             decoding="async"
             fetchpriority="high"

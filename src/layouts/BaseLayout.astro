@@ -1,6 +1,6 @@
 ---
 import Seo from "@jdevalk/astro-seo-graph/Seo.astro";
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import { getCollection } from "astro:content";
 import logoImg from "../assets/images/bytemeuh.webp";
 import "../styles/global.css";
@@ -134,12 +134,12 @@ const currentPath = Astro.url.pathname;
           class="site-logo"
           aria-label="Bytemeuh — Retour à l'accueil"
         >
-          <Image
+          <Picture
             src={logoImg}
             alt="Logo Bytemeuh"
             width={40}
             height={40}
-            quality={55}
+            quality={50} formats={["avif", "webp"]}
             loading="eager"
             decoding="async"
           />

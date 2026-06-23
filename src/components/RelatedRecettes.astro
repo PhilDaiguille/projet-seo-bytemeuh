@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
@@ -66,13 +66,13 @@ const related: CollectionEntry<"recettes">[] = [
             >
               {recette.data.featuredImage && (
                 <div class="related-card-image">
-                  <Image
+                  <Picture
                     src={recette.data.featuredImage}
                     alt={recette.data.featuredImageAlt ?? recette.data.title}
                     width={400}
                     height={267}
                     loading="lazy"
-                    quality={55}
+                    quality={50} formats={["avif", "webp"]}
                     decoding="async"
                   />
                   {recette.data.category && (

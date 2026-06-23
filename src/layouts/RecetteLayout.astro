@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import RelatedRecettes from "../components/RelatedRecettes.astro";
 import FaqSection from "../components/FaqSection.astro";
 import { normalizeCuisine } from "../utils/seo";
@@ -283,12 +283,12 @@ const graph = {
           class="recipe-hero"
           aria-label={data.featuredImageAlt ?? data.title}
         >
-          <Image
+          <Picture
             src={data.featuredImage}
             alt={data.featuredImageAlt ?? data.title}
             width={800}
             height={533}
-            quality={55}
+            quality={50} formats={["avif", "webp"]}
             loading="eager"
             decoding="async"
             fetchpriority="high"
@@ -537,7 +537,7 @@ const graph = {
               height="18"
               viewBox="0 0 24 24"
               fill={
-                i < Math.round(data.aggregateRating!.ratingValue)
+                i < Math.round(Number(data.aggregateRating!.ratingValue))
                   ? "#f59e0b"
                   : "none"
               }
