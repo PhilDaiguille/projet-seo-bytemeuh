@@ -86,7 +86,7 @@ export default defineConfig({
         internalLinks: true,
       },
     }),
-    compressor({ gzip: true, brotli: true }),
+    compressor({ brotli: true, zstd: false, gzip: false }),
   ],
 
   image: {
