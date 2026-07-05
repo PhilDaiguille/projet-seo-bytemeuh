@@ -122,9 +122,12 @@ const currentPath = Astro.url.pathname;
       is:inline
       src="https://analytics.phildaiguille.fr/script.js"
       data-website-id="f6d2bfab-2762-462a-abe6-5b1a9e7c5b25"
-      data-performance="true"
-      ></script>
-    <script is:inline defer src="https://analytics.phildaiguille.fr/recorder.js" data-website-id="f6d2bfab-2762-462a-abe6-5b1a9e7c5b25"></script>
+      data-performance="true"></script>
+    <script
+      is:inline
+      defer
+      src="https://analytics.phildaiguille.fr/recorder.js"
+      data-website-id="f6d2bfab-2762-462a-abe6-5b1a9e7c5b25"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -141,7 +144,8 @@ const currentPath = Astro.url.pathname;
             alt="Logo Bytemeuh"
             width={40}
             height={40}
-            quality={50} formats={["avif", "webp"]}
+            quality={50}
+            formats={["avif", "webp"]}
             loading="eager"
             decoding="async"
           />

@@ -1,11 +1,9 @@
-import {defineConfig, svgoOptimizer} from "astro/config";
+import { defineConfig, memoryCache, svgoOptimizer } from "astro/config";
 import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import seoGraph from "@jdevalk/astro-seo-graph/integration";
 import { satteri } from "@astrojs/markdown-satteri";
 
 import compressor from "astro-compressor";
-
-import playformCompress from "@playform/compress";
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 
@@ -17,13 +15,20 @@ export default defineConfig({
     svgOptimizer: svgoOptimizer(),
     clientPrerender: true,
   },
+  cache: {
+    provider: memoryCache(),
+  },
   compressHTML: true,
   build: {
     inlineStylesheets: "always",
   },
   markdown: {
     processor: satteri({
-      features: { directive: true },
+      features: {
+        directive: true,
+        math: true,
+        headingAttributes: true,
+      },
     }),
   },
 
@@ -82,14 +87,6 @@ export default defineConfig({
       },
     }),
     compressor({ gzip: true, brotli: true }),
-    playformCompress({
-      CSS: true,
-      HTML: true,
-      Image: true,
-      JavaScript: true,
-      JSON: true,
-      SVG: true,
-    }),
   ],
 
   image: {
