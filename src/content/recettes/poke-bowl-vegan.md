@@ -9,7 +9,7 @@ faq:
   - question: "Comment rendre le poke bowl plus protéiné sans poisson ?"
     answer: "Edamame, tofu mariné et grillé, tempeh, pois chiches rôtis ou graines de chanvre sont d'excellentes sources de protéines végétales pour enrichir votre bowl."
 title: "Recette de Poke Bowl Végan Signature"
-description: "Riz vinaigré, tofu mariné, avocat, edamame, sauce sésame-soja : le poke bowl végan signature Bytemeuh, voyage hawaïen-japonais dans votre assiette en moins de 20 min."
+description: "Riz vinaigré, tofu mariné, avocat, edamame et sauce sésame-soja : le poke bowl végan signature Bytemeuh, un voyage hawaïen-japonais prêt en 20 min."
 descriptionLong: "La recette signature du Poke Bowl végan de Bytemeuh, une fusion de saveurs hawaïennes et japonaises, parfaite pour un repas sain et savoureux."
 publishDate: 2024-09-01
 author: "Bytemeuh Farm"
@@ -46,9 +46,6 @@ nutrition:
   protein: "20g"
   carbs: "60g"
   fat: "10g"
-aggregateRating:
-  ratingValue: "4.9"
-  reviewCount: "20"
 tips:
   - "Utilisez du riz sushi pour une texture parfaite"
   - "Marinez le tofu à l'avance pour plus de saveurs"

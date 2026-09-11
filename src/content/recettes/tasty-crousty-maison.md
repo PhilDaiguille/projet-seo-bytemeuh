@@ -9,7 +9,7 @@ faq:
   - question: "Quel riz utiliser et faut-il le préparer d'une façon particulière ?"
     answer: "Un riz à grains longs (basmati ou jasmin) donne la meilleure texture. Rincez-le plusieurs fois à l'eau froide avant cuisson pour enlever l'excès d'amidon — le résultat est bien plus léger et les grains restent séparés."
 title: "Tasty Crousty maison : riz, poulet frit et sauce"
-description: "Riz basmati moelleux, poulet frit croustillant et sauce crémeuse épicée : réalisez le Tasty Crousty maison, la tendance fast-food français-belge en version healthy."
+description: "Riz basmati, poulet frit croustillant et sauce crémeuse épicée : le Tasty Crousty maison, la tendance fast-food franco-belge en version plus healthy."
 descriptionLong: "La recette maison du Tasty Crousty, le plat tendance des fast-foods franco-belges : un bol généreux de riz basmati, des morceaux de poulet frit dorés au panko et une sauce crémeuse épicée maison. Simple, savoureux, et bien meilleur que la version du restaurant."
 publishDate: 2026-05-21
 author: "Bytemeuh Farm"
@@ -45,9 +45,6 @@ nutrition:
   protein: "38g"
   carbs: "58g"
   fat: "18g"
-aggregateRating:
-  ratingValue: "5"
-  reviewCount: "10"
 tips:
   - "Les hauts de cuisse désossés sont plus juteux et moins secs que les escalopes à la cuisson — à privilégier pour un résultat proche de la version restaurant."
   - "Laissez reposer le poulet pané 5 minutes avant de le couper pour que les jus se redistribuent et que la panure reste bien adhérente."

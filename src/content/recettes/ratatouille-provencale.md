@@ -9,7 +9,7 @@ faq:
   - question: "Avec quoi servir la ratatouille provençale ?"
     answer: "En accompagnement d'une viande grillée, sur des pâtes, avec des œufs pochés, sur des bruschetta, ou simplement avec du pain de campagne. Elle est aussi délicieuse froide en entrée."
 title: "Recette de ratatouille provençale aux légumes"
-description: "Aubergines, courgettes, poivrons et tomates d'été mijotés à l'huile d'olive : la vraie ratatouille provençale, cuite légume par légume pour un résultat incomparable."
+description: "Aubergines, courgettes, poivrons et tomates mijotés à l'huile d'olive : la vraie ratatouille provençale, cuite légume par légume pour plus de saveur."
 descriptionLong: "Une recette authentique de ratatouille provençale, ce chef-d'œuvre emblématique de la cuisine méditerranéenne transmis de génération en génération dans les villages du Sud de la France."
 publishDate: 2024-09-01
 author: "Bytemeuh Farm"
@@ -42,9 +42,6 @@ nutrition:
   protein: "4g"
   carbs: "25g"
   fat: "8g"
-aggregateRating:
-  ratingValue: "5"
-  reviewCount: "12"
 tips:
   - "La cuisson séparée des légumes est essentielle pour préserver leurs saveurs distinctes."
   - "N'hésitez pas à préparer la ratatouille la veille, elle n'en sera que meilleure."

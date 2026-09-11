@@ -9,7 +9,7 @@ faq:
   - question: "Comment nettoyer les champignons sans les tremper ?"
     answer: "Utilisez un pinceau sec ou un chiffon humide pour retirer la terre. Ne plongez jamais les champignons dans l'eau — ils l'absorbent comme des éponges et perdent toute leur saveur à la cuisson."
 title: "Recette de risotto crémeux aux champignons"
-description: "Riz carnaroli, champignons forestiers, parmesan 24 mois : la vraie technique du risotto all'onda. Texture crémeuse, saveur boisée, résultat digne d'un restaurant italien."
+description: "Riz carnaroli, champignons forestiers et parmesan 24 mois : la vraie technique du risotto all'onda, pour une texture crémeuse digne d'un restaurant."
 descriptionLong: "Le risotto aux champignons de Bytemeuh : un classique de la cuisine italienne préparé avec du riz carnaroli, des champignons des bois dorés à sec, et du parmesan affiné. La technique mantecatura pour un résultat brillant et fondant."
 publishDate: 2025-02-15
 author: "Bytemeuh Farm"
@@ -48,9 +48,6 @@ nutrition:
   protein: "18g"
   carbs: "65g"
   fat: "22g"
-aggregateRating:
-  ratingValue: "4.7"
-  reviewCount: "15"
 tips:
   - "Le riz carnaroli est essentiel : plus résistant que l'arborio, il supporte les 18-20 minutes de cuisson sans se transformer en bouillie."
   - "Le bouillon doit être chaud — pas brûlant — pour maintenir la température de cuisson stable. Un bouillon froid ralentit le processus et produit un résultat inégal."

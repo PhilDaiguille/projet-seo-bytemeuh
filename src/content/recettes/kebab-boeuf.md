@@ -9,7 +9,7 @@ faq:
   - question: "Peut-on cuire le kebab au four plutôt qu'à la poêle ?"
     answer: "Oui : enfourner à 220 °C (chaleur tournante) pendant 15-18 min en retournant à mi-cuisson. Un grill en fin donne un beau brunissage."
 title: "Recette kebab de bœuf maison — marinade aux épices"
-description: "Préparez un kebab de bœuf maison avec une marinade paprika-cumin, des légumes frais et une sauce blanche faite maison. Recette simple, saine et plus savoureuse que le kebab du commerce."
+description: "Kebab de bœuf maison : marinade paprika-cumin, légumes frais et sauce blanche faite maison. Une recette simple, saine et plus savoureuse que celle du commerce."
 descriptionLong: "Cette recette de kebab maison au bœuf mariné vous permet de retrouver les saveurs du kebab traditionnel — viande grillée parfumée, légumes frais croquants, sauce blanche crémeuse — en maîtrisant la qualité de chaque ingrédient. Inspiré du döner kebap, ce sandwich de street food est une adaptation maison du gyros grec et du shawarma du Moyen-Orient, avec du bœuf français de qualité."
 publishDate: 2024-09-01
 author: "Bytemeuh Farm"
@@ -52,9 +52,6 @@ nutrition:
   protein: "35g"
   carbs: "40g"
   fat: "25g"
-aggregateRating:
-  ratingValue: "5"
-  reviewCount: "10"
 tips:
   - "Pour des tranches de viande plus fines, placez la viande 30 minutes au congélateur avant de la couper."
   - "Préparez la sauce blanche maison en mélangeant du yaourt grec avec de l'ail, du citron et des herbes."

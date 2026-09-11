@@ -54,9 +54,6 @@ nutrition:
   protein: "12g"
   carbs: "48g"
   fat: "18g"
-aggregateRating:
-  ratingValue: "4.8"
-  reviewCount: "22"
 tips:
   - "Faites toujours revenir la pâte de curry dans l'huile chaude avant d'ajouter les légumes — c'est ce qui libère tous ses arômes."
   - "Ajoutez le lait de coco en fin de cuisson et évitez de faire bouillir vigoureusement pour conserver sa douceur crémeuse."

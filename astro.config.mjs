@@ -4,8 +4,25 @@ import seoGraph from "@jdevalk/astro-seo-graph/integration";
 import { satteri } from "@astrojs/markdown-satteri";
 
 import compressor from "astro-compressor";
+import fs from "node:fs";
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
+
+// lastmod du sitemap lu dans le frontmatter (updatedDate sinon publishDate)
+const lastmod = {};
+for (const col of ["recettes", "articles"]) {
+  for (const file of fs.readdirSync(`./src/content/${col}`)) {
+    if (!file.endsWith(".md")) continue;
+    const fm = fs.readFileSync(`./src/content/${col}/${file}`, "utf8");
+    const date =
+      fm.match(/^updatedDate:\s*["']?([\d-]+)/m)?.[1] ??
+      fm.match(/^publishDate:\s*["']?([\d-]+)/m)?.[1];
+    if (date)
+      lastmod[`${SITE_URL}/blog/${col}/${file.slice(0, -3)}/`] = new Date(
+        date,
+      ).toISOString();
+  }
+}
 
 export default defineConfig({
   site: SITE_URL,
@@ -45,6 +62,7 @@ export default defineConfig({
           page,
         ),
       serialize(item) {
+        if (lastmod[item.url]) item.lastmod = lastmod[item.url];
         if (/\/blog\/recettes\//.test(item.url)) {
           return { ...item, changefreq: ChangeFreqEnum.WEEKLY, priority: 0.9 };
         }

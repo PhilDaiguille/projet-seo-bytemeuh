@@ -9,7 +9,7 @@ faq:
   - question: "Comment accélérer le temps de repos des nouilles maison ?"
     answer: "40 minutes minimum sont nécessaires pour que le gluten se développe. Si vous manquez de temps, étalez la pâte très fine (2mm) et réduisez le repos à 20 minutes — le résultat sera moins élastique mais toujours correct."
 title: "Recette de ramen végan au miso et champignons"
-description: "Bouillon umami, miso blanc, champignons shiitake, nouilles maison : le ramen végan qui rivalise avec les meilleures versions. Préparation longue mais résultat spectaculaire."
+description: "Bouillon umami au miso blanc, shiitake et nouilles maison : un ramen végan qui rivalise avec les meilleures adresses. Long à préparer, mais spectaculaire."
 descriptionLong: "Le ramen au miso de Bytemeuh : un bouillon végétal d'une grande complexité, créé par l'alliance du kombu, des shiitakes et du miso blanc, servi avec des nouilles maison et des toppings généreux. Un bol réconfortant qui réchauffe de l'intérieur."
 publishDate: 2025-02-20
 author: "Bytemeuh Farm"
@@ -52,9 +52,6 @@ nutrition:
   protein: "24g"
   carbs: "72g"
   fat: "18g"
-aggregateRating:
-  ratingValue: "4.9"
-  reviewCount: "18"
 tips:
   - "Le bouillon doit réduire lentement à feu doux pendant minimum 45 minutes — plus longtemps = plus profond le goût. Ne faites jamais bouillir, juste frémir."
   - "Pour un umami végétal maximal : faites tremper les shiitakes toute une nuit et utilisez cette eau comme base. Les champignons eux-mêmes deviennent une garniture croustillante."

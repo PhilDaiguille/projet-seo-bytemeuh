@@ -382,7 +382,7 @@ const cuisineData: Record<
   "fusion-asiatique-francaise": {
     title: "Cuisine fusion asiatique-française",
     intro:
-      "Les bao buns marient la tradition chinoise du baozi à la sensibilité française. Ces petites buns vapotisées emprisonnent une farce de jack-fruit mariné, pickles croquants et coriandre fraîche. Une street food de qualité restaurant.",
+      "Les bao buns marient la tradition chinoise du baozi à la sensibilité française. Ces petits pains cuits à la vapeur renferment une farce de jack-fruit mariné, pickles croquants et coriandre fraîche. Une street food de qualité restaurant.",
     editorial: `
       <h2>La fusion asiatique-française : un dialogue de deux grandes cultures</h2>
       <p>La rencontre entre la cuisine asiatique et la cuisine française n'est pas nouvelle. Elle a ses racines dans l'histoire coloniale franco-indochinoise, qui a laissé des traces culinaires profondes — le bánh mì vietnamien (baguette de blé garnie à l'asiatique) en est l'exemple le plus célèbre. Mais aujourd'hui, ce dialogue prend de nouvelles formes, portées par une nouvelle génération de cuisiniers qui ont grandi dans les deux cultures simultanément.</p>
@@ -418,6 +418,13 @@ const cuisine = cuisineData[slug!] ?? {
     "N'hésitez pas à ajuster les épices selon vos goûts",
   ],
 };
+
+// Nombre de recettes + intro éditoriale, coupée au dernier mot avant 158 caractères
+const fullDescription = `${filtered.length} recette${filtered.length > 1 ? "s" : ""} de ${cuisine.title.toLowerCase()} : ${cuisine.intro}`;
+const metaDescription =
+  fullDescription.length <= 160
+    ? fullDescription
+    : fullDescription.slice(0, 158).replace(/\s+\S*$/, "") + "…";
 
 const allCuisines = [
   ...new Set(recettes.map((r) => r.data.cuisine).filter(Boolean)),
@@ -481,10 +488,7 @@ const graph = {
 
 <BaseLayout
   title={`Recettes de ${cuisine.title}`}
-  description={`${filtered.length} recette${filtered.length > 1 ? "s" : ""} de ${cuisine.title.toLowerCase()} à découvrir sur Bytemeuh. ${filtered.map((r) => r.data.title).join(", ")}.`.slice(
-    0,
-    155,
-  )}
+  description={metaDescription}
   canonical={pageUrl}
   graph={graph}
 >
@@ -641,25 +645,6 @@ const graph = {
                 )}
                 {recette.data.difficulty && (
                   <span class="card-meta-item">{recette.data.difficulty}</span>
-                )}
-                {recette.data.aggregateRating && (
-                  <span class="card-meta-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="13"
-                      height="13"
-                      viewBox="0 0 24 24"
-                      fill="#f59e0b"
-                      stroke="#f59e0b"
-                      stroke-width="1"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                    {recette.data.aggregateRating.ratingValue}
-                  </span>
                 )}
               </div>
               <h2 class="card-title">{recette.data.title}</h2>

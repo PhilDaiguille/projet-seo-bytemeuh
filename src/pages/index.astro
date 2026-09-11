@@ -99,13 +99,6 @@ const graph = {
       ],
       publishingPrinciples:
         "https://bytemeuh.phildaiguille.fr/mention-legales/",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: String(recettes.length + articles.length),
-        bestRating: "5",
-        worstRating: "1",
-      },
     },
     {
       "@type": "FAQPage",
@@ -126,24 +119,6 @@ const graph = {
         "@type": "ListItem",
         position: index + 1,
         url: `https://bytemeuh.phildaiguille.fr/blog/recettes/${recette.id}/`,
-        name: recette.data.title,
-        ...(recette.data.aggregateRating
-          ? {
-              item: {
-                "@type": "Recipe",
-                name: recette.data.title,
-                description: recette.data.description,
-                url: `https://bytemeuh.phildaiguille.fr/blog/recettes/${recette.id}/`,
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: recette.data.aggregateRating.ratingValue,
-                  reviewCount: recette.data.aggregateRating.reviewCount,
-                  bestRating: "5",
-                  worstRating: "1",
-                },
-              },
-            }
-          : {}),
       })),
     },
   ],
