@@ -123,6 +123,42 @@ const categoryData: Record<
       "Un peu de fromage (feta, chèvre) transforme une salade en plat complet",
     ],
   },
+  dessert: {
+    title: "Desserts faits maison",
+    intro:
+      "Un bon dessert termine le repas sur une note de plaisir. Cookies fourrés, gâteaux de saison ou douceurs venues d'ailleurs : chez Bytemeuh, nos desserts s'inspirent des tendances du moment, avec de bons ingrédients et des techniques simples à reproduire à la maison.",
+    editorial: `
+      <h2>La pâtisserie maison, plus simple qu'on ne le croit</h2>
+      <p>La pâtisserie a la réputation d'être une science exacte. C'est en partie vrai : les proportions de farine, de sucre, de matière grasse et d'œufs déterminent la texture finale. Mais une fois ces bases comprises, les desserts maison deviennent un terrain de jeu. Pesez vos ingrédients plutôt que de les mesurer en volume, respectez les températures indiquées, et vous obtiendrez des résultats réguliers.</p>
+      <p>Faire ses desserts soi-même permet surtout de choisir la qualité : un vrai beurre, un chocolat riche en cacao, des fruits de saison, des fruits secs non transformés. On évite ainsi les arômes artificiels, les colorants et les huiles de moindre qualité des produits industriels.</p>
+
+      <h2>Les desserts chez Bytemeuh</h2>
+      <p>Nos recettes de desserts suivent les envies du moment, comme les cookies pistache et kadayif inspirés du chocolat de Dubaï, tout en expliquant chaque geste. Pour chaque recette, nous indiquons le temps, la difficulté, la conservation et les variantes possibles.</p>
+    `,
+    tips: [
+      "Pesez tous les ingrédients : la pâtisserie ne supporte pas l'approximation",
+      "Sortez beurre et œufs à l'avance pour une pâte homogène",
+      "Un four bien préchauffé est la clé d'une cuisson régulière",
+    ],
+  },
+  entree: {
+    title: "Entrées et soupes maison",
+    intro:
+      "L'entrée ouvre l'appétit et donne le ton du repas. Veloutés de saison, salades composées ou bouchées à partager : nos entrées sont légères, colorées et construites autour des légumes du moment.",
+    editorial: `
+      <h2>Une entrée réussie, c'est d'abord une question de saison</h2>
+      <p>Les meilleures entrées sont celles qui mettent en valeur un produit de saison au sommet de sa saveur : tomates en été, courges et champignons à l'automne, poireaux et choux en hiver, asperges au printemps. Un légume bien choisi demande peu de travail pour briller.</p>
+      <p>Les soupes et veloutés sont les entrées idéales de la saison froide. Rôtir les légumes avant de les mixer concentre leurs sucres et leur goût, et une touche d'umami (miso, parmesan, champignons) apporte de la profondeur sans alourdir.</p>
+
+      <h2>Les entrées chez Bytemeuh</h2>
+      <p>Nos entrées sont pensées pour être simples et rapides, avec des ingrédients faciles à trouver. Beaucoup peuvent se préparer à l'avance et se conservent quelques jours au réfrigérateur, parfaites pour un repas en semaine comme pour recevoir.</p>
+    `,
+    tips: [
+      "Rôtissez les légumes avant de les mixer pour un velouté plus goûteux",
+      "Une entrée légère laisse de la place au plat principal",
+      "Ajoutez un topping croquant (graines, noix) pour le contraste de textures",
+    ],
+  },
 };
 
 const category = categoryData[slug!] ?? {
