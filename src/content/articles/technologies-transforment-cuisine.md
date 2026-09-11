@@ -39,7 +39,7 @@ La technologie transforme nos cuisines en véritables espaces d'innovation :
 
 ## Planifier ses repas facilement
 
-L'IA nous aide à choisir nos repas ! Elle analyse nos goûts, nos besoins et même ce qu'il y a dans notre frigo.
+L'IA nous aide à choisir nos repas ! Elle analyse nos goûts, nos besoins et même ce qu'il y a dans notre frigo. Pour aller plus loin sur le suivi de l'équilibre alimentaire, lisez notre article sur les [applications et objets connectés de nutrition](/blog/articles/technologie-bien-etre-alimentaire/).
 
 **Les réfrigérateurs intelligents permettent de :**
 
