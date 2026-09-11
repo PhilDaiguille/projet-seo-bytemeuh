@@ -59,12 +59,6 @@ const recettes = defineCollection({
           fat: z.string().optional(),
         })
         .optional(),
-      aggregateRating: z
-        .object({
-          ratingValue: z.string(),
-          reviewCount: z.string(),
-        })
-        .optional(),
       steps: z.array(recipeStep).optional(),
       tips: z.array(z.string()).optional(),
       variations: z.array(z.string()).optional(),

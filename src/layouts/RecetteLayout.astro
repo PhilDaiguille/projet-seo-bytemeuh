@@ -92,6 +92,7 @@ const graph = {
         },
       },
       datePublished: data.publishDate.toISOString(),
+      dateModified: data.publishDate.toISOString(),
       recipeCategory: data.category ?? "Plat principal",
       recipeCuisine: data.cuisine ?? "Cuisine française",
       prepTime: data.prepTime ?? "PT15M",
@@ -120,15 +121,6 @@ const graph = {
               proteinContent: data.nutrition.protein,
               carbohydrateContent: data.nutrition.carbs,
               fatContent: data.nutrition.fat,
-            },
-          }
-        : {}),
-      ...(data.aggregateRating?.ratingValue
-        ? {
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: data.aggregateRating.ratingValue,
-              reviewCount: data.aggregateRating.reviewCount,
             },
           }
         : {}),
@@ -245,43 +237,8 @@ const graph = {
     </ol>
   </nav>
 
-  <article itemscope itemtype="https://schema.org/Recipe">
-    <!-- Microdata meta cachés -->
-    <meta itemprop="url" content={pageUrl} />
-    {imageUrl && <meta itemprop="image" content={imageUrl} />}
-    {data.video && <meta itemprop="video" content={data.video} />}
-    {data.aggregateRating && (
-      <div
-        itemprop="aggregateRating"
-        itemscope
-        itemtype="https://schema.org/AggregateRating"
-        style="display:none"
-      >
-        <meta
-          itemprop="ratingValue"
-          content={data.aggregateRating.ratingValue}
-        />
-        <meta
-          itemprop="reviewCount"
-          content={data.aggregateRating.reviewCount}
-        />
-        <meta itemprop="bestRating" content="5" />
-        <meta itemprop="worstRating" content="1" />
-      </div>
-    )}
-    <meta
-      itemprop="recipeCategory"
-      content={data.category ?? "Plat principal"}
-    />
-    <meta
-      itemprop="recipeCuisine"
-      content={data.cuisine ?? "Cuisine française"}
-    />
-    {data.prepTime && <meta itemprop="prepTime" content={data.prepTime} />}
-    <meta
-      itemprop="keywords"
-      content={data.tags ? data.tags.join(", ") : data.title}
-    />
+  <!-- Données structurées : uniquement en JSON-LD (graph ci-dessus), pas de microdata en doublon -->
+  <article>
     <!-- Hero -->
     {data.featuredImage && (
       <figure
@@ -298,7 +255,6 @@ const graph = {
           loading="eager"
           decoding="async"
           fetchpriority="high"
-          itemprop="image"
         />
         <div class="recipe-hero-overlay" aria-hidden="true" />
         <div class="recipe-hero-content">
@@ -319,7 +275,7 @@ const graph = {
             </svg>
             Recette
           </span>
-          <h1 class="recipe-hero-title" itemprop="name">
+          <h1 class="recipe-hero-title">
             {data.title}
           </h1>
           <div
@@ -433,7 +389,7 @@ const graph = {
           </svg>
           Recette
         </span>
-        <h1 class="recipe-hero-title" itemprop="name">
+        <h1 class="recipe-hero-title">
           {data.title}
         </h1>
         <div
@@ -526,37 +482,6 @@ const graph = {
       </header>
     )}
 
-    {/* Rating */}
-    {data.aggregateRating && (
-      <div
-        style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-6);"
-        aria-label={`Note : ${data.aggregateRating.ratingValue}/5 — ${data.aggregateRating.reviewCount} avis`}
-      >
-        {Array.from({ length: 5 }).map((_, i) => (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill={
-              i < Math.round(Number(data.aggregateRating!.ratingValue))
-                ? "#f59e0b"
-                : "none"
-            }
-            stroke="#f59e0b"
-            stroke-width="2"
-            aria-hidden="true"
-          >
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-        ))}
-        <span style="font-size:var(--text-sm);color:var(--color-muted);font-weight:600;">
-          {data.aggregateRating.ratingValue}/5 —{" "}
-          {data.aggregateRating.reviewCount} avis
-        </span>
-      </div>
-    )}
-
     <!-- Auteur (byline EEAT) -->
     <p style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);font-size:var(--text-sm);color:var(--color-muted);">
       <svg
@@ -583,7 +508,7 @@ const graph = {
 
     <!-- Intro description -->
     {(data.descriptionLong ?? data.description) && (
-      <p class="recipe-intro-block" itemprop="description">
+      <p class="recipe-intro-block">
         {data.descriptionLong ?? data.description}
       </p>
     )}
@@ -721,7 +646,7 @@ const graph = {
             </div>
           )}
           <p class="recipe-sidebar-title">Ingrédients</p>
-          <ul class="ingredients-list" itemprop="recipeIngredient">
+          <ul class="ingredients-list">
             {data.ingredients.map((ing) => (
               <li>
                 <span class="ingredient-dot" aria-hidden="true" />

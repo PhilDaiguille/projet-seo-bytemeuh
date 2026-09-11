@@ -47,7 +47,7 @@ const tagData: Record<
     intro:
       "Le vegan, ce n'est pas une contrainte — c'est une découverte. Tofu, jack-fruit, pois chiches, quinoa : les protéines végétales regorgent de possibilités. En remplaçant l'animal par des ingrédients de ferme, on redécouvre des saveurs authentiques. Chez Bytemeuh, le végan est une démarche cohérente avec notre engagement pour une agriculture régénérative.",
     tips: [
-      "Le tofu se marinde toujours : min 2h dans sauce soja + huile de sésame",
+      "Le tofu se marine toujours : au moins 2 h dans la sauce soja et l'huile de sésame",
       "Le jack-fruit jeune doit être bien rincé pour éliminer le sel de conservation",
       "Les protéines végétales se combinent (riz + légumineuses) pour un profil complet",
     ],
@@ -55,17 +55,35 @@ const tagData: Record<
   healthy: {
     title: "Recettes healthy",
     intro:
-      "Manger sain ne veut pas dire manger fade. Nos recettes healthy proof le contraire : avocat crémeux, mangue sucrée, patate douce réconfortante, quinoa protéiné. Une alimentation consciente qui ne sacrifie ni le goût ni le plaisir. Chaque plat Bytemeuh est pensé pour nutritional balance sans renoncer à la gourmandise.",
+      "Manger sain ne veut pas dire manger fade. Nos recettes healthy prouvent le contraire : avocat crémeux, mangue sucrée, patate douce réconfortante, quinoa protéiné. Une alimentation consciente qui ne sacrifie ni le goût ni le plaisir. Chaque plat Bytemeuh est pensé pour être équilibré sans renoncer à la gourmandise.",
+    editorial: `
+      <h2>Qu'est-ce qu'une recette healthy ?</h2>
+      <p>Une recette healthy n'est pas un plat « light » ou restrictif. C'est une assiette équilibrée : une source de protéines, des glucides complets, des légumes en quantité et de bonnes graisses. Chez Bytemeuh, on privilégie les produits bruts et de saison, cuisinés simplement, plutôt que les produits transformés.</p>
+      <p>Le <a href="/blog/recettes/poke-bowl-vegan/">poke bowl végan</a> illustre bien cette approche : riz vinaigré, tofu mariné, avocat et edamame forment un repas complet en moins de 20 minutes. La <a href="/blog/recettes/salade-quinoa-legumes-grilles/">salade de quinoa aux légumes grillés</a> se prépare à l'avance et se garde plusieurs jours au frais, idéale pour les repas de la semaine.</p>
+
+      <h2>Équilibrer une assiette sans perdre le goût</h2>
+      <p>Le secret d'un plat sain et savoureux tient dans l'assaisonnement. Les épices, les herbes fraîches, les agrumes et les aliments fermentés comme le miso apportent de la profondeur sans ajouter de gras. Le <a href="/blog/recettes/ramen-miso/">ramen miso végan</a> en est la preuve : son bouillon umami repose sur le miso blanc et les champignons shiitake, pas sur la matière grasse.</p>
+      <p>Pour aller plus loin, notre article sur la <a href="/blog/articles/cuisine-saine-et-gourmande/">cuisine saine et gourmande</a> détaille les principes d'une alimentation équilibrée au quotidien.</p>
+    `,
     tips: [
       "L'avocat s'ajoute en fin de préparation pour garder sa texture",
-      "La patate douce caramelise mieux à chaleur haute en debut de cuisson",
-      "Le quinoa se toast 2min avant cuisson pour un goût de noisette",
+      "La patate douce caramélise mieux à feu vif en début de cuisson",
+      "Le quinoa se torréfie 2 min à sec avant cuisson pour un goût de noisette",
     ],
   },
   vegetarien: {
     title: "Recettes végétariennes",
     intro:
       "Le végétarisme, bien plus qu'une absence de viande, c'est une cuisine positive qui célèbre les légumes comme stars de l'assiette. Aubergines fondantes, courgettes grillées, poivrons confits : chaque légume devient protagoniste. Nos recettes montrent qu'un plat sans viande peut être complet, satisfaisant et profond.",
+    editorial: `
+      <h2>Cuisiner végétarien : les légumes au centre de l'assiette</h2>
+      <p>Une cuisine végétarienne réussie ne consiste pas à retirer la viande d'une recette classique. Elle part des légumes et construit le plat autour d'eux. La <a href="/blog/recettes/ratatouille-provencale/">ratatouille provençale</a> en est l'exemple parfait : chaque légume est cuit séparément pour garder sa texture et son goût, puis l'ensemble mijote à l'huile d'olive.</p>
+      <p>Le végétarien accepte les produits laitiers et les œufs, ce qui le distingue du végan. Le <a href="/blog/recettes/risotto-champignons/">risotto aux champignons</a> profite ainsi du parmesan affiné pour sa texture crémeuse et sa saveur profonde.</p>
+
+      <h2>Des plats complets et rassasiants</h2>
+      <p>Pour qu'un plat sans viande nourrisse vraiment, il faut penser aux protéines. Le quinoa, les légumineuses, les œufs et les fromages en apportent en quantité. La <a href="/blog/recettes/salade-quinoa-legumes-grilles/">salade de quinoa aux légumes grillés</a> associe céréale protéinée et légumes caramélisés pour un repas complet.</p>
+      <p>Cuisiner davantage de légumes, c'est aussi un geste pour l'environnement. Notre article sur le <a href="/blog/articles/developpement-durable-alimentation/">développement durable et l'alimentation</a> explique pourquoi.</p>
+    `,
     tips: [
       "Les légumes d'été (aubergine, courgette) rééquilibrent les saveurs avec du sel et du temps",
       "Un bon fromage (feta, chèvre) remplace la viande comme source de protéine",
@@ -87,7 +105,7 @@ const tagData: Record<
     intro:
       "Le bœuf est l'une des protéines les plus versatiles de la cuisine mondiale. Burgers juteux, kebabs parfumés, tacos épicés, ravioli réconfortants : chaque culture l'a sublimé à sa manière. La clé ? Choisir le bon morceau (bœuf à griller pour les tacos, haché 15% MG pour les burgers) et ne pas trop le cuire.",
     tips: [
-      "Le bœuf haché se travaille froids pour une meilleure texture des galettes",
+      "Le bœuf haché se travaille froid pour une meilleure texture des galettes",
       "Pour les morceaux en dés, saisir d'abord à feu vif avant de mijoter",
       "Le bœuf se marie avec les épices du monde : cumin, paprika, cinq-épices",
     ],
@@ -129,10 +147,19 @@ const tagData: Record<
     title: "Recettes street food",
     intro:
       "La street food, c'est la démocratie de la cuisine. Un taco à la main, un bao bun en marchant, un bowl à emporter : manger bien n'a pas besoin de salle. Ces plats de rue sont souvent les plus anciens — transmis de génération en génération parce qu'ils sont bons, pas parce qu'ils sont tendance.",
+    editorial: `
+      <h2>La street food, une cuisine populaire et millénaire</h2>
+      <p>Bien avant la mode des food trucks, chaque culture avait sa cuisine de rue : le baozi en Chine, le kebab au Moyen-Orient, le taco au Mexique. Ces plats sont nés pour être préparés vite, mangés à la main et vendus à petit prix. Leur longévité s'explique simplement : ils sont bons.</p>
+      <p>Les <a href="/blog/recettes/bao-buns-vegan/">bao buns végans</a> revisitent le baozi chinois avec une farce de jack-fruit effiloché, des pickles croquants et de la coriandre fraîche. Le <a href="/blog/recettes/kebab-boeuf/">kebab de bœuf maison</a> reprend la marinade paprika-cumin et la sauce blanche du kebab traditionnel, avec des ingrédients frais que vous choisissez vous-même.</p>
+
+      <h2>Pourquoi faire sa street food maison ?</h2>
+      <p>Faire sa street food à la maison, c'est garder le plaisir du plat de rue en maîtrisant la qualité : viande française, légumes de saison, sauces faites maison sans additifs. C'est souvent plus sain et moins cher que la version achetée.</p>
+      <p>La clé est l'organisation : la plupart de ces recettes se préparent en plusieurs étapes (marinade, pâte, garniture, sauce). Préparez tous vos éléments à l'avance, puis assemblez au dernier moment pour garder le croquant.</p>
+    `,
     tips: [
       "La street food se prépare en plusieurs étapes : préparez tout avant de commencer",
       "Les pickles sont essentiels : ils apportent du croquant et de l'acidité qui équilibre",
-      'La incontournabe étape du "pliage" des buns prend du temps — entraînez-vous!',
+      "L'étape incontournable du pliage des buns prend du temps : entraînez-vous !",
     ],
   },
 };
@@ -146,6 +173,13 @@ const tag = tagData[slug!] ?? {
     "N'hésitez pas à ajuster les épices selon vos goûts",
   ],
 };
+
+// Nombre de recettes + intro, coupée au dernier mot avant 158 caractères
+const fullDescription = `${filtered.length} recette${filtered.length > 1 ? "s" : ""} ${tagName.toLowerCase()} : ${tag.intro}`;
+const metaDescription =
+  fullDescription.length <= 160
+    ? fullDescription
+    : fullDescription.slice(0, 158).replace(/\s+\S*$/, "") + "…";
 
 const allTags = [...new Set(recettes.flatMap((r) => r.data.tags ?? []))];
 
@@ -210,7 +244,7 @@ const graph = {
 
 <BaseLayout
   title={`${tag.title} — Bytemeuh`}
-  description={`${filtered.length} recette${filtered.length > 1 ? "s" : ""} ${tagName.toLowerCase()} à découvrir. ${tag.intro.slice(0, 100)}...`}
+  description={metaDescription}
   canonical={pageUrl}
   graph={graph}
 >
@@ -366,25 +400,6 @@ const graph = {
                 )}
                 {recette.data.difficulty && (
                   <span class="card-meta-item">{recette.data.difficulty}</span>
-                )}
-                {recette.data.aggregateRating && (
-                  <span class="card-meta-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="13"
-                      height="13"
-                      viewBox="0 0 24 24"
-                      fill="#f59e0b"
-                      stroke="#f59e0b"
-                      stroke-width="1"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                    {recette.data.aggregateRating.ratingValue}
-                  </span>
                 )}
               </div>
               <h2 class="card-title">{recette.data.title}</h2>

@@ -9,7 +9,7 @@ faq:
   - question: "Le quinoa est-il vraiment une protéine complète ?"
     answer: "Oui. C'est l'un des rares végétaux à contenir les 9 acides aminés essentiels que notre corps ne peut pas fabriquer seul. Avec environ 14 g de protéines pour 100 g cuit, il est particulièrement précieux pour une alimentation végétarienne ou végane."
 title: "Recette de salade de quinoa et légumes grillés"
-description: "Quinoa protéiné, légumes grillés caramélisés, vinaigrette citronnée à l'huile d'olive : une salade complète et colorée, idéale en repas du soir ou en préparation de la semaine."
+description: "Quinoa, légumes grillés caramélisés et vinaigrette citronnée : une salade complète et colorée, idéale pour le dîner ou à préparer pour la semaine."
 descriptionLong: "La salade de quinoa et légumes grillés de Bytemeuh est une explosion de saveurs et de couleurs. Le quinoa, riche en protéines végétales et en fibres, est associé à des légumes rôtis au four dont la caramélisation révèle des arômes fumés et sucrés incomparables."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
@@ -43,9 +43,6 @@ nutrition:
   protein: "10g"
   carbs: "50g"
   fat: "12g"
-aggregateRating:
-  ratingValue: "4.8"
-  reviewCount: "25"
 tips:
   - "Ne surchargez pas la plaque du four : les légumes doivent rôtir, pas étuver. Si nécessaire, utilisez deux plaques et faites tourner les grilles à mi-cuisson."
   - "Ajoutez des graines de grenade pour une touche sucrée-acidulée qui contraste magnifiquement avec le cumin et les légumes fumés."

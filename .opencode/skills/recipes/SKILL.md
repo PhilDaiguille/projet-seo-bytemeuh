@@ -53,9 +53,6 @@ nutrition:
   protein: "__g"
   carbs: "__g"
   fat: "__g"
-aggregateRating:
-  ratingValue: "5"
-  reviewCount: "10"
 tips:
   - "[Astuce pratique 1]"
   - "[Astuce pratique 2]"

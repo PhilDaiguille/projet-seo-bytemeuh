@@ -50,9 +50,6 @@ nutrition:
   protein: "16g"
   carbs: "22g"
   fat: "14g"
-aggregateRating:
-  ratingValue: "4.9"
-  reviewCount: "18"
 tips:
   - "Creusez des cavités bien distinctes dans la sauce avant de casser les œufs — cela les maintient en place pendant la cuisson."
   - "Couvrez la poêle en fin de cuisson pour accélérer la prise des blancs tout en gardant les jaunes coulants."

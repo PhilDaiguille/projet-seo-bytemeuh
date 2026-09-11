@@ -9,7 +9,7 @@ faq:
   - question: "Peut-on préparer la pâte à pizza la veille ?"
     answer: "Oui, une fermentation longue au réfrigérateur (12-24 h) améliore même le goût et la texture. Sortez la pâte 1 h avant d'abaisser pour qu'elle revienne à température ambiante."
 title: "Recette de Pizza Chèvre-Miel Maison"
-description: "Pâte maison croustillante, chèvre fondant, miel d'acacia en finition : la pizza blanche franco-italienne qui réunit le terroir en une bouchée. Facile, élégante, inoubliable."
+description: "Pâte maison croustillante, chèvre fondant et miel d'acacia : la pizza blanche franco-italienne qui réunit le terroir en une bouchée. Facile et élégante."
 descriptionLong: "Une délicieuse recette de pizza maison alliant la douceur du miel au fromage de chèvre fondant. La pizza chèvre-miel est devenue un grand classique de la cuisine fusion franco-italienne."
 publishDate: 2024-09-01
 author: "Bytemeuh Farm"
@@ -24,9 +24,6 @@ cookTime: "PT15M"
 totalTime: "PT2H45M"
 servings: "4 personnes"
 difficulty: "Facile"
-aggregateRating:
-  ratingValue: "4.9"
-  reviewCount: "14"
 ingredients:
   - "300g de farine T45"
   - "1 sachet de levure de boulanger"

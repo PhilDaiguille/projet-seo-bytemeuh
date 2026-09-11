@@ -9,7 +9,7 @@ faq:
   - question: "Peut-on préparer les steaks à l'avance ?"
     answer: "Oui, formez les steaks, séparez-les avec du papier cuisson et réfrigérez jusqu'à 24 h. Vous pouvez aussi les congeler crus jusqu'à 3 mois."
 title: "Recette de burgers de bœuf juteux maison"
-description: "Galette dorée, bœuf français 15 % MG, cheddar fondu : réalisez à la maison des burgers juteux dignes d'un restaurant avec nos conseils de pro pour un résultat parfait."
+description: "Galette dorée, bœuf français 15 % MG, cheddar fondu : réalisez des burgers maison juteux dignes d'un restaurant, avec nos conseils de pro pas à pas."
 descriptionLong: "Les burgers de bœuf faits maison sont un régal pour toute la famille. Faciles à préparer, ils sont parfaits pour un repas convivial. Notre bœuf, issu exclusivement d'élevages français responsables, garantit des burgers d'exception."
 publishDate: 2024-01-15
 author: "Bytemeuh Farm"
@@ -40,9 +40,6 @@ nutrition:
   protein: "30g"
   carbs: "40g"
   fat: "35g"
-aggregateRating:
-  ratingValue: "5"
-  reviewCount: "10"
 tips:
   - "Pour des burgers encore plus juteux, choisissez de la viande avec un peu de gras (15-20%)."
   - "Vous pouvez ajouter des épices à la viande, comme du paprika ou du cumin, pour plus de saveur."
