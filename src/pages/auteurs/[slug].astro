@@ -147,7 +147,7 @@ const graph = {
     </header>
 
     <div class="article-content">
-      <p>{author.bio}</p>
+      {author.bio.split("\n\n").map((p) => <p>{p}</p>)}
     </div>
 
     {recettes.length > 0 && (

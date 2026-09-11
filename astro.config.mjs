@@ -37,7 +37,8 @@ export default defineConfig({
   },
   compressHTML: true,
   build: {
-    inlineStylesheets: "always",
+    // CSS global en fichier externe mis en cache (/_astro/) : allège chaque page HTML (ratio texte / HTML)
+    inlineStylesheets: "auto",
   },
   markdown: {
     processor: satteri({

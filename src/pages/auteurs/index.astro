@@ -65,6 +65,17 @@ const graph = {
       L'équipe Bytemeuh
     </h1>
 
+    <div class="article-content" style="margin-bottom: var(--space-6);">
+      <p>
+        Derrière Bytemeuh, il y a une petite équipe passionnée de cuisine et
+        d'agriculture durable. Chaque contenu publié sur le site est signé par
+        une personne réelle, responsable de ce qu'elle écrit : les
+        <a href="/blog/recettes/">recettes</a> sont développées et testées par
+        notre chef, les <a href="/blog/articles/">articles</a> sont rédigés
+        par notre expert culinaire à partir de sources vérifiées.
+      </p>
+    </div>
+
     <div class="expertise-grid">
       {list.map((author) => (
         <a
@@ -85,6 +96,34 @@ const graph = {
           <p class="expertise-desc">{author.short}</p>
         </a>
       ))}
+    </div>
+
+    <div class="article-content" style="margin-top: var(--space-8);">
+      <h2>Notre charte éditoriale</h2>
+      <p>
+        Une recette n'est publiée qu'après avoir été cuisinée plusieurs fois
+        dans une cuisine domestique. Les quantités, les temps de préparation et
+        de cuisson sont mesurés en conditions réelles, et les valeurs
+        nutritionnelles sont des estimations calculées à partir des
+        ingrédients utilisés.
+      </p>
+      <p>
+        Nos articles s'appuient sur des études, des rapports d'organismes
+        publics et des échanges avec des producteurs et des artisans. Lorsqu'un
+        sujet fait débat, nous présentons les différents points de vue et
+        indiquons clairement ce qui relève des faits et ce qui relève de
+        l'opinion.
+      </p>
+      <p>
+        Les contenus sont relus et mis à jour lorsque de nouvelles
+        informations sont disponibles. Bytemeuh n'affiche ni avis inventés ni
+        contenus sponsorisés déguisés.
+      </p>
+      <p>
+        Une erreur, une question ou une suggestion de recette ? Écrivez-nous
+        via la page <a href="/contact/">contact</a> ou découvrez
+        <a href="/a-propos-de-nous/">l'histoire de Bytemeuh</a>.
+      </p>
     </div>
   </article>
 </BaseLayout>

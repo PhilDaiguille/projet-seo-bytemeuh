@@ -2,20 +2,11 @@
 import { getCollection } from "astro:content";
 import { Image, Picture } from "astro:assets";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import { slugify } from "../../../utils/seo";
 
 const recettes = await getCollection("recettes");
 const sorted = recettes.sort(
   (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime(),
 );
-
-const tagCounts: Record<string, number> = {};
-recettes.forEach((r) => {
-  (r.data.tags ?? []).forEach((tag) => {
-    const s = slugify(tag);
-    tagCounts[s] = (tagCounts[s] ?? 0) + 1;
-  });
-});
 
 const SITE_URL = "https://bytemeuh.phildaiguille.fr";
 
@@ -253,22 +244,10 @@ const graph = {
           {recette.data.tags && recette.data.tags.length > 0 && (
             <div class="card-footer">
               <div class="card-tags">
-                {recette.data.tags.slice(0, 2).map((tag) => {
-                  const tSlug = slugify(tag);
-                  return tagCounts[tSlug] >= 2 ? (
-                    <a
-                      href={`/blog/recettes/tag/${tSlug}/`}
-                      class="tag"
-                      style="text-decoration: none;"
-                    >
-                      {tag}
-                    </a>
-                  ) : (
-                    <span class="tag" style="text-decoration: none;">
-                      {tag}
-                    </span>
-                  );
-                })}
+                {/* ponytail: pas de <a> ici, un lien imbriqué dans le lien de la carte est du HTML invalide (lien vide recréé par le parser) */}
+                {recette.data.tags.slice(0, 2).map((tag) => (
+                  <span class="tag">{tag}</span>
+                ))}
               </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
