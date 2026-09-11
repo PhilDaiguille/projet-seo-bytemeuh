@@ -9,7 +9,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 >
   <nav aria-label="Fil d'ariane" class="breadcrumb">
     <ol>
-      <li><a href="/">Accueil</a></li>
+      <li>
+        <a href="/">Accueil</a>
+      </li>
       <li aria-hidden="true" class="breadcrumb-sep">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -21,22 +23,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           stroke-width="2.5"
           stroke-linecap="round"
           stroke-linejoin="round"
-          ><polyline points="9 18 15 12 9 6"></polyline></svg
         >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
       </li>
       <li aria-current="page">Contact</li>
     </ol>
   </nav>
 
   <section class="surface">
-    <h1
-      style="font-size: var(--text-4xl); margin-bottom: var(--space-4); letter-spacing: -0.03em;"
-    >
+    <h1 style="font-size: var(--text-4xl); margin-bottom: var(--space-4); letter-spacing: -0.03em;">
       Contactez-nous
     </h1>
-    <p
-      style="font-size: var(--text-lg); color: var(--color-muted); margin-bottom: var(--space-8); max-width: 55rem;"
-    >
+    <p style="font-size: var(--text-lg); color: var(--color-muted); margin-bottom: var(--space-8); max-width: 55rem;">
       Vous avez une question sur nos recettes, notre ferme ou souhaitez établir
       un partenariat ? N'hésitez pas à nous contacter. Nous lisons chaque
       message avec attention et nous nous engageons à vous répondre dans les
@@ -58,10 +57,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            ><path
-              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-            ></path><polyline points="22,6 12,13 2,6"></polyline></svg
           >
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
         </div>
         <p class="expertise-title">Par email</p>
         <p class="expertise-desc">contact@bytemeuh.phildaiguille.fr</p>
@@ -78,9 +77,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            ><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-            ></path><circle cx="12" cy="10" r="3"></circle></svg
           >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
         </div>
         <p class="expertise-title">Localisation</p>
         <p class="expertise-desc">Paris, France</p>
@@ -97,30 +97,23 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            ><circle cx="12" cy="12" r="10"></circle><polyline
-              points="12 6 12 12 16 14"></polyline></svg
           >
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
         </div>
         <p class="expertise-title">Disponibilité</p>
         <p class="expertise-desc">Du lundi au vendredi, 9h — 18h</p>
       </div>
     </div>
 
-    <div
-      style="margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid var(--color-border);"
-    >
-      <h2
-        style="font-size: var(--text-xl); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--space-6);"
-      >
+    <div style="margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid var(--color-border);">
+      <h2 style="font-size: var(--text-xl); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--space-6);">
         Questions fréquentes
       </h2>
-      <div
-        style="display: flex; flex-direction: column; gap: var(--space-6); max-width: 65rem;"
-      >
+      <div style="display: flex; flex-direction: column; gap: var(--space-6); max-width: 65rem;">
         <div>
-          <p
-            style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);"
-          >
+          <p style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);">
             Puis-je proposer une recette à publier sur Bytemeuh ?
           </p>
           <p style="color: var(--color-muted); line-height: 1.65;">
@@ -131,9 +124,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </p>
         </div>
         <div>
-          <p
-            style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);"
-          >
+          <p style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);">
             Comment signaler une erreur dans une recette ?
           </p>
           <p style="color: var(--color-muted); line-height: 1.65;">
@@ -143,9 +134,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </p>
         </div>
         <div>
-          <p
-            style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);"
-          >
+          <p style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);">
             Bytemeuh accepte-t-il des partenariats avec des marques alimentaires
             ?
           </p>
@@ -157,9 +146,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </p>
         </div>
         <div>
-          <p
-            style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);"
-          >
+          <p style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);">
             Puis-je utiliser vos recettes dans un cadre professionnel
             (restaurant, traiteur) ?
           </p>
@@ -171,33 +158,26 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </p>
         </div>
         <div>
-          <p
-            style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);"
-          >
+          <p style="font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2);">
             Comment s'abonner aux nouvelles recettes Bytemeuh ?
           </p>
           <p style="color: var(--color-muted); line-height: 1.65;">
-            Nous proposons un <a
-              href="/rss.xml"
-              style="color: var(--color-primary);">flux RSS</a
-            > pour suivre nos nouvelles publications en temps réel. C'est le moyen
+            Nous proposons un{" "}
+            <a href="/rss.xml" style="color: var(--color-primary);">
+              flux RSS
+            </a>{" "}
+            pour suivre nos nouvelles publications en temps réel. C'est le moyen
             le plus simple de ne rien manquer, sans publicité ni algorithme.
           </p>
         </div>
       </div>
     </div>
 
-    <div
-      style="margin-top: var(--space-10); padding: var(--space-8); background: var(--color-surface); border-radius: var(--radius-lg); border: 1px solid var(--color-border);"
-    >
-      <h2
-        style="font-size: var(--text-xl); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--space-4);"
-      >
+    <div style="margin-top: var(--space-10); padding: var(--space-8); background: var(--color-surface); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+      <h2 style="font-size: var(--text-xl); font-weight: 800; letter-spacing: -0.02em; margin-bottom: var(--space-4);">
         Notre engagement éditorial
       </h2>
-      <p
-        style="color: var(--color-muted); line-height: 1.65; margin-bottom: var(--space-4);"
-      >
+      <p style="color: var(--color-muted); line-height: 1.65; margin-bottom: var(--space-4);">
         Bytemeuh est un blog indépendant. Nos recettes sont testées et écrites
         par notre équipe — nous ne publions pas de contenu sponsorisé non
         identifié. Quand un partenariat existe, il est toujours clairement

@@ -85,22 +85,9 @@ const graph = {
 >
   <nav aria-label="Fil d'ariane" class="breadcrumb">
     <ol>
-      <li><a href="/">Accueil</a></li>
-      <li aria-hidden="true" class="breadcrumb-sep">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><polyline points="9 18 15 12 9 6"></polyline></svg
-        >
+      <li>
+        <a href="/">Accueil</a>
       </li>
-      <li><a href="/auteurs/">Auteurs</a></li>
       <li aria-hidden="true" class="breadcrumb-sep">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -112,17 +99,34 @@ const graph = {
           stroke-width="2.5"
           stroke-linecap="round"
           stroke-linejoin="round"
-          ><polyline points="9 18 15 12 9 6"></polyline></svg
         >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </li>
+      <li>
+        <a href="/auteurs/">Auteurs</a>
+      </li>
+      <li aria-hidden="true" class="breadcrumb-sep">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
       </li>
       <li aria-current="page">{author.name}</li>
     </ol>
   </nav>
 
   <article class="surface" style="margin-bottom: var(--space-6);">
-    <header
-      style="display:flex;gap:var(--space-6);align-items:center;flex-wrap:wrap;margin-bottom:var(--space-6);"
-    >
+    <header style="display:flex;gap:var(--space-6);align-items:center;flex-wrap:wrap;margin-bottom:var(--space-6);">
       <Image
         src={author.image}
         alt={`Photo de ${author.name}`}
@@ -133,9 +137,7 @@ const graph = {
         style="border-radius:50%;object-fit:cover;"
       />
       <div>
-        <h1
-          style="font-size: var(--text-4xl); margin-bottom: var(--space-2); letter-spacing: -0.03em;"
-        >
+        <h1 style="font-size: var(--text-4xl); margin-bottom: var(--space-2); letter-spacing: -0.03em;">
           {author.name}
         </h1>
         <p style="color: var(--color-primary); font-weight: 700;">
@@ -148,34 +150,30 @@ const graph = {
       <p>{author.bio}</p>
     </div>
 
-    {
-      recettes.length > 0 && (
-        <section style="margin-top: var(--space-8);">
-          <h2>Recettes de {author.name}</h2>
-          <ul>
-            {recettes.map((r) => (
-              <li>
-                <a href={`/blog/recettes/${r.id}/`}>{r.data.title}</a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
+    {recettes.length > 0 && (
+      <section style="margin-top: var(--space-8);">
+        <h2>Recettes de {author.name}</h2>
+        <ul>
+          {recettes.map((r) => (
+            <li>
+              <a href={`/blog/recettes/${r.id}/`}>{r.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
-    {
-      articles.length > 0 && (
-        <section style="margin-top: var(--space-8);">
-          <h2>Articles de {author.name}</h2>
-          <ul>
-            {articles.map((a) => (
-              <li>
-                <a href={`/blog/articles/${a.id}/`}>{a.data.title}</a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
+    {articles.length > 0 && (
+      <section style="margin-top: var(--space-8);">
+        <h2>Articles de {author.name}</h2>
+        <ul>
+          {articles.map((a) => (
+            <li>
+              <a href={`/blog/articles/${a.id}/`}>{a.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
   </article>
 </BaseLayout>
