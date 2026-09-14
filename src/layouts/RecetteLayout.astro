@@ -3,6 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import { Image, Picture } from "astro:assets";
 import RelatedRecettes from "../components/RelatedRecettes.astro";
 import FaqSection from "../components/FaqSection.astro";
+import AiNotice from "../components/AiNotice.astro";
 import { normalizeCuisine } from "../utils/seo";
 import { slugify } from "../utils/seo";
 import { resolveAuthor, authorUrl } from "../data/authors";
@@ -505,6 +506,8 @@ const graph = {
       </a>
       , {author.jobTitle}
     </p>
+
+    <AiNotice />
 
     <!-- Intro description -->
     {(data.descriptionLong ?? data.description) && (

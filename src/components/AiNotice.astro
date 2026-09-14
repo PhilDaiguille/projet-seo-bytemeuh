@@ -1,0 +1,51 @@
+---
+// Bandeau de transparence IA (art. 50 du règlement UE 2024/1689 - AI Act).
+---
+
+<p class="ai-notice">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M12 2a5 5 0 0 0-5 5v1a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"></path>
+    <path d="M8 14v4a4 4 0 0 0 8 0v-4"></path>
+  </svg>
+  <span>
+    <strong>Contenu généré par intelligence artificielle</strong> — non
+    testé en cuisine par un humain, à vérifier avant réalisation.{" "}
+    <a href="/mention-legales/#ia">En savoir plus</a>.
+  </span>
+</p>
+
+<style>
+  .ai-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    background: var(--color-primary-light);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+  .ai-notice svg {
+    flex-shrink: 0;
+    color: var(--color-primary-dark);
+    margin-top: 2px;
+  }
+  .ai-notice a {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+</style>

@@ -3,6 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import { Image, Picture } from "astro:assets";
 import RelatedArticles from "../components/RelatedArticles.astro";
 import FaqSection from "../components/FaqSection.astro";
+import AiNotice from "../components/AiNotice.astro";
 import { resolveAuthor, authorUrl } from "../data/authors";
 import type { CollectionEntry } from "astro:content";
 
@@ -304,6 +305,7 @@ const dateFormatted = data.publishDate.toLocaleDateString("fr-FR", {
       </div>
 
       {data.description && <p class="article-intro">{data.description}</p>}
+      <AiNotice />
     </div>
 
     <!-- Article body -->
