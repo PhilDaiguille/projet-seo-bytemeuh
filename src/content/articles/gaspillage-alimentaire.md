@@ -8,8 +8,8 @@ faq:
     answer: "La DLC (Date Limite de Consommation) est obligatoire pour les produits périssables et indique un risque sanitaire — ne pas dépasser. La DLUO (Date de Durabilité Minimale) indique la qualité optimale, pas un risque : les produits peuvent être consommés après cette date si leur apparence et leur odeur sont normales."
   - question: "Comment transformer les restes en repas appétissants ?"
     answer: "Le pain rassis devient pain perdu ou chapelure. Les légumes cuits rejoignent une quiche ou un gratin. Le riz refroidi se transforme en riz sauté aux œufs. La clé est de garder en permanence quelques sauces et épices de base pour sublimer les ingrédients existants."
-title: "Réduire le gaspillage alimentaire : guide zéro déchet"
-description: "10 millions de tonnes gaspillées chaque année en France. Guide pratique pour réduire le gaspillage à la maison : planification, recettes anti-gaspi et habitudes durables."
+title: "Réduire le gaspillage alimentaire chez soi"
+description: "10 millions de tonnes gaspillées chaque année en France. Guide pratique pour réduire le gaspillage à la maison : planification et recettes anti-gaspi."
 publishDate: 2025-03-01
 author: "Bytemeuh Farm"
 category: "Durabilité"

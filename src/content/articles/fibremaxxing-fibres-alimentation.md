@@ -8,8 +8,8 @@ faq:
     answer: "Une augmentation trop brutale provoque ballonnements, gaz et inconfort digestif. Il faut augmenter progressivement sur deux à trois semaines et boire suffisamment d'eau. Les personnes souffrant de troubles digestifs doivent demander l'avis d'un professionnel de santé."
   - question: "Faut-il prendre des compléments de fibres ?"
     answer: "Ce n'est généralement pas nécessaire. Les aliments entiers apportent en plus des vitamines, des minéraux et des polyphénols que les compléments n'offrent pas. Mieux vaut varier les sources de fibres dans l'assiette."
-title: "Fibremaxxing : faire le plein de fibres sans se forcer"
-description: "Le fibremaxxing, tendance santé de 2026, vise 30 g de fibres par jour. Pourquoi c'est une bonne idée, les meilleures sources et comment s'y mettre sans inconfort."
+title: "Fibremaxxing : faire le plein de fibres"
+description: "Le fibremaxxing, tendance santé de 2026, vise 30 g de fibres par jour. Pourquoi c'est une bonne idée, les meilleures sources et comment s'y mettre."
 publishDate: 2026-09-11
 author: "Bytemeuh Farm"
 category: "Alimentation"

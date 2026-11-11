@@ -8,8 +8,8 @@ faq:
     answer: "Ils permettent de corréler alimentation, activité et ressenti. Les études montrent qu'ils augmentent la conscience de soi — mais la durabilité des changements dépend surtout de la motivation personnelle."
   - question: "Comment distinguer les vrais conseils nutritionnels des tendances marketing ?"
     answer: "Privilégiez les sources validées (ANSES, INSERM, Registered Dietitian). Méfiez-vous des 'superaliments' miracles et des régimes exclusifs. La science nutritionnelle préconise toujours la variété et l'équilibre."
-title: "Nutrition connectée : apps et objets pour bien manger"
-description: "Apps nutritionnelles, objets connectés, nutrigénomique : comment la technologie aide à mieux comprendre ses besoins alimentaires et adopter une alimentation plus consciente."
+title: "Nutrition connectée : apps et objets utiles"
+description: "Apps nutritionnelles, objets connectés, nutrigénomique : comment la technologie aide à mieux comprendre ses besoins et à mieux manger."
 publishDate: 2024-10-31
 author: "Bytemeuh Farm"
 category: "Alimentation"

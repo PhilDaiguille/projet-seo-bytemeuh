@@ -9,7 +9,7 @@ faq:
   - question: "La fracture numérique est-elle un problème dans le monde agricole ?"
     answer: "Oui, particulièrement chez les agriculteurs plus âgés et dans les zones peu couvertes. Des programmes de formation numérique agricole existent (Chambre d'Agriculture, VIVEA) pour réduire cet écart."
 title: "Les smartphones révolutionnent l'agriculture"
-description: "Prévisions météo, gestion des troupeaux, analyse des sols : les smartphones transforment le quotidien des agriculteurs. Tour d'horizon de la ferme connectée Bytemeuh."
+description: "Météo, gestion des troupeaux, analyse des sols : les smartphones transforment le quotidien des agriculteurs. Tour d'horizon de la ferme connectée."
 publishDate: 2024-11-17
 author: "Bytemeuh Farm"
 category: "Agriculture"
