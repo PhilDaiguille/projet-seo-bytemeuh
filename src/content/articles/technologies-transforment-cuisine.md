@@ -9,7 +9,7 @@ faq:
   - question: "Comment la technologie peut-elle aider à réduire le gaspillage en cuisine ?"
     answer: "Applications anti-gaspi (Too Good To Go, Phenix), réfrigérateurs connectés qui inventorient, capteurs de maturité des fruits, et recettes générées par IA à partir des ingrédients disponibles."
 title: "Équipements connectés qui transforment la cuisine"
-description: "Réfrigérateurs intelligents, balances connectées, réalité augmentée : tour d'horizon des équipements tech qui simplifient et enrichissent la cuisine du quotidien."
+description: "Réfrigérateurs intelligents, balances connectées, réalité augmentée : les équipements tech qui simplifient et enrichissent la cuisine au quotidien."
 publishDate: 2024-11-02
 author: "Bytemeuh Farm"
 category: "Cuisine"

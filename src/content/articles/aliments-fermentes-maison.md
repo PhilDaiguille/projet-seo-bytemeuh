@@ -8,7 +8,7 @@ faq:
     answer: "Une fois la fermentation terminée, ils se gardent plusieurs mois au réfrigérateur dans leur saumure. Leur goût continue à évoluer lentement et devient plus acide avec le temps."
   - question: "Faut-il manger des aliments fermentés tous les jours ?"
     answer: "Il n'y a pas de dose officielle. Une petite portion régulière, comme une cuillère de choucroute ou un verre de kéfir, suffit pour en profiter. Les personnes immunodéprimées doivent demander l'avis de leur médecin."
-title: "Aliments fermentés maison : kimchi, kéfir et kombucha"
+title: "Aliments fermentés maison : kimchi, kéfir…"
 description: "Kimchi, kéfir, kombucha, légumes lactofermentés : pourquoi la fermentation revient en force en 2026 et comment la pratiquer chez soi en toute sécurité."
 publishDate: 2026-09-11
 author: "Bytemeuh Farm"
